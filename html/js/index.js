@@ -9,8 +9,10 @@ async function loadHtmlComponent(path, id, nameFile) {
         .then((data) => {
             const el = document.getElementById(id);
             el.innerHTML = data;
-            const script = el.getElementsByTagName("script")[0];
-            if (script) eval(script.innerHTML);
+            const scripts = el.getElementsByTagName("script");
+            for (let i = 0; i < scripts.length; i++) {
+                if (scripts[i]) eval(scripts[i].innerHTML);
+            }
         });
 }
 
