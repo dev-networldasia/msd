@@ -266,7 +266,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  gap: 15px;
 }
 
 .menu-header {
@@ -277,21 +276,20 @@ a {
 
 .container-content {
   display: flex;
-  gap: 15px;
   flex-direction: column;
   flex: auto;
-  gap: 15px;
+  gap: 10px;
 }
 .container-content .main-container {
+  max-height: calc(100svh - 160px);
+  overflow-y: auto;
   flex-grow: 1;
   width: 100;
   display: flex;
   flex: auto;
   flex-direction: column;
   gap: 0px;
-  border-radius: var(--radius-lg);
-  background-color: white;
-  overflow: hidden;
+  border-radius: var(--radius-md);
 }
 .container-content .main-container .banner-main {
   border-top-left-radius: var(--radius-lg);
@@ -325,6 +323,17 @@ a {
   column-count: 2;
   column-gap: 10px;
 }
+.container-content .main-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.container-content .main-container::-webkit-scrollbar-thumb {
+  display: none;
+}
+.container-content .main-container::-webkit-scrollbar-track {
+  display: none;
+}
 .container-content .sidebar {
   display: none;
   flex-direction: column;
@@ -333,11 +342,17 @@ a {
 }
 
 @media (min-width: 1100px) {
+  .root-container {
+    gap: 15px;
+  }
   .container-content {
     flex-direction: row;
   }
   .container-content .main-container {
     width: 0;
+    max-height: auto;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
   }
   .container-content .main-container .footer-main-content {
     padding: 50px;
