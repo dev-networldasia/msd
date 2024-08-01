@@ -1,4 +1,4 @@
-<link type="text/css" rel="stylesheet" href="./css/layout/menu.css">
+<link type="text/css" rel="stylesheet" href="./css/layout/menu/menu.css">
 
 <div class="menu-desktop box-shadow-md">
    <div class="logos">
@@ -16,12 +16,11 @@
          document.body.appendChild(scriptElement);
       </script>
 
-
-      <span class="search-control" title="Search">
-         <svg xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use xlink:href="#search" fill="currentColor" />
-         </svg>
-      </span>
+      <div class="search-control" id="search-control" title="Search">
+         <script type="text/javascript">
+            loadHtmlComponent('./layout/menu/', 'search-control', 'search');
+         </script>
+      </div>
    </nav>
 
 

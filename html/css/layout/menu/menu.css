@@ -1,3 +1,80 @@
+.popup-search {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  transition: all 250ms ease-in-out;
+}
+.popup-search .overlay {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(51, 51, 51, 0.4156862745);
+}
+.popup-search .container-search {
+  position: absolute;
+  z-index: 2;
+  right: 80px;
+  top: 80px;
+  width: 380px;
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--neutral-400);
+}
+.popup-search .container-search input {
+  font-size: 14px;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--neutral-06-day, #d6d6d6);
+  background: var(--neutral-09-day, #fff);
+}
+.popup-search .container-search input:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  outline: 0;
+  outline-offset: 0;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: var(--neutral-600);
+  border-color: transparent;
+}
+.popup-search .container-search .search-results {
+  color: var(--primary-500);
+}
+.popup-search .container-search .search-results ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.popup-search .container-search .search-results ul li {
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.popup-search .container-search .no-results {
+  color: var(--primary-500);
+  text-align: center;
+}
+
+/* Define the animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}
 .menu-desktop {
   display: flex;
   border-radius: 50px;
