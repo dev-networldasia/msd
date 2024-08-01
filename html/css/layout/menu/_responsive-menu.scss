@@ -1,0 +1,28 @@
+@media (min-width: 1200px) {
+   .menu-desktop {
+      .logos {
+         img {
+            height: 65px
+         }
+      }
+   
+      .nav-menu {
+         ul{
+            gap: 16px;
+         }
+         &__item {
+   
+            a {
+               font-size: 13px;
+            }
+   
+            &.active a {
+               color: green;
+            }
+         }
+   
+         .search-control {
+         }
+      }
+   }
+}

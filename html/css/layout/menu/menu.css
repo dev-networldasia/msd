@@ -64,3 +64,18 @@
   background-color: var(--primary-800);
   color: white;
 }
+
+@media (min-width: 1200px) {
+  .menu-desktop .logos img {
+    height: 65px;
+  }
+  .menu-desktop .nav-menu ul {
+    gap: 16px;
+  }
+  .menu-desktop .nav-menu__item a {
+    font-size: 13px;
+  }
+  .menu-desktop .nav-menu__item.active a {
+    color: green;
+  }
+}
