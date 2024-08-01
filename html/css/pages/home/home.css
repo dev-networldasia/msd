@@ -1,0 +1,125 @@
+.container-sidebar,
+.container-sidebar-mobile {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container-sidebar .sidebar-title,
+.container-sidebar-mobile .sidebar-title {
+  background-color: var(--primary-500);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.list-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.list-card .card-item {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 10px;
+  font-size: 14px !important;
+  flex: auto;
+  overflow: hidden;
+}
+.list-card .card-item .avatar {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--primary-500);
+  overflow: hidden;
+  flex: 0;
+  min-width: 130px;
+}
+.list-card .card-item .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.list-card .card-item .info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  flex: 1;
+}
+.list-card .card-item .info .title {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-500);
+}
+.list-card .card-item .info .description {
+  flex-grow: 1;
+}
+.list-card .card-item .info .actions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.list-card .card-item .info .actions a {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.container-sidebar-mobile {
+  background-color: transparent;
+  position: static;
+}
+.container-sidebar-mobile .sidebar-title {
+  border-radius: 0;
+}
+.container-sidebar-mobile .list-card {
+  padding: 8px;
+}
+.container-sidebar-mobile .list-card .card-item {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--primary-500);
+  padding: 0;
+  gap: 0;
+}
+.container-sidebar-mobile .list-card .card-item .avatar {
+  border-radius: 0;
+  border: none;
+  width: 70px;
+  min-width: 65px;
+}
+.container-sidebar-mobile .list-card .card-item .info {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  padding: 10px;
+  padding-left: 0;
+}
+.container-sidebar-mobile .list-card .card-item .info .title {
+  font-size: 11px;
+}
+.container-sidebar-mobile .list-card .card-item .info .btn {
+  font-size: 12px;
+}
+
+.container-content .main-container .body-main-content {
+  position: relative;
+  z-index: 1;
+}
+.container-content .main-container .body-main-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, #FCEA6F 0%, #00B4CF 100%);
+  opacity: 0.5;
+}

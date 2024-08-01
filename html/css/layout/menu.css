@@ -1,0 +1,66 @@
+.menu-desktop {
+  display: flex;
+  border-radius: 50px;
+  background-color: white;
+  flex: auto;
+  align-items: center;
+  padding: 5px;
+}
+.menu-desktop .logos {
+  display: flex;
+}
+.menu-desktop .logos img {
+  height: 55px;
+}
+.menu-desktop .nav-menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.menu-desktop .nav-menu ul {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  justify-content: flex-end;
+}
+.menu-desktop .nav-menu__item {
+  display: inline-block;
+}
+.menu-desktop .nav-menu__item a {
+  text-transform: capitalize;
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+  border: 1px solid var(--primary-800);
+  border-radius: 50px;
+  font-size: 10px;
+  transition: all 0.25s ease-in-out;
+  color: var(--primary-800);
+  font-weight: 400;
+  text-align: center;
+}
+.menu-desktop .nav-menu__item a:hover {
+  background-color: var(--primary-800);
+  border-color: var(--primary-500);
+  color: white;
+}
+.menu-desktop .nav-menu__item.active a {
+  color: green;
+}
+.menu-desktop .nav-menu .search-control {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--primary-800);
+  transition: all 0.25s ease-in-out;
+}
+.menu-desktop .nav-menu .search-control svg {
+  font-size: 30px;
+}
+.menu-desktop .nav-menu .search-control:hover {
+  background-color: var(--primary-800);
+  color: white;
+}

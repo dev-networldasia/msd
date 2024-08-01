@@ -1,0 +1,31 @@
+// Define the custom font
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Unbounded:wght@200..900&display=swap');
+
+// @font-face {
+//   font-family: 'Unbounded';
+//   src: url('../fonts/unbounded/Unbounded-Bold.ttf') format('truetype'),
+//   url('../fonts/unbounded/Unbounded-Light.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// Apply the font to body or specific elements
+body {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  // font-weight: 300;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  overflow: visible;
+}

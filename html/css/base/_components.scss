@@ -1,0 +1,23 @@
+.btn-primary-outline {
+   display: inline-block;
+   border: 1px solid var(--primary-500);
+   color: var(--neutral-200);
+   transition: all 0.25s ease-in-out;
+   cursor: pointer;
+   text-decoration: none;
+   padding: 5px 20px;
+   background-color: white;
+   font-size: 15px;
+   text-align: center;
+
+   &:hover {
+      color: white;
+      background-color: var(--primary-500);
+   }
+}
+
+.btn {
+   &.full-radius {
+      border-radius: 50px;
+   }
+}

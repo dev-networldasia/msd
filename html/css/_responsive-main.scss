@@ -1,0 +1,42 @@
+@media (min-width: 1100px) {
+   .container-content {
+      flex-direction: row;
+
+      .main-container {
+         width: 0;
+
+         .footer-main-content {
+            padding: 50px;
+            gap: 40px;
+
+            &.paragraph-2-col {
+               column-count: 2;
+               column-gap: 40px;
+            }
+
+            .content {
+               ul {
+                  li {
+                     font-size: 10px;
+                  }
+               }
+            }
+         }
+      }
+
+      .container-sidebar-mobile {
+         display: none;
+      }
+
+      .sidebar {
+         display: flex;
+         max-width: 500px;
+         min-width: 500px;
+      }
+
+   }
+}
+
+// main {
+//    font-size: var(--breakpoint-lg);
+// }
