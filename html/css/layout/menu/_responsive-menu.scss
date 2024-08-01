@@ -1,5 +1,24 @@
-@media (min-width: 1200px) {
-   .menu-desktop {
+@media (min-width: 1100px) {
+   .main-menu{
+
+      background-color: white;
+      justify-content: flex-start;
+
+      .btn-open-menu-mobile{
+         display: none;
+      }
+
+      .nav-menu {
+         flex-grow: 1;
+         ul{
+            flex-grow: 1;
+            display: flex;
+         }
+      }
+   }
+}
+@media (min-width: 1300px) {
+   .main-menu{
       .logos {
          img {
             height: 65px
@@ -7,6 +26,7 @@
       }
    
       .nav-menu {
+         display: flex;
          ul{
             gap: 16px;
          }
@@ -20,9 +40,8 @@
                color: green;
             }
          }
-   
-         .search-control {
-         }
+
       }
+
    }
 }
