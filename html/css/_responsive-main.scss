@@ -16,6 +16,16 @@
          overflow: hidden;
          border-radius: var(--radius-lg);
 
+         .banner-main {
+            &__desktop {
+               display: block;
+            }
+
+            &__mobile {
+               display: none;
+            }
+         }
+
          .footer-main-content {
             padding: 50px;
             gap: 40px;
