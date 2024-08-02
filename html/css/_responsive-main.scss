@@ -2,17 +2,35 @@
    .root-container {
       gap: 15px;
    }
+
+   .menu-header {
+      margin-top: 20px;
+   }
+
    .container-content {
       flex-direction: row;
 
       .main-container {
          width: 0;
-         max-height: auto;
-         overflow: hidden ;
+         max-height: 100%;
+         overflow: hidden;
          border-radius: var(--radius-lg);
+
+         .banner-main {
+            &__desktop {
+               display: block;
+            }
+
+            &__mobile {
+               display: none;
+            }
+         }
+
          .footer-main-content {
             padding: 50px;
             gap: 40px;
+            border-bottom-left-radius: var(--radius-lg);
+            border-bottom-right-radius: var(--radius-lg);
 
             &.paragraph-2-col {
                column-count: 2;
@@ -35,8 +53,8 @@
 
       .sidebar {
          display: flex;
-         max-width: 500px;
-         min-width: 500px;
+         max-width: 580px;
+         min-width: 580px;
       }
 
    }

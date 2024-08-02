@@ -12,13 +12,14 @@
    box-shadow: none;
    // margin-top: 15px;
 
-   .btn-open-menu-mobile{
+   .btn-open-menu-mobile {
       cursor: pointer;
       padding: 10px 10px;
       border-radius: var(--radius-sm);
       transition: all 250ms ease-in-out;
       color: var(--primary-800);
-      &:hover{
+
+      &:hover {
          color: white;
          background-color: var(--primary-800);
       }
@@ -27,6 +28,7 @@
    .logos {
       display: flex;
       gap: 10px;
+
       img {
          height: 40px
       }
@@ -37,7 +39,7 @@
       align-items: center;
       gap: 5px;
       display: flex;
-   
+
       ul {
          display: none;
          gap: 8px;
@@ -92,7 +94,7 @@
       }
    }
 
-   .btn-open-menu-mobile{
+   .btn-open-menu-mobile {
       display: block;
    }
 }

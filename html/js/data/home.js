@@ -13,7 +13,7 @@ var homeSidebarCards = [
         id: 2,
         image: "./images/home/19-26.png",
         title: "Thanh thiếu niên (19-26 tuổi)",
-        subtitle: "<b>nguy cơ nhiễm cao nhất</b> \n - Dự phòng HPV ngay!",
+        subtitle: "<b>NGUY CƠ NHIỄM CAO NHẤT</b> \n - Dự phòng HPV ngay!",
         description:
             "Gần 50% các trường hợp nhiễm HPV xảy ra ở độ tuổi 15 - 24.(12)",
         link_female: "#female",
@@ -23,7 +23,7 @@ var homeSidebarCards = [
         id: 3,
         image: "./images/home/27-45.png",
         title: "Người  trưởng thành (27-45 tuổi)",
-        subtitle: "<b>cơ hội cuối cùng</b> \n - Dự phòng HPV ngay!",
+        subtitle: "<b>CƠ HỘI CUỐI CÙNG</b> \n - Dự phòng HPV ngay!",
         description: "Người trong độ tuổi trung niên có thể dự phòng HPV.(13)",
         link_female: "#female",
         link_male: "#male",

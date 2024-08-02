@@ -16,6 +16,15 @@ async function loadHtmlComponent(path, id, nameFile) {
         });
 }
 
+async function loadFile(path, pathSelector) {
+    fetch(path)
+        .then((response) => response.text())
+        .then((data) => {
+            const el = document.querySelector(pathSelector);
+            if (el) el.innerHTML = data;
+        });
+}
+
 async function loadCssFile(path, id) {
     fetch(path)
         .then((response) => response.text())
