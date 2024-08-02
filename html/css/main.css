@@ -124,6 +124,7 @@ a {
   --third-500: #005CFF;
   --forth-500: #00B4CF;
   --fifth-500: #1952A0;
+  --sixth-500: #4EC3BD;
   /* Functions color */
   --error: #FF513C;
   --info: #0085FF;
@@ -307,6 +308,16 @@ a {
   border-top-left-radius: var(--radius-lg);
   border-top-right-radius: var(--radius-lg);
 }
+.container-content .main-container .banner-main__desktop {
+  display: none;
+}
+.container-content .main-container .banner-main__mobile {
+  display: block;
+  width: 100%;
+  max-height: 350px;
+  height: 100%;
+  object-fit: cover;
+}
 .container-content .main-container .body-main-content {
   flex-grow: 1;
 }
@@ -368,6 +379,12 @@ a {
     max-height: 100%;
     overflow: hidden;
     border-radius: var(--radius-lg);
+  }
+  .container-content .main-container .banner-main__desktop {
+    display: block;
+  }
+  .container-content .main-container .banner-main__mobile {
+    display: none;
   }
   .container-content .main-container .footer-main-content {
     padding: 50px;
