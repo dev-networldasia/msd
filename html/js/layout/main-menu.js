@@ -1,4 +1,6 @@
-// Render Menu
+//----------------------------------------------------------------
+// *** MENU DESKTOP ***
+//----------------------------------------------------------------
 function renderListMenuDesktop() {
     const menuEl = document.querySelector(".main-menu #nav-menu ul");
 
@@ -16,7 +18,9 @@ function renderListMenuDesktop() {
 }
 renderListMenuDesktop();
 
-// Control Search
+//----------------------------------------------------------------
+// *** SEARCH CONTROL ***
+//----------------------------------------------------------------
 function addEventForButtonSearch() {
     const elBtn = document.querySelector(".nav-menu #search-control");
 
@@ -92,6 +96,10 @@ setTimeout(() => {
     addEventForButtonSearch();
 }, 1000);
 
+//----------------------------------------------------------------
+// *** MENU MOBILE ***
+//----------------------------------------------------------------
+
 //Menu mobile
 function addEventToggleMenuMobile() {
     const elBtn = document.querySelector(".btn-open-menu-mobile");
@@ -156,3 +164,27 @@ function removePopupMenuMobile() {
 setTimeout(() => {
     addEventToggleMenuMobile();
 }, 1000);
+
+//----------------------------------------------------------------
+// *** DETECT FIXED MENU SCROLL ***
+//----------------------------------------------------------------
+
+function addEventDetectMenuStuck() {
+    document.addEventListener("scroll", () => {
+        const stickyElement = document.querySelector("header.menu-header#menu");
+
+        const container = stickyElement.parentElement;
+
+        const isStuck =
+            stickyElement.getBoundingClientRect().top <= 20 &&
+            container.getBoundingClientRect().top < 0;
+
+        if (isStuck) {
+            stickyElement.classList.add("is-sticky");
+        } else {
+            stickyElement.classList.remove("is-sticky");
+        }
+    });
+}
+
+addEventDetectMenuStuck();

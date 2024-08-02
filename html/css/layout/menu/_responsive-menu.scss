@@ -1,45 +1,49 @@
 @media (min-width: 1100px) {
-   .main-menu{
-      margin-top: 0;
+   .main-menu {
+      // margin-top: 15px;
       background-color: white;
       justify-content: flex-start;
 
-      .btn-open-menu-mobile{
+      .btn-open-menu-mobile {
          display: none;
       }
 
       .nav-menu {
          flex-grow: 1;
-         ul{
+
+         ul {
             flex-grow: 1;
             display: flex;
          }
       }
    }
 
-   .popup-search .container-search{
+   .popup-search .container-search {
       width: 400px;
    }
 }
+
 @media (min-width: 1350px) {
-   .main-menu{
+   .main-menu {
       .logos {
          img {
             height: 65px
          }
       }
-   
+
       .nav-menu {
          display: flex;
-         ul{
+
+         ul {
             gap: 16px;
          }
+
          &__item {
-   
+
             a {
                font-size: 13px;
             }
-   
+
             &.active a {
                color: green;
             }
