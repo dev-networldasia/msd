@@ -94,6 +94,7 @@
 @media (min-width: 1500px) {
    .result-infection-hpv {
       padding: 20px;
+      margin-top: 0;
 
       .top-ribbon {
          padding: 10px 25px;
@@ -107,6 +108,7 @@
 
          .text-result-ribbon {
             font-size: 20px;
+            margin-top: -25px;
          }
 
       }
