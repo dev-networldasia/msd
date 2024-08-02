@@ -20,12 +20,12 @@ function renderListCard() {
                   <p class="description">${card.description}</p>
                   <div class="actions">
                      <a href="${card.link_female}" class="btn btn-primary-outline full-radius">
-                        <span>Tìm hiểu thêm</span>
+                        <p>Tìm hiểu thêm</p>
                         <b>Nữ</b>
                      </a>
 
                      <a href="${card.link_male}" class="btn btn-primary-outline full-radius">
-                        <span>Tìm hiểu thêm</span>
+                        <p>Tìm hiểu thêm</p>
                         <b>Nam</b>
                      </a>
                   </div>
