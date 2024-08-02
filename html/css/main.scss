@@ -62,8 +62,8 @@
          padding: 10px;
          color: white;
 
-         border-bottom-left-radius: var(--radius-lg);
-         border-bottom-right-radius: var(--radius-lg);
+         border-bottom-left-radius: var(--radius-md);
+         border-bottom-right-radius: var(--radius-md);
 
          .content {
             ul {
@@ -73,7 +73,7 @@
                li {
                   display: block;
                   margin-bottom: 10px;
-                  font-size: 6px;
+                  font-size: 4.5px;
                   overflow-wrap: break-word;
                }
             }
@@ -89,13 +89,15 @@
          width: 0;
          height: 0;
          display: none;
-       }
-       &::-webkit-scrollbar-thumb {
+      }
+
+      &::-webkit-scrollbar-thumb {
          display: none;
       }
+
       &::-webkit-scrollbar-track {
-          display: none;
-       }
+         display: none;
+      }
    }
 
    .sidebar {
@@ -107,7 +109,7 @@
 
    }
 
-    
+
 }
 
 @import './responsive-main';

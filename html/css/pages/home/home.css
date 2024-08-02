@@ -9,7 +9,7 @@
 .container-sidebar .sidebar-title,
 .container-sidebar-mobile .sidebar-title {
   background-color: var(--primary-500);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   font-weight: 700;
   font-size: 15px;
   color: white;
@@ -38,7 +38,7 @@
   border: 1px solid var(--primary-500);
   overflow: hidden;
   flex: 0;
-  min-width: 130px;
+  min-width: 140px;
 }
 .list-card .card-item .avatar img {
   width: 100%;
@@ -48,15 +48,18 @@
 .list-card .card-item .info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   text-align: left;
   flex: 1;
+  line-height: 1.2;
+  font-size: 15px;
 }
 .list-card .card-item .info .title {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--primary-500);
+  letter-spacing: -0.5px;
 }
 .list-card .card-item .info .description {
   flex-grow: 1;
@@ -67,44 +70,80 @@
   gap: 8px;
 }
 .list-card .card-item .info .actions a {
-  font-size: 14px;
+  flex: 1;
   line-height: 1.2;
 }
 
-.container-sidebar-mobile {
+.sidebar-action-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--neutral-400);
+}
+.sidebar-action-controls .action-item {
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  color: white;
+  font-size: 20px;
+  background-color: var(--primary-500);
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.sidebar-action-controls .action-item.active {
+  background-color: var(--primary-800);
+}
+.sidebar-action-controls .action-item img {
+  width: 35px;
+  height: 35px;
+}
+.sidebar-action-controls .action-item#sidebar-btn-booking img {
+  height: 30px;
+}
+
+.actions .container-sidebar-mobile {
   background-color: transparent;
   position: static;
 }
-.container-sidebar-mobile .sidebar-title {
+.actions .container-sidebar-mobile .sidebar-title {
   border-radius: 0;
 }
-.container-sidebar-mobile .list-card {
+.actions .container-sidebar-mobile .list-card {
   padding: 8px;
 }
-.container-sidebar-mobile .list-card .card-item {
-  border-radius: var(--radius-md);
-  border: 1px solid var(--primary-500);
+.actions .container-sidebar-mobile .list-card .card-item {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-500);
   padding: 0;
   gap: 0;
 }
-.container-sidebar-mobile .list-card .card-item .avatar {
+.actions .container-sidebar-mobile .list-card .card-item .avatar {
   border-radius: 0;
   border: none;
-  width: 70px;
-  min-width: 65px;
+  min-width: 100px;
 }
-.container-sidebar-mobile .list-card .card-item .info {
+.actions .container-sidebar-mobile .list-card .card-item .info {
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 10px;
   padding: 10px;
   padding-left: 0;
+  letter-spacing: -0.5px;
 }
-.container-sidebar-mobile .list-card .card-item .info .title {
+.actions .container-sidebar-mobile .list-card .card-item .info .title {
   font-size: 11px;
 }
-.container-sidebar-mobile .list-card .card-item .info .btn {
+.actions .container-sidebar-mobile .list-card .card-item .info .subtitle {
+  margin-right: -15px;
+  margin-left: -25px;
+  font-size: 10px;
+  letter-spacing: -1px;
+}
+.actions .container-sidebar-mobile .list-card .card-item .info .btn {
   font-size: 12px;
 }
 
