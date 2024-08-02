@@ -104,28 +104,36 @@
   height: 30px;
 }
 
-.actions .container-sidebar-mobile {
+.container-sidebar-mobile {
   background-color: transparent;
   position: static;
 }
-.actions .container-sidebar-mobile .sidebar-title {
+.container-sidebar-mobile .copyright {
+  font-size: 6px;
+  color: var(--neutral-300);
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+  padding: 0 10px;
+}
+.container-sidebar-mobile .sidebar-title {
   border-radius: 0;
 }
-.actions .container-sidebar-mobile .list-card {
+.container-sidebar-mobile .list-card {
   padding: 8px;
 }
-.actions .container-sidebar-mobile .list-card .card-item {
+.container-sidebar-mobile .list-card .card-item {
   border-radius: var(--radius-lg);
   border: 1px solid var(--neutral-500);
   padding: 0;
   gap: 0;
 }
-.actions .container-sidebar-mobile .list-card .card-item .avatar {
+.container-sidebar-mobile .list-card .card-item .avatar {
   border-radius: 0;
   border: none;
   min-width: 100px;
 }
-.actions .container-sidebar-mobile .list-card .card-item .info {
+.container-sidebar-mobile .list-card .card-item .info {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -134,16 +142,16 @@
   padding-left: 0;
   letter-spacing: -0.5px;
 }
-.actions .container-sidebar-mobile .list-card .card-item .info .title {
+.container-sidebar-mobile .list-card .card-item .info .title {
   font-size: 11px;
 }
-.actions .container-sidebar-mobile .list-card .card-item .info .subtitle {
+.container-sidebar-mobile .list-card .card-item .info .subtitle {
   margin-right: -15px;
   margin-left: -25px;
   font-size: 10px;
   letter-spacing: -1px;
 }
-.actions .container-sidebar-mobile .list-card .card-item .info .btn {
+.container-sidebar-mobile .list-card .card-item .info .btn {
   font-size: 12px;
 }
 

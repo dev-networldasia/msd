@@ -272,7 +272,7 @@ a {
   position: sticky;
   top: 0px;
   z-index: 10;
-  margin-top: 20px;
+  margin-top: 0;
   transition: all 200ms ease-in-out;
 }
 .menu-header.is-sticky {
@@ -357,12 +357,15 @@ a {
   .root-container {
     gap: 15px;
   }
+  .menu-header {
+    margin-top: 20px;
+  }
   .container-content {
     flex-direction: row;
   }
   .container-content .main-container {
     width: 0;
-    max-height: auto;
+    max-height: 100%;
     overflow: hidden;
     border-radius: var(--radius-lg);
   }
