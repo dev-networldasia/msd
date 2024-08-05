@@ -100,7 +100,6 @@
   z-index: 2;
   left: 20px;
   top: 20px;
-  width: -moz-fit-content;
   width: fit-content;
   background-color: white;
   border-radius: var(--radius-md);
@@ -244,4 +243,4 @@
   .main-menu .nav-menu__item.active a {
     color: green;
   }
-}/*# sourceMappingURL=menu.css.map */
+}

@@ -191,6 +191,15 @@
             font-size: 26px;
          }
       }
+
+      &__items {
+         row-gap: 50px;
+      }
+   }
+
+   .routes-item {
+      min-width: 200px;
+      max-width: fit-content;
    }
 }
 

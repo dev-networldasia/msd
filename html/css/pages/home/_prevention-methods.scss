@@ -194,6 +194,7 @@
          // right: -15px;
          font-size: 30px;
          padding: 15px 15px;
+         border-radius: var(--radius-sm);
       }
 
       &__title {
@@ -224,13 +225,14 @@
          flex: 1;
 
          &__number {
-            padding: 15px 10px;
+            padding: 25px 15px;
+            width: 60px;
          }
 
          &__title {
             flex-grow: 1;
             text-align: left;
-            padding-left: 60px;
+            padding-left: 65px;
          }
       }
    }
