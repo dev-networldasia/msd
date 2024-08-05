@@ -1,7 +1,6 @@
 @import'./sidebar';
 @import'./section-1';
 @import'./section-2';
-@import'./prevention-methods';
 
 .container-content .main-container .body-main-content {
 
@@ -18,7 +17,6 @@
       z-index: -1;
       background-color: var(--neutral-900);
       opacity: 0.5;
-
    }
 }
 
