@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS Shape</title>
+   <style>
+      .shape {
+         width: 300px;
+         height: 150px;
+         background-color: #008080;
+         position: relative;
+         overflow: hidden;
+      }
+
+      .shape::before,
+      .shape::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         width: 0;
+         height: 0;
+         border-style: solid;
+         border-width: 0 50px 50px 50px;
+         border-color: transparent #008080 transparent transparent;
+      }
+
+      .shape::before {
+         left: 0;
+         transform: rotate(90deg);
+      }
+
+      .shape::after {
+         right: 0;
+         transform: rotate(-90deg);
+      }
+
+      .shape .bottom {
+         width: 100%;
+         height: 100%;
+         border-radius: 0 0 30px 30px;
+         background-color: #008080;
+         position: absolute;
+         bottom: 0;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="shape">
+      <div class="bottom"></div>
+   </div>
+</body>
+
+</html>
