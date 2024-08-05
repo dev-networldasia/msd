@@ -133,7 +133,7 @@
    // padding: 8px;
 
    .copyright {
-      font-size: 6px;
+      font-size: 5.8px;
       color: var(--neutral-300);
       margin-top: 15px;
       display: block;
@@ -187,3 +187,38 @@
       }
    }
 }
+
+@media (min-width: 1100px) {
+   .list-card {
+
+      .card-item {
+
+         .avatar {
+            min-width: 120px;
+         }
+
+         .info {
+            font-size: 13px;
+
+            .title {
+               font-size: 15px;
+            }
+
+            .subtitle {}
+
+            .actions {
+
+               a {
+                  font-size: 13px;
+                  flex: 1;
+                  line-height: 1.2;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 1300px) {}
+
+@media (min-width: 1500px) {}
