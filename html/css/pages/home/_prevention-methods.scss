@@ -2,6 +2,7 @@
    display: flex;
    justify-content: center;
    flex-direction: column;
+   padding: 5px;
 
    .line-top {
       border-top: 1px solid var(--primary-500);
@@ -16,7 +17,7 @@
       flex-direction: column;
       gap: 15px;
       margin-top: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 0;
    }
 }
 
@@ -73,14 +74,15 @@
    flex-wrap: wrap;
    justify-content: center;
    gap: 10px;
-   padding: 0 15px;
+   // padding: 0 15px;
    align-items: stretch;
+   // margin-bottom: 15px;
 
    .method-item {
       display: flex;
       flex-direction: row;
       align-items: center;
-      align-items: stretch;
+      // align-items: stretch;
       gap: 10px;
       background: white;
       border-radius: var(--radius-sm);
@@ -88,19 +90,19 @@
       filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
 
       color: var(--primary-500);
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 400;
       text-align: center;
-
-      width: 280px;
+      min-height: 60px;
+      width: 320px;
 
 
       &__number {
-         position: relative;
+         position: absolute;
          z-index: 1;
 
-         top: -15px;
-         padding: 15px 10px;
+         top: -5px;
+         padding: 10px 10px;
          min-width: 48px;
 
          font-size: 20px;
@@ -141,6 +143,7 @@
 
       &__title {
          flex-grow: 1;
+         padding-left: 52px;
       }
    }
 
@@ -176,6 +179,14 @@
 }
 
 @media (min-width: 1100px) {
+   .prevention-methods {
+      padding: 0 20px;
+
+      .line-top {
+         display: block;
+      }
+   }
+
    .ribbon-header {
 
       &__number {
@@ -201,6 +212,7 @@
    .methods {
       // align-items: stretch;
       margin-top: 20px;
+      margin-bottom: 20px;
 
       .method-item {
          font-size: 17px;
@@ -211,17 +223,25 @@
 
          flex: 1;
 
-         &__number {}
+         &__number {
+            padding: 15px 10px;
+         }
 
          &__title {
             flex-grow: 1;
             text-align: left;
+            padding-left: 60px;
          }
       }
    }
 }
 
-@media (min-width: 1300px) {}
+@media (min-width: 1300px) {
+   .prevention-methods {
+      padding: 0 40px;
+      margin-bottom: 20px;
+   }
+}
 
 
 @media (min-width: 1500px) {
