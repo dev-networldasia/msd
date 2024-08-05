@@ -203,7 +203,7 @@
       margin-top: 20px;
 
       .method-item {
-         font-size: 18px;
+         font-size: 17px;
          // width: auto;
          // min-width: 300px;
          min-width: 250px;
@@ -215,6 +215,7 @@
 
          &__title {
             flex-grow: 1;
+            text-align: left;
          }
       }
    }
@@ -238,7 +239,7 @@
          padding-left: 125px;
          width: 480px;
 
-         font-size: 30px;
+         font-size: 28px;
 
          sup {
             font-size: 15px;
