@@ -38,7 +38,7 @@
       padding: 10px;
       background-color: var(--sixth-500);
       border-radius: var(--radius-md);
-      margin-top: -14px;
+      margin-top: -3.8%;
       align-items: center;
       gap: 25px;
       box-shadow: 3px 3px 5px #00685a57;
@@ -152,7 +152,7 @@
    }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1100px) {
    .container-what-is-hpv {
       padding: 30px;
 
@@ -170,7 +170,7 @@
       }
 
       .viral-disease {
-         margin-top: -27px;
+         // margin-top: -27px;
          padding: 15px;
 
          .head-ribbon {
@@ -187,11 +187,9 @@
          }
 
          .reasons {
-
             gap: 15px;
-
-            .reason-item {
-               min-width: 280px;
+.reason-item {
+               min-width: 320px;
 
                &__icon-percent {
 
@@ -212,6 +210,10 @@
                   font-size: 15px;
                }
             }
+         }
+
+         .quote-footer {
+            font-size: 14px;
          }
       }
    }
@@ -235,7 +237,7 @@
       }
 
       .viral-disease {
-         margin-top: -31px;
+         // margin-top: -31px;
 
          .head-ribbon {
             padding: 20px 50px;
@@ -255,7 +257,7 @@
             gap: 15px;
 
             .reason-item {
-               min-width: 280px;
+               min-width: 380px;
 
                &__icon-percent {
 
