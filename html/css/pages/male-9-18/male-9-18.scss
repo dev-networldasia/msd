@@ -1,0 +1,25 @@
+@import'./sidebar';
+@import'./section-1';
+@import'./results-infection-hpv';
+@import'./prevention-methods';
+
+.container-content .main-container .body-main-content {
+
+   position: relative;
+   z-index: 1;
+
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      background: linear-gradient(0deg, #FCEA6F 0%, #00B4CF 100%);
+      opacity: 0.5;
+
+   }
+}
+
+@import './responsive'

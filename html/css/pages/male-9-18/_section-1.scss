@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap');
+
+.container-section-1 {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--neutral-900);
+   align-items: center;
+
+   .top-banner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+
+      .male-9-18-info {
+         width: 100%;
+         color: var(--neutral-900);
+         padding: 10px;
+         text-align: center;
+         background-color: var(--third-500);
+
+         &__title {
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+         }
+
+         &__des {
+            font-size: 10px;
+            line-height: 1.2;
+         }
+      }
+   }
+
+   .description {
+      display: flex;
+      width: 90%;
+      flex-direction: column;
+      background-color: var(--neutral-900);
+      border-radius: var(--radius-md);
+      align-items: center;
+      padding-top: 10px;
+
+      .group-image-male {
+         display: flex;
+         flex-direction: row;
+         background-color: var(--neutral-900);
+         border-radius: var(--radius-sm);
+
+         .img-male{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+
+            .male-9-18{
+               width: 325px;
+            }
+
+            .text-img{
+               width: 55%;
+               position: relative;
+            }
+            .text-img-1{
+               bottom: -10%;
+               left: -7%;
+            }
+            .text-img-2{
+               bottom: -10%;
+               right: -7%;
+            }
+         }
+      }
+
+      .disc-image-male{
+         width: 100%;
+         display: flex;
+         align-items: center;
+         position: relative;
+         z-index: 10;
+
+         .male-9-18-info__title{
+            width: 100%;
+            color: var(--neutral-900);
+            padding: 10px;
+            text-align: center;
+            background-color: var(--third-500);
+         }
+      }
+   }
+}
+
+@media (min-width: 1300px) {
+   .container-what-is-hpv {
+      padding: 30px;
+
+      .top-banner {
+         .hpv-info {
+            &__title {
+               font-weight: 700;
+               font-size: 25px;
+            }
+
+            &__des {
+               font-size: 16px;
+            }
+         }
+      }
+
+      .viral-disease {
+         margin-top: -27px;
+         padding: 15px;
+
+         .head-ribbon {
+            padding: 20px;
+            // margin-top: 10px;
+
+
+            &__title-1,
+            &__title-2 {
+               font-size: 20px;
+            }
+
+            &__title-2 {}
+         }
+
+         .reasons {
+
+            gap: 15px;
+
+            .reason-item {
+               min-width: 280px;
+
+               &__icon-percent {
+
+                  font-size: 16px;
+
+                  min-width: 60px;
+                  min-height: 60px;
+                  max-width: 60px;
+                  max-height: 60px;
+
+                  span {}
+               }
+
+               &__text {
+                  padding: 26px 0;
+                  margin-left: -40px;
+                  padding-left: 35px;
+                  font-size: 15px;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 1500px) {
+   .container-what-is-hpv {
+      padding: 40px;
+
+      .top-banner {
+         .hpv-info {
+            &__title {
+               font-weight: 700;
+               font-size: 30px;
+            }
+
+            &__des {
+               font-size: 20px;
+            }
+         }
+      }
+
+      .viral-disease {
+         margin-top: -31px;
+
+         .head-ribbon {
+            padding: 20px 50px;
+            // margin-top: 10px;
+
+
+            &__title-1,
+            &__title-2 {
+               font-size: 28px;
+            }
+
+            &__title-2 {}
+         }
+
+         .reasons {
+
+            gap: 15px;
+
+            .reason-item {
+               min-width: 280px;
+
+               &__icon-percent {
+
+                  font-size: 25px;
+
+                  min-width: 100px;
+                  min-height: 100px;
+                  max-width: 100px;
+                  max-height: 100px;
+
+                  span {}
+               }
+
+               &__text {
+                  padding: 26px 0;
+                  margin-left: -55px;
+                  padding-left: 50px;
+                  font-size: 22px;
+               }
+            }
+         }
+      }
+   }
+}
