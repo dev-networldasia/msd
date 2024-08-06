@@ -1,0 +1,136 @@
+.slide-posts {
+
+   .posts {
+      font-size: 1rem;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      // gap: 0.5em;
+   }
+}
+
+.post-item {
+   border-radius: var(--radius-sm);
+   background-color: white;
+
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+
+   text-align: center;
+   font-weight: 400;
+
+
+   &__title {
+      text-transform: uppercase;
+      font-size: 1.4em;
+      padding: .8em 1em;
+      color: var(--primary-500);
+      line-height: 1.3;
+   }
+
+   &__des {
+      text-transform: capitalize;
+      font-size: 1.3em;
+      padding: .8em 1em;
+      font-weight: 300;
+   }
+
+   &__tile,
+   &__des {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.5em;
+   }
+
+   &__action {
+      margin-bottom: 1em;
+
+      a {
+         color: var(--primary-500);
+         display: inline-block;
+         padding: .7em 1.2em;
+         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+         background-color: var(--secondary-500);
+         cursor: pointer;
+         border-radius: var(--radius-md);
+         font-size: 1.2em;
+         transition: all .3s ease-in;
+
+         &:hover {
+            background-color: var(--third-700);
+         }
+      }
+   }
+
+}
+
+.slide-posts .posts.swiper {
+   // overflow: visible;
+
+   .swiper-pagination {
+      position: relative;
+      margin-top: 1.5em;
+
+      .swiper-pagination-bullet-active {
+         background-color: var(--secondary-500);
+      }
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      background-color: transparent;
+      width: 4.5em;
+      height: 4.5em;
+      border-radius: 50%;
+      transition: all 0.2s ease-in;
+
+
+      &::after {
+         font-size: 2.5em;
+         color: var(--secondary-500)
+      }
+
+      &:hover {
+         background-color: rgba(255, 255, 255, 0.7);
+         box-shadow: 1px 1px 2px #3333334e;
+      }
+   }
+}
+
+.posts.swiper.is-blue {
+
+   .post-item {
+
+      &__title {
+         color: white;
+         background-color: var(--third-500);
+      }
+
+      &__action {
+         a {
+            background-color: var(--third-700);
+            color: white;
+
+            &:hover {
+               background-color: var(--third-600);
+            }
+         }
+      }
+   }
+
+   .swiper-pagination {
+      .swiper-pagination-bullet-active {
+         background-color: var(--third-500);
+      }
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      &::after {
+         color: var(--third-500)
+      }
+   }
+}
