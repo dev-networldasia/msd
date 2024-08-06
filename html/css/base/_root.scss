@@ -160,13 +160,17 @@ $third-500: #005CFF;
 
 
 .bg-gradient-primary {
-   background: linear-gradient(to bottom right,
-         #f8fcf8 0%,
-         #e1f5ea 20%,
-         #c9efe5 40%,
-         #a1e4db 60%,
-         #7cd3ce 80%,
-         #2fa89b 100%);
+
+   // background-size: 150% 100%;
+   background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+   background-image: radial-gradient(25% 70% at -1% 91%, #38ab9f 1%, #38ab9f 1%, #073AFF00 91%), radial-gradient(30% 53% at 62% 163%, #73F2FFFF 0%, #073AFF00 100%), linear-gradient(125deg, #FFFFFFFF 8%, #d3e9d6 44%, #ACE0C8FF 93%);
+   // background: linear-gradient(to bottom right,
+   //       #f8fcf8 0%,
+   //       #e1f5ea 20%,
+   //       #c9efe5 40%,
+   //       #a1e4db 60%,
+   //       #7cd3ce 80%,
+   //       #2fa89b 100%);
 }
 
 .bg-gradient-secondary {
