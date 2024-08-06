@@ -54,7 +54,6 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-  margin: auto;
 }
 
 /*
@@ -376,6 +375,7 @@ a {
   }
   .container-content {
     flex-direction: row;
+    gap: 20px;
   }
   .container-content .main-container {
     width: 0;
