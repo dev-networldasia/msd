@@ -12,7 +12,7 @@ function renderListMenuDesktop() {
             item.title === "Nữ giới" ? "is-female" : ""
         } ${item.title === "Nam giới" ? "is-male" : ""}`;
 
-        const link = `<a href="${item.link}">${item.title}</a>`;
+        const link = `<a href="${item.link}"><span>${item.title}</span></a>`;
         li.innerHTML = link;
 
         menuEl.appendChild(li);
@@ -113,13 +113,12 @@ function addEventToggleMenuMobile() {
     });
 
     document.addEventListener("click", (event) => {
-        console.log("🚀 ~ document.addEventListener ~ elBtn:", elBtn);
         if (elBtn.contains(event.target)) return;
 
         const containerSearch = document.querySelector(
             "#popup-menu-mobile #container-menu-mobile"
         );
-        if (!containerSearch.contains(event.target)) {
+        if (!containerSearch?.contains(event.target)) {
             removePopupMenuMobile();
         }
     });
