@@ -188,19 +188,16 @@
 
          .reasons {
             gap: 15px;
-.reason-item {
-               min-width: 320px;
+
+            .reason-item {
+               min-width: 280px;
 
                &__icon-percent {
-
                   font-size: 16px;
-
                   min-width: 60px;
                   min-height: 60px;
                   max-width: 60px;
                   max-height: 60px;
-
-                  span {}
                }
 
                &__text {
@@ -257,7 +254,7 @@
             gap: 15px;
 
             .reason-item {
-               min-width: 380px;
+               min-width: 350px;
 
                &__icon-percent {
 

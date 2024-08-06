@@ -33,11 +33,13 @@
    }
 
    &__items {
-      display: flex;
-      flex-wrap: wrap;
-      row-gap: 30px;
-      justify-content: center;
-      flex: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      // display: flex;
+      // flex-wrap: wrap;
+      row-gap: 40px;
+      // justify-content: center;
+      // flex: auto;
       margin-top: 25px;
       padding-bottom: 25px;
    }
@@ -176,6 +178,7 @@
       margin: 0 20px;
       margin-top: 30px;
 
+
       &__ribbon {
 
          box-shadow: 5px 5px 0px rgba(61, 175, 165, 0.7);
@@ -193,13 +196,17 @@
       }
 
       &__items {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+         align-items: center;
          row-gap: 50px;
       }
    }
 
    .routes-item {
-      min-width: 200px;
+      // min-width: 200px;
       max-width: fit-content;
+      align-self: center;
    }
 }
 
