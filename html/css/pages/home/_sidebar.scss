@@ -21,17 +21,19 @@
 .list-card {
    display: flex;
    flex-direction: column;
-   gap: 15px;
+   gap: 1.5em;
 
    .card-item {
+      font-size: 1rem;
+
       display: flex;
       flex-direction: row;
-      gap: 15px;
+      gap: 1.5em;
 
       background-color: white;
       border-radius: var(--radius-md);
-      padding: 10px;
-      font-size: 14px !important;
+      padding: 1em;
+      // font-size: 14px !important;
       flex: auto;
       overflow: hidden;
 
@@ -40,7 +42,7 @@
          border: 1px solid var(--primary-500);
          overflow: hidden;
          flex: 0;
-         min-width: 140px;
+         min-width: 14em;
 
          img {
             width: 100%;
@@ -53,21 +55,19 @@
       .info {
          display: flex;
          flex-direction: column;
-         gap: 12px;
+         gap: 0.7em;
          text-align: left;
          flex: 1;
          line-height: 1.2;
-         font-size: 15px;
+         font-size: 1.5em;
 
          .title {
             font-size: 18px;
             font-weight: 700;
             text-transform: uppercase;
             color: var(--primary-500);
-            letter-spacing: -0.5px;
+            letter-spacing: -0.05em;
          }
-
-         .subtitle {}
 
          .description {
             flex-grow: 1;
@@ -76,10 +76,10 @@
          .actions {
             display: flex;
             flex-direction: row;
-            gap: 8px;
+            gap: 0.8em;
 
             a {
-               // font-size: 14px;
+               font-size: 1.4em;
                flex: 1;
                // padding: 8px 20px;
                line-height: 1.2;
@@ -92,7 +92,7 @@
 .sidebar-action-controls {
    display: flex;
    flex-direction: column;
-   gap: 10px;
+   gap: 1em;
 
    color: var(--neutral-400);
 
@@ -100,27 +100,27 @@
       display: flex;
       flex-direction: row;
       border-radius: var(--radius-md);
-      padding: 10px 12px;
+      padding: 0.5em 2em;
       color: white;
-      font-size: 20px;
+      font-size: 2em;
       background-color: var(--primary-500);
       vertical-align: middle;
       align-items: center;
       justify-content: center;
-      gap: 7px;
+      gap: 0.7em;
 
       &.active {
          background-color: var(--primary-800);
       }
 
       img {
-         width: 35px;
-         height: 35px;
+         width: 2em;
+         height: 2em;
       }
 
       &#sidebar-btn-booking {
          img {
-            height: 30px;
+            height: 1.7em;
          }
       }
    }
@@ -133,7 +133,7 @@
    // padding: 8px;
 
    .copyright {
-      font-size: 5.8px;
+      font-size: 0.58em;
       color: var(--neutral-300);
       margin-top: 15px;
       display: block;
@@ -147,41 +147,48 @@
 
    .list-card {
       padding: 8px;
+      display: flex;
+      flex-direction: row;
+      gap: 1.5em;
+      flex-wrap: wrap;
 
       .card-item {
-         border-radius: var(--radius-lg);
+         border-radius: var(--radius-md);
          border: 1px solid var(--neutral-500);
          padding: 0;
          gap: 0;
+         flex: 1;
+         min-width: 31rem;
+         font-size: 1rem;
 
          .avatar {
             border-radius: 0;
             border: none;
-            min-width: 100px;
+            min-width: 10em;
          }
 
          .info {
             text-align: center;
             align-items: center;
             justify-content: center;
-            font-size: 10px;
-            padding: 10px;
+            font-size: 1em;
+            padding: 1em;
             padding-left: 0;
             letter-spacing: -0.5px;
 
             .title {
-               font-size: 11px;
+               font-size: 1.1em;
             }
 
             .subtitle {
                margin-right: -15px;
-               margin-left: -25px;
-               font-size: 10px;
-               letter-spacing: -1px;
+               margin-left: -2.5em;
+               font-size: 1em;
+               letter-spacing: -0.3px;
             }
 
             .btn {
-               font-size: 12px;
+               font-size: 1.2em;
             }
          }
       }
@@ -192,24 +199,22 @@
    .list-card {
 
       .card-item {
+         font-size: 1rem;
 
          .avatar {
-            min-width: 120px;
+            min-width: 12.5em;
          }
 
          .info {
-            font-size: 13px;
+            font-size: 1.3em;
 
             .title {
-               font-size: 15px;
+               font-size: 1.15em;
             }
 
-            .subtitle {}
-
             .actions {
-
                a {
-                  font-size: 13px;
+                  font-size: 1.4rem;
                   flex: 1;
                   line-height: 1.2;
                }

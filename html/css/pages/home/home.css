@@ -21,16 +21,16 @@
 .list-card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.5em;
 }
 .list-card .card-item {
+  font-size: 1rem;
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 1.5em;
   background-color: white;
   border-radius: var(--radius-md);
-  padding: 10px;
-  font-size: 14px !important;
+  padding: 1em;
   flex: auto;
   overflow: hidden;
 }
@@ -39,9 +39,10 @@
   border: 1px solid var(--primary-500);
   overflow: hidden;
   flex: 0;
-  min-width: 140px;
+  min-width: 14em;
 }
 .list-card .card-item .avatar img {
+  transition: all 0.3s ease-in-out;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -49,18 +50,18 @@
 .list-card .card-item .info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.7em;
   text-align: left;
   flex: 1;
   line-height: 1.2;
-  font-size: 15px;
+  font-size: 1.5em;
 }
 .list-card .card-item .info .title {
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--primary-500);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.05em;
 }
 .list-card .card-item .info .description {
   flex-grow: 1;
@@ -68,41 +69,50 @@
 .list-card .card-item .info .actions {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 0.8em;
 }
 .list-card .card-item .info .actions a {
+  font-size: 1.4em;
   flex: 1;
   line-height: 1.2;
+}
+.list-card .card-item:hover .avatar img {
+  transform: scale(1.1) rotateZ(2deg);
 }
 
 .sidebar-action-controls {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1em;
   color: var(--neutral-400);
 }
 .sidebar-action-controls .action-item {
   display: flex;
   flex-direction: row;
   border-radius: var(--radius-md);
-  padding: 10px 12px;
+  padding: 0.5em 2em;
   color: white;
-  font-size: 20px;
+  font-size: 2em;
   background-color: var(--primary-500);
   vertical-align: middle;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 0.7em;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.sidebar-action-controls .action-item:hover {
+  background-color: var(--primary-800);
 }
 .sidebar-action-controls .action-item.active {
   background-color: var(--primary-800);
 }
 .sidebar-action-controls .action-item img {
-  width: 35px;
-  height: 35px;
+  width: 2em;
+  height: 2em;
 }
 .sidebar-action-controls .action-item#sidebar-btn-booking img {
-  height: 30px;
+  height: 1.7em;
 }
 
 .container-sidebar-mobile {
@@ -110,7 +120,7 @@
   position: static;
 }
 .container-sidebar-mobile .copyright {
-  font-size: 5.8px;
+  font-size: 0.58em;
   color: var(--neutral-300);
   margin-top: 15px;
   display: block;
@@ -122,57 +132,68 @@
 }
 .container-sidebar-mobile .list-card {
   padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+  flex-wrap: wrap;
 }
 .container-sidebar-mobile .list-card .card-item {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   border: 1px solid var(--neutral-500);
   padding: 0;
   gap: 0;
+  flex: 1;
+  min-width: 31rem;
+  font-size: 1rem;
 }
 .container-sidebar-mobile .list-card .card-item .avatar {
   border-radius: 0;
   border: none;
-  min-width: 100px;
+  min-width: 10em;
 }
 .container-sidebar-mobile .list-card .card-item .info {
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
-  padding: 10px;
+  font-size: 1em;
+  padding: 1em;
   padding-left: 0;
   letter-spacing: -0.5px;
 }
 .container-sidebar-mobile .list-card .card-item .info .title {
-  font-size: 11px;
+  font-size: 1.1em;
 }
 .container-sidebar-mobile .list-card .card-item .info .subtitle {
   margin-right: -15px;
-  margin-left: -25px;
-  font-size: 10px;
-  letter-spacing: -1px;
+  margin-left: -2.5em;
+  font-size: 1em;
+  letter-spacing: -0.3px;
 }
 .container-sidebar-mobile .list-card .card-item .info .btn {
-  font-size: 12px;
+  font-size: 1.2em;
 }
 
 @media (min-width: 1100px) {
+  .list-card .card-item {
+    font-size: 1rem;
+  }
   .list-card .card-item .avatar {
-    min-width: 120px;
+    min-width: 12.5em;
   }
   .list-card .card-item .info {
-    font-size: 13px;
+    font-size: 1.3em;
   }
   .list-card .card-item .info .title {
-    font-size: 15px;
+    font-size: 1.15em;
   }
   .list-card .card-item .info .actions a {
-    font-size: 13px;
+    font-size: 1.4rem;
     flex: 1;
     line-height: 1.2;
   }
 }
 .container-what-is-hpv {
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -296,11 +317,11 @@
 
 @media (min-width: 1100px) {
   .container-what-is-hpv {
-    padding: 30px;
+    padding: 3em;
   }
   .container-what-is-hpv .top-banner .hpv-info__title {
     font-weight: 700;
-    font-size: 25px;
+    font-size: 2.5em;
   }
   .container-what-is-hpv .top-banner .hpv-info__des {
     font-size: 16px;
@@ -328,22 +349,22 @@
     max-height: 60px;
   }
   .container-what-is-hpv .viral-disease .reasons .reason-item__text {
-    padding: 26px 0;
-    margin-left: -40px;
-    padding-left: 35px;
-    font-size: 15px;
+    padding: 1.5em 0;
+    margin-left: -2.5em;
+    padding-left: 2.2em;
+    font-size: 1.5em;
   }
   .container-what-is-hpv .viral-disease .quote-footer {
     font-size: 14px;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1300px) {
   .container-what-is-hpv {
     padding: 40px;
   }
   .container-what-is-hpv .top-banner .hpv-info__title {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 2.5em;
   }
   .container-what-is-hpv .top-banner .hpv-info__des {
     font-size: 20px;
@@ -351,8 +372,11 @@
   .container-what-is-hpv .viral-disease .head-ribbon {
     padding: 20px 50px;
   }
-  .container-what-is-hpv .viral-disease .head-ribbon__title-1, .container-what-is-hpv .viral-disease .head-ribbon__title-2 {
-    font-size: 28px;
+  .container-what-is-hpv .viral-disease .head-ribbon__title-1 {
+    font-size: 2.5em;
+  }
+  .container-what-is-hpv .viral-disease .head-ribbon__title-2 {
+    font-size: 2.8em;
   }
   .container-what-is-hpv .viral-disease .reasons {
     gap: 15px;
@@ -368,18 +392,19 @@
     max-height: 100px;
   }
   .container-what-is-hpv .viral-disease .reasons .reason-item__text {
-    padding: 26px 0;
-    margin-left: -55px;
-    padding-left: 50px;
-    font-size: 22px;
+    padding: 2.1em 0;
+    margin-left: -2.8em;
+    padding-left: 3em;
+    font-size: 2.2em;
   }
 }
 .result-infection-hpv {
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 25px;
-  padding: 5px;
+  margin-top: 2.5em;
+  padding: 0.5em;
 }
 .result-infection-hpv .top-ribbon {
   position: relative;
@@ -426,22 +451,26 @@
   padding-top: 30px;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1100px) {
   .result-infection-hpv {
     padding: 20px;
   }
   .result-infection-hpv .top-ribbon {
     padding: 10px 25px;
-    font-size: 20px;
+    font-size: 2em;
+  }
+  .result-infection-hpv .top-ribbon .quote-element {
+    top: -1.2em;
   }
   .result-infection-hpv .top-ribbon .quote-element img {
     width: 45px;
   }
   .result-infection-hpv .top-ribbon .text-result-ribbon {
-    font-size: 20px;
+    font-size: 1em;
+    margin-top: -1.4em;
   }
   .result-infection-hpv .container-des {
-    font-size: 18px;
+    font-size: 1.5em;
   }
 }
 @media (min-width: 1500px) {
@@ -466,6 +495,7 @@
   }
 }
 .prevention-methods {
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -496,7 +526,7 @@
   z-index: 1;
   top: -10px;
   padding: 15px 10px;
-  font-size: 20px;
+  font-size: 2em;
   font-weight: 700;
   color: var(--primary-500);
   border-radius: var(--radius-sm);
@@ -511,6 +541,7 @@
   color: white;
   font-weight: 700;
   text-transform: uppercase;
+  font-size: 1.8em;
   margin-left: -50px;
   padding-left: 58px;
   width: 245px;
@@ -814,6 +845,7 @@
   }
 }
 .disease-routes {
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -850,6 +882,7 @@
 }
 
 .routes-item {
+  font-size: 1rem;
   position: relative;
   z-index: 1;
   display: flex;
@@ -887,6 +920,7 @@
   color: var(--primary-500);
 }
 .routes-item__number span {
+  font-size: 1.8em;
   background-color: white;
   display: flex;
   align-items: center;
@@ -983,16 +1017,16 @@
     padding-top: 0;
   }
   .routes-item__number {
-    min-width: 80px;
-    height: 80px;
-    min-height: 80px;
+    min-width: 6em;
+    height: 6em;
+    min-height: 6em;
     padding: 7.5px;
-    font-size: 26px;
+    font-size: 1.5em;
     top: -40px;
   }
   .routes-item__number span {
-    max-height: 65px;
-    min-height: 65px;
+    max-height: 1.4em;
+    min-height: 2.75em;
     box-shadow: 1.06px 1.06px 1.42px rgba(120, 120, 120, 0.35);
   }
   .routes-item__des {

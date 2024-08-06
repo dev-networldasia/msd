@@ -131,7 +131,7 @@
   flex: auto;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
+  padding: 0.5em 1.8em;
   background-color: transparent;
   box-shadow: none;
 }
@@ -156,12 +156,12 @@
 .main-menu .nav-menu {
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
+  gap: 0.4em;
   display: flex;
 }
 .main-menu .nav-menu ul {
   display: none;
-  gap: 8px;
+  gap: 0.3em;
   width: 100%;
   justify-content: center;
   justify-content: flex-end;
@@ -173,7 +173,7 @@
   text-transform: capitalize;
   text-decoration: none;
   display: block;
-  padding: 8px 10px;
+  padding: 0.6em 1.5em;
   border: 1px solid var(--primary-800);
   border-radius: 50px;
   font-size: 10px;
@@ -181,11 +181,31 @@
   color: var(--primary-800);
   font-weight: 400;
   text-align: center;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.main-menu .nav-menu__item a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: calc(100% + 2px);
+  background-color: var(--primary-800);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+  left: -2px;
 }
 .main-menu .nav-menu__item a:hover {
   background-color: var(--primary-800);
   border-color: var(--primary-500);
   color: white;
+}
+.main-menu .nav-menu__item a:hover:before {
+  width: calc(100% + 4px);
 }
 .main-menu .nav-menu__item.active a {
   color: green;
@@ -223,11 +243,29 @@
     flex-grow: 1;
     display: flex;
   }
+  .main-menu .nav-menu ul .nav-menu__item {
+    transition: all 250ms ease-in-out;
+  }
+  .main-menu .nav-menu ul .nav-menu__item.is-female a:hover {
+    color: var(--primary-500);
+    background-color: transparent;
+    border-color: var(--secondary-500);
+  }
+  .main-menu .nav-menu ul .nav-menu__item.is-female a:hover:before {
+    background-color: var(--secondary-500);
+  }
+  .main-menu .nav-menu ul .nav-menu__item.is-male a:hover {
+    background-color: transparent;
+    border-color: var(--third-500);
+  }
+  .main-menu .nav-menu ul .nav-menu__item.is-male a:hover:before {
+    background-color: var(--third-500);
+  }
   .popup-search .container-search {
     width: 400px;
   }
 }
-@media (min-width: 1350px) {
+@media (min-width: 1300px) {
   .main-menu .logos img {
     height: 65px;
   }
@@ -235,10 +273,11 @@
     display: flex;
   }
   .main-menu .nav-menu ul {
-    gap: 16px;
+    gap: 1em;
   }
   .main-menu .nav-menu__item a {
-    font-size: 13px;
+    padding: 0.8em 1.2em;
+    font-size: 1.3em;
   }
   .main-menu .nav-menu__item.active a {
     color: green;
