@@ -64,11 +64,36 @@
             font-weight: 400;
             text-align: center;
 
+            transition: all .4s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+
+            &:before {
+               content: '';
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               width: 0%;
+               height: calc(100% + 2px);
+               background-color: var(--primary-800);
+               transition: all .3s;
+               border-radius: 10rem;
+               z-index: -1;
+               left: -2px;
+            }
+
             &:hover {
                background-color: var(--primary-800);
                border-color: var(--primary-500);
                color: white;
+
+               &:before {
+                  width: calc(100% + 4px);
+               }
             }
+
+
          }
 
          &.active a {
@@ -121,17 +146,30 @@
                transition: all 250ms ease-in-out;
 
                &.is-female {
-                  &:hover a {
-                     color: var(--primary-500);
-                     background-color: var(--secondary-500);
-                     border-color: var(--secondary-500);
+
+                  a {
+                     &:hover {
+                        color: var(--primary-500);
+                        background-color: transparent;
+                        border-color: var(--secondary-500);
+
+                        &:before {
+                           background-color: var(--secondary-500);
+                        }
+                     }
                   }
                }
 
                &.is-male {
-                  &:hover a {
-                     background-color: var(--third-500);
-                     border-color: var(--third-500);
+                  a {
+                     &:hover {
+                        background-color: transparent;
+                        border-color: var(--third-500);
+
+                        &:before {
+                           background-color: var(--third-500);
+                        }
+                     }
                   }
                }
             }
@@ -175,3 +213,5 @@
 
    }
 }
+
+// @import './effect-btn-menu';

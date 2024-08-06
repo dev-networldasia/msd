@@ -258,6 +258,42 @@ a {
   border-radius: 50px;
 }
 
+.btn-primary-animation,
+.btn-dark-primary-animation {
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-primary-animation:before,
+.btn-dark-primary-animation:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: calc(100% + 2px);
+  background-color: var(--primary-500);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+  left: -2px;
+}
+.btn-primary-animation:hover,
+.btn-dark-primary-animation:hover {
+  background-color: transparent;
+  border-color: var(--primary-500);
+  color: white;
+}
+.btn-primary-animation:hover:before,
+.btn-dark-primary-animation:hover:before {
+  width: calc(100% + 4px);
+}
+
+.btn-dark-primary-animation:before {
+  background-color: var(--primary-800);
+}
+
 .container,
 .container-fluid {
   width: 100%;
