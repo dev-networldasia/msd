@@ -1,26 +1,51 @@
-.hpv-report {
+.container-truly{
+   background-color: var(--neutral-900);
    display: flex;
-   flex-wrap: wrap;
-   gap: 8px;
-   flex: auto;
-   margin-bottom: 15px;
-   padding: 0 15px;
-
-   .hpv-reports {
-      display: flex;
-      flex-wrap: wrap;
-      flex: 1;
-      gap: 15px;
-   }
+   position: relative;
+   justify-content: center;
 }
 
-.report-item {
+.group-truly{
    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   width: 90%;
+   border-radius: var(--radius-md);
+   background: linear-gradient(to bottom right, #306eff 0%, #306eff 25%, #53b7e8 50%, #7bd6e6 75%, #b1eced 100%);
+}
+
+.ribbon-truly{
+   width: fit-content;
+   color: var(--third-500);
+
+   padding: 10px 20px;
+   background-color: var(--neutral-900);
+   margin: 20px 0;
+   border-radius: var(--radius-sm);
+
+}
+
+.hpv-truly {
+   display: grid;
+   gap: 10px;
+   grid-template-columns: auto;
+   grid-auto-columns: 1fr;
+   grid-auto-rows: 1fr;
+   margin-bottom: 15px;
+   padding: 0 15px;
+}
+
+.truly-item {
+   display: flex;
+   flex: 1;
    background-color: white;
    position: relative;
-   flex: 1;
+   border-radius: var(--radius-sm);
+   padding: 10px 10px 10px 0;
+   height: auto;
 
-   padding: 8px;
    margin-left: 13px;
    min-width: 300px;
 
@@ -55,20 +80,29 @@
 
 
    &__content {
-      padding: 8px;
+      width: 100%;
       display: flex;
       align-items: center;
 
-      background: linear-gradient(-90deg, #EDF3FB 0%, #FFFFFF 100%);
-
       &__icon {
-         min-width: 50px;
+         height: 90%;
+         display: flex;
+         position: relative;
+         justify-content: center;
+         align-items: center;
+         border-right: 1px solid var(--forth-500);
+         padding: 0 10px;
+
+         img{
+            min-width: 40px;
+            display: block;
+            width: min-content;
+         }
       }
 
       &__des {
-         border-left: 1px solid var(--primary-500);
-         padding-left: 15px;
-         margin-left: 10px;
+         font-weight: 500;
+         margin: 0;
          color: var(--primary-500);
          font-size: 12px;
          text-align: justify;
@@ -93,7 +127,7 @@
          transform: skewY(1.5deg);
       }
 
-      .report-item__content__des {
+      .truly-item__content__des {
          // text-align: right;
          border-left: none;
          padding-left: 0;
@@ -102,7 +136,7 @@
          border-right: 1px solid var(--primary-500);
       }
 
-      .report-item__shape {
+      .truly-item__shape {
          right: -10px;
          left: auto;
          border-top-left-radius: 0;
@@ -113,59 +147,129 @@
    }
 }
 
-.report-item:nth-child(2) {
-   .report-item__shape {
-      background-color: var(--forth-500);
-   }
-
-   .report-item__content__des {
-      color: var(--forth-500);
+.truly-item__content__group{
+   padding-left: 10px;
+   p {
+      margin: 0;
+      margin-top: 0.5em;
+      color: var(--neutral-100);
+      font-size: 12px;
+      font-weight: 300;
+      text-align: justify;
    }
 }
 
-.report-item:nth-child(3) {
-   .report-item__content__des {
+.truly-item:nth-child(2) {
+   .truly-item__shape {
+      background-color: var(--forth-500);
+   }
+
+   .truly-item__content__des {
+      color: var(--forth-500);
+   }
+
+   .truly-item__content__icon{
+      border-color: var(--forth-500);
+   }
+}
+
+.truly-item:nth-child(3) {
+   .truly-item__content__des {
       color: var(--fifth-500);
    }
 
-   .report-item__shape {
+   .truly-item__shape {
       background-color: var(--fifth-500);
    }
+
+   .truly-item__content__icon{
+      border-color: var(--fifth-500);
+   }
+}
+
+.truly-item:nth-child(4) {
+   .truly-item__content__des {
+      color: var(--secondary-500);
+   }
+
+   .truly-item__shape {
+      background-color: var(--secondary-500);
+   }
+
+   .truly-item__content__icon{
+      border-color: var(--secondary-500);
+   }
+   
 }
 
 
 
 @media (min-width: 1100px) {
-   .hpv-report {
-      padding: 0 20px;
-      margin-top: 50px;
-
-      .hpv-reports {
-         gap: 20px;
-      }
+   .truly-item__content__group p, 
+   .truly-item .truly-item__content__des{
+      font-size: 16px;
    }
 
-   .report-item {
-      flex: 1 50% auto;
-
-      &__content__des {
-         font-size: 16px;
-      }
+   .truly-item__content__icon img {
+      min-width: 50px;
    }
 }
 
 @media (min-width: 1300px) {
-   .hpv-report {
-      padding: 0 40px;
+   .truly-item__content__group p, 
+   .truly-item .truly-item__content__des{
+      font-size: 18px;
    }
 
-   .report-item {
-      flex: 1 50% auto;
+   .truly-item__content__icon img {
+      min-width: 60px;
+   }
 
-      &__content__des {
-         font-size: 18px;
-      }
+   .truly-item__content__group {
+      padding-left: 25px;
+  }
+
+   .truly-item{
+      padding: 25px 25px 25px 0;
+   }
+   .truly-item__content__icon{
+      padding: 0 25px;
+   }
+
+   .truly-item__shape{
+      left: -14px;
+      width: 15px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
    }
 }
 
-@media (min-width: 1500px) {}
+@media (min-width: 1500px) {
+   .truly-item__content__group p, 
+   .truly-item .truly-item__content__des{
+      font-size: 20px;
+   }
+
+   .truly-item__content__group {
+      padding-left: 25px;
+  }
+
+   .truly-item{
+      padding: 25px 25px 25px 0;
+   }
+   .truly-item__content__icon{
+      padding: 0 25px;
+   }
+
+   .truly-item__content__icon img {
+      min-width: 60px;
+   }
+
+   .truly-item__shape{
+      left: -14px;
+      width: 15px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+   }
+
+}
