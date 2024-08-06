@@ -5,13 +5,7 @@
    const scriptElement = document.createElement('script');
    scriptElement.id = "js-load-lib-swiper"
    scriptElement.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
-   // scriptElement.type = 'module';
    document.body.appendChild(scriptElement);
-
-   scriptElement.addEventListener('load', function () {
-      console.log('Swiper script loaded successfully.');
-   });
-
 </script>
 
 <div class="posts swiper-posts swiper is-blue" id="post-list">
@@ -40,7 +34,6 @@
 
 
    const elLoadScriptLibSwiper = document.querySelector('#js-load-lib-swiper')
-   // console.log("🚀 ~ elLoadScriptLibSwiper:", elLoadScriptLibSwiper)
    if (elLoadScriptLibSwiper) {
       elLoadScriptLibSwiper.addEventListener('load', () => {
          var swiper = new Swiper(".swiper-posts", {
@@ -55,7 +48,6 @@
                prevEl: ".swiper-button-prev",
             },
          });
-         console.log("Swiper loaded", swiper);
       })
    }
 

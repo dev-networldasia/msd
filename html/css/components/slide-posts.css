@@ -81,11 +81,11 @@
   background-color: var(--third-500);
 }
 .posts.swiper.is-blue .post-item__action a {
-  background-color: var(--third-700);
+  background-color: var(--third-500);
   color: white;
 }
 .posts.swiper.is-blue .post-item__action a:hover {
-  background-color: var(--third-600);
+  background-color: var(--third-700);
 }
 .posts.swiper.is-blue .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--third-500);
