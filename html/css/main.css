@@ -54,7 +54,6 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-  margin: auto;
 }
 
 /*
@@ -317,10 +316,8 @@ a {
   width: 100%;
   max-height: 350px;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: cover;
+  object-position: top;
 }
 .container-content .body-main-content {
   flex-grow: 1;
@@ -347,10 +344,8 @@ a {
   overflow-wrap: break-word;
 }
 .container-content .footer-main-content.paragraph-2-col {
-  -moz-column-count: 2;
-       column-count: 2;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-count: 2;
+  column-gap: 10px;
 }
 .container-content::-webkit-scrollbar {
   width: 0;
@@ -380,6 +375,7 @@ a {
   }
   .container-content {
     flex-direction: row;
+    gap: 20px;
   }
   .container-content .main-container {
     width: 0;
@@ -400,10 +396,8 @@ a {
     border-bottom-right-radius: var(--radius-lg);
   }
   .container-content .main-container .footer-main-content.paragraph-2-col {
-    -moz-column-count: 2;
-         column-count: 2;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    column-count: 2;
+    column-gap: 40px;
   }
   .container-content .main-container .footer-main-content .content ul li {
     font-size: 10px;
@@ -423,4 +417,4 @@ a {
     max-width: 550px;
     min-width: 550px;
   }
-}/*# sourceMappingURL=main.css.map */
+}

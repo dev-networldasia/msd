@@ -44,8 +44,7 @@
 .list-card .card-item .avatar img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .list-card .card-item .info {
   display: flex;
@@ -216,7 +215,6 @@
   border-radius: var(--radius-sm);
   text-align: center;
   padding: 10px 15px;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .container-what-is-hpv .viral-disease .head-ribbon__title-1, .container-what-is-hpv .viral-disease .head-ribbon__title-2 {
@@ -320,7 +318,7 @@
     gap: 15px;
   }
   .container-what-is-hpv .viral-disease .reasons .reason-item {
-    min-width: 320px;
+    min-width: 280px;
   }
   .container-what-is-hpv .viral-disease .reasons .reason-item__icon-percent {
     font-size: 16px;
@@ -360,7 +358,7 @@
     gap: 15px;
   }
   .container-what-is-hpv .viral-disease .reasons .reason-item {
-    min-width: 380px;
+    min-width: 350px;
   }
   .container-what-is-hpv .viral-disease .reasons .reason-item__icon-percent {
     font-size: 25px;
@@ -413,7 +411,6 @@
   box-shadow: 2px 2px 0px #8CCABC;
   border-radius: 7px;
   margin-top: -15px;
-  width: -moz-fit-content;
   width: fit-content;
   font-size: 12px;
   color: white;
@@ -504,7 +501,6 @@
   color: var(--primary-500);
   border-radius: var(--radius-sm);
   background-color: var(--secondary-500);
-  height: -moz-fit-content;
   height: fit-content;
 }
 .ribbon-header__title {
@@ -564,7 +560,6 @@
   text-align: center;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  height: -moz-fit-content;
   height: fit-content;
 }
 .methods .method-item__number::after {
@@ -623,6 +618,7 @@
     top: -10px;
     font-size: 30px;
     padding: 15px 15px;
+    border-radius: var(--radius-sm);
   }
   .ribbon-header__title {
     padding: 10px;
@@ -644,12 +640,13 @@
     flex: 1;
   }
   .methods .method-item__number {
-    padding: 15px 10px;
+    padding: 25px 15px;
+    width: 60px;
   }
   .methods .method-item__title {
     flex-grow: 1;
     text-align: left;
-    padding-left: 60px;
+    padding-left: 65px;
   }
 }
 @media (min-width: 1300px) {
@@ -732,6 +729,9 @@
 }
 .report-item__content__icon {
   min-width: 50px;
+}
+.report-item__content__icon img {
+  margin: auto;
 }
 .report-item__content__des {
   border-left: 1px solid var(--primary-500);
@@ -843,11 +843,9 @@
   color: var(--secondary-500);
 }
 .disease-routes__items {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 30px;
-  justify-content: center;
-  flex: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  row-gap: 40px;
   margin-top: 25px;
   padding-bottom: 25px;
 }
@@ -971,6 +969,16 @@
     color: var(--secondary-500);
     font-size: 26px;
   }
+  .disease-routes__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    align-items: center;
+    row-gap: 50px;
+  }
+  .routes-item {
+    max-width: fit-content;
+    align-self: center;
+  }
 }
 @media (min-width: 1300px) {
   .routes-item {
@@ -1048,4 +1056,4 @@
   .container-sidebar {
     top: 90px;
   }
-}/*# sourceMappingURL=home.css.map */
+}
