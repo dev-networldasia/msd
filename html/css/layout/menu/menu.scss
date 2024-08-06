@@ -7,7 +7,7 @@
    flex: auto;
    align-items: center;
    justify-content: space-between;
-   padding: 5px;
+   padding: 0.5em 1.8em;
    background-color: transparent;
    box-shadow: none;
    // margin-top: 15px;
@@ -37,12 +37,12 @@
    .nav-menu {
       justify-content: space-between;
       align-items: center;
-      gap: 5px;
+      gap: 0.4em;
       display: flex;
 
       ul {
          display: none;
-         gap: 8px;
+         gap: 0.3em;
          width: 100%;
          justify-content: center;
          justify-content: flex-end;
@@ -55,7 +55,7 @@
             text-transform: capitalize;
             text-decoration: none;
             display: block;
-            padding: 8px 10px;
+            padding: 0.6em 1.5em;
             border: 1px solid var(--primary-800);
             border-radius: 50px;
             font-size: 10px;
@@ -100,4 +100,78 @@
 }
 
 
-@import './responsive-menu';
+@media (min-width: 1100px) {
+   .main-menu {
+      // margin-top: 15px;
+      background-color: white;
+      justify-content: flex-start;
+
+      .btn-open-menu-mobile {
+         display: none;
+      }
+
+      .nav-menu {
+         flex-grow: 1;
+
+         ul {
+            flex-grow: 1;
+            display: flex;
+
+            .nav-menu__item {
+               transition: all 250ms ease-in-out;
+
+               &.is-female {
+                  &:hover a {
+                     color: var(--primary-500);
+                     background-color: var(--secondary-500);
+                     border-color: var(--secondary-500);
+                  }
+               }
+
+               &.is-male {
+                  &:hover a {
+                     background-color: var(--third-500);
+                     border-color: var(--third-500);
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .popup-search .container-search {
+      width: 400px;
+   }
+}
+
+@media (min-width: 1300px) {
+   .main-menu {
+      .logos {
+         img {
+            height: 65px
+         }
+      }
+
+      .nav-menu {
+         display: flex;
+
+         ul {
+            gap: 1em;
+         }
+
+         &__item {
+
+            a {
+               padding: 0.8em 1.2em;
+               font-size: 1.3em;
+            }
+
+            &.active a {
+               color: green;
+            }
+         }
+
+      }
+
+   }
+}

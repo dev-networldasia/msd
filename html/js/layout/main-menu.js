@@ -8,7 +8,9 @@ function renderListMenuDesktop() {
 
     mainMenuData.forEach((item) => {
         const li = document.createElement("li");
-        li.className = "nav-menu__item";
+        li.className = `nav-menu__item ${
+            item.title === "Nữ giới" ? "is-female" : ""
+        } ${item.title === "Nam giới" ? "is-male" : ""}`;
 
         const link = `<a href="${item.link}">${item.title}</a>`;
         li.innerHTML = link;
