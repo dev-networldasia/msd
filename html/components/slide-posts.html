@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="./css/components/slide-posts.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<script type="text/javascript">
+   const scriptElement = document.createElement('script');
+   scriptElement.id = "js-load-lib-swiper"
+   scriptElement.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
+   // scriptElement.type = 'module';
+   document.body.appendChild(scriptElement);
+
+   scriptElement.addEventListener('load', function () {
+      console.log('Swiper script loaded successfully.');
+   });
+
+</script>
+
+<div class="posts swiper-posts swiper is-blue" id="post-list">
+   <!-- Additional required wrapper -->
+   <div class="swiper-wrapper">
+      <!-- Slides -->
+   </div>
+   <!-- If we need pagination -->
+   <div class="swiper-pagination"></div>
+
+   <!-- If we need navigation buttons -->
+   <div class="swiper-button-prev"></div>
+   <div class="swiper-button-next"></div>
+
+   <!-- If we need scrollbar -->
+   <!-- <div class="swiper-scrollbar"></div> -->
+</div>
+
+
+
+<script type="text/javascript" id="js-slide-posts">
+   var scriptElement = document.createElement('script');
+   scriptElement.src = "./js/components/slide-posts.js";
+   scriptElement.type = 'module';
+   document.body.appendChild(scriptElement);
+
+
+   const elLoadScriptLibSwiper = document.querySelector('#js-load-lib-swiper')
+   // console.log("🚀 ~ elLoadScriptLibSwiper:", elLoadScriptLibSwiper)
+   if (elLoadScriptLibSwiper) {
+      elLoadScriptLibSwiper.addEventListener('load', () => {
+         var swiper = new Swiper(".swiper-posts", {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            pagination: {
+               el: ".swiper-pagination",
+               clickable: true,
+            },
+            navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+            },
+         });
+         console.log("Swiper loaded", swiper);
+      })
+   }
+
+</script>
