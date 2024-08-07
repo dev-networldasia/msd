@@ -3,7 +3,7 @@ function renderListPost() {
         ".slide-posts .posts#post-list .swiper-wrapper"
     );
 
-    if (!postListEl) return console.log("Not found element!");
+    if (!postListEl) return;
 
     posts.forEach((post) => {
         const item = document.createElement("div");
