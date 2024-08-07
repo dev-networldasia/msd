@@ -471,6 +471,8 @@
   }
   .result-infection-hpv .container-des {
     font-size: 1.5em;
+    padding: 1.2em;
+    padding-top: 2.2em;
   }
 }
 @media (min-width: 1500px) {
@@ -653,7 +655,7 @@
   }
   .ribbon-header__title {
     padding: 10px;
-    padding-left: 60px;
+    padding-left: 6.5em;
     width: 320px;
     font-size: 22px;
   }
@@ -677,7 +679,7 @@
   .methods .method-item__title {
     flex-grow: 1;
     text-align: left;
-    padding-left: 65px;
+    padding-left: 4em;
   }
 }
 @media (min-width: 1300px) {
@@ -876,6 +878,7 @@
 .disease-routes__items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: stretch;
   row-gap: 40px;
   margin-top: 25px;
   padding-bottom: 25px;
@@ -1003,35 +1006,33 @@
   .disease-routes__items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    align-items: center;
     row-gap: 50px;
   }
   .routes-item {
     max-width: fit-content;
-    align-self: center;
   }
 }
 @media (min-width: 1300px) {
   .routes-item {
-    padding: 15px;
+    padding: 1em;
     padding-top: 0;
   }
   .routes-item__number {
-    min-width: 6em;
-    height: 6em;
-    min-height: 6em;
+    min-width: 5.5em;
+    height: 5.5em;
+    min-height: 5.5em;
     padding: 7.5px;
-    font-size: 1.5em;
+    font-size: 1.4em;
     top: -40px;
   }
   .routes-item__number span {
     max-height: 1.4em;
-    min-height: 2.75em;
+    min-height: 2.4em;
     box-shadow: 1.06px 1.06px 1.42px rgba(120, 120, 120, 0.35);
   }
   .routes-item__des {
     padding: 65px 15px 15px 15px;
-    font-size: 20px;
+    font-size: 1.7em;
   }
   .routes-item:nth-child(2n) {
     padding-top: 15px;
