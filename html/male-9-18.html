@@ -22,6 +22,12 @@
    <!-- Load Data For Page Home -->
    <script src="./js/data/home.js"></script>
 
+   <!-- Load Data For Sidebar Cop -->
+   <script src="./js/data/sidebar.js"></script>
+
+   <!-- Load Data For Slide Posts -->
+   <script src="./js/data/slide-posts.js"></script>
+
    <!-- Load JS Utils -->
    <script src="./js/index.js"></script>
 
@@ -86,11 +92,13 @@
 
 
          <!-- Sidebar content -->
-         <div class="sidebar" id="sidebar">
+         <link rel="stylesheet" href="./css/components/sidebar-child-page.css">
+         <div class="sidebar is-blue" id="sidebar">
             <script type="text/javascript">
-               loadHtmlComponent('./pages/male-9-18/', 'sidebar', 'sidebar')
+               loadHtmlComponent('./components/', 'sidebar', 'sidebar-child-page')
             </script>
          </div>
+
       </main>
 
 
@@ -104,20 +112,18 @@
 
 
    <!-- Fast Action Controls -->
-   <div class="fast-action-controls" id="fast-controls">
+   <div class="fast-action-controls" id="fast-action-controls">
       <script type="text/javascript">
-         loadHtmlComponent('./layout/fast-controls/', 'fast-controls')
+         loadHtmlComponent('./components/', 'fast-action-controls', 'fast-action-controls')
       </script>
    </div>
 
-
-   <!-- Menu footer mobile -->
-   <div class="menu-footer-mobile" id="menu-footer-mobile">
+   <!-- Fast Action Controls -->
+   <div class="mobile-fast-action-controls" id="mobile-fast-action-controls">
       <script type="text/javascript">
-         loadHtmlComponent('./layout/menu-footer-mobile/', 'menu-footer-mobile')
+         loadHtmlComponent('./layout/fast-controls/', 'mobile-fast-action-controls')
       </script>
    </div>
-
 
    <!-- Icons SVG  -->
    <div id="icon-svg" style="display: none;">
@@ -127,7 +133,7 @@
    </div>
 
    <!-- Load Data For Slide Posts -->
-   <script src="./js/data/slide-posts.js"></script>
+   <!-- <script src="./js/data/slide-posts.js"></script> -->
 </body>
 
 </html>

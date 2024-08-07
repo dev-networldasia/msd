@@ -1,6 +1,6 @@
 function renderListPost() {
     const postListEl = document.querySelector(
-        ".slide-posts .posts#post-list .swiper-wrapper"
+        ".slide-posts .posts#post-list-mobile .swiper-wrapper.mobile"
     );
     if (!postListEl) return;
 
@@ -9,7 +9,7 @@ function renderListPost() {
         item.className = "swiper-slide post-item box-shadow-sm";
         const contentCardItem = `
                <div class="post-item__title bg-secondary">
-                  <span> ${post.title}</span>
+                 <span> ${post.title}</span>
                </div>
                <div class="post-item__avatar">
                   <img src="${post.avatar}" alt="  ${post.title}">
