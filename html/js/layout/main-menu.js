@@ -29,7 +29,6 @@ function addEventForButtonSearch() {
     if (!elBtn) return console.log("Not found element!");
 
     elBtn.addEventListener("click", (e) => {
-        console.log("search click");
         createPopupSearch();
     });
 

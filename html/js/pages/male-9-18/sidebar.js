@@ -1,7 +1,7 @@
 function renderListCard() {
     const listCardEl = document.querySelector("#sidebar-list-card");
 
-    if (!listCardEl) return console.log("Not found element!");
+    if (!listCardEl) return;
 
     homeSidebarCards.forEach((card) => {
         const item = document.createElement("div");

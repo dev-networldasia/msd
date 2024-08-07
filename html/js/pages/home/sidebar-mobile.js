@@ -1,7 +1,7 @@
 function renderListCardMobile() {
     const listCardEl = document.querySelector("#sidebar-list-card-mobile");
 
-    if (!listCardEl) return console.log("Not found element!");
+    if (!listCardEl) return;
 
     homeSidebarCards.forEach((card) => {
         const item = document.createElement("div");
