@@ -60,3 +60,15 @@
       background-color: var(--primary-800);
    }
 }
+
+.btn-primary-animation.is-blue {
+   &:before {
+      background-color: var(--third-800);
+   }
+}
+
+.btn-primary-animation.is-yellow {
+   &:before {
+      background-color: var(--secondary-800);
+   }
+}

@@ -22,47 +22,45 @@
 .list-card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.5em;
 }
 .list-card .card-item {
+  font-size: 1rem;
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 1.5em;
   background-color: white;
   border-radius: var(--radius-md);
-  padding: 10px;
-  font-size: 14px !important;
+  padding: 1em;
   flex: auto;
   overflow: hidden;
 }
 .list-card .card-item .avatar {
-  border-radius: var(--radius-md);
-  border: 1px solid var(--primary-500);
   overflow: hidden;
   flex: 0;
-  min-width: 140px;
+  min-width: 14em;
 }
 .list-card .card-item .avatar img {
+  transition: all 0.3s ease-in-out;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .list-card .card-item .info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.7em;
   text-align: left;
   flex: 1;
   line-height: 1.2;
-  font-size: 15px;
+  font-size: 1.5em;
 }
 .list-card .card-item .info .title {
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--primary-500);
-  letter-spacing: -0.5px;
+  color: var(--third-500);
+  letter-spacing: -0.05em;
 }
 .list-card .card-item .info .description {
   flex-grow: 1;
@@ -70,41 +68,50 @@
 .list-card .card-item .info .actions {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 0.8em;
 }
 .list-card .card-item .info .actions a {
+  font-size: 1.4em;
   flex: 1;
   line-height: 1.2;
+}
+.list-card .card-item:hover .avatar img {
+  transform: scale(1.1) rotateZ(2deg);
 }
 
 .sidebar-action-controls {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1em;
   color: var(--neutral-400);
 }
 .sidebar-action-controls .action-item {
   display: flex;
   flex-direction: row;
   border-radius: var(--radius-md);
-  padding: 10px 12px;
+  padding: 0.5em 2em;
   color: white;
-  font-size: 20px;
+  font-size: 2em;
   background-color: var(--primary-500);
   vertical-align: middle;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 0.7em;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.sidebar-action-controls .action-item:hover {
+  background-color: var(--primary-800);
 }
 .sidebar-action-controls .action-item.active {
   background-color: var(--primary-800);
 }
 .sidebar-action-controls .action-item img {
-  width: 35px;
-  height: 35px;
+  width: 2em;
+  height: 2em;
 }
 .sidebar-action-controls .action-item#sidebar-btn-booking img {
-  height: 30px;
+  height: 1.7em;
 }
 
 .container-sidebar-mobile {
@@ -112,7 +119,7 @@
   position: static;
 }
 .container-sidebar-mobile .copyright {
-  font-size: 6px;
+  font-size: 0.58em;
   color: var(--neutral-300);
   margin-top: 15px;
   display: block;
@@ -124,40 +131,66 @@
 }
 .container-sidebar-mobile .list-card {
   padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+  flex-wrap: wrap;
 }
 .container-sidebar-mobile .list-card .card-item {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   border: 1px solid var(--neutral-500);
   padding: 0;
   gap: 0;
+  flex: 1;
+  min-width: 31rem;
+  font-size: 1rem;
 }
 .container-sidebar-mobile .list-card .card-item .avatar {
   border-radius: 0;
   border: none;
-  min-width: 100px;
+  min-width: 10em;
 }
 .container-sidebar-mobile .list-card .card-item .info {
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
-  padding: 10px;
+  font-size: 1em;
+  padding: 1em;
   padding-left: 0;
   letter-spacing: -0.5px;
 }
 .container-sidebar-mobile .list-card .card-item .info .title {
-  font-size: 11px;
+  font-size: 1.1em;
 }
 .container-sidebar-mobile .list-card .card-item .info .subtitle {
   margin-right: -15px;
-  margin-left: -25px;
-  font-size: 10px;
-  letter-spacing: -1px;
+  margin-left: -2.5em;
+  font-size: 1em;
+  letter-spacing: -0.3px;
 }
 .container-sidebar-mobile .list-card .card-item .info .btn {
-  font-size: 12px;
+  font-size: 1.2em;
 }
 
+@media (min-width: 1100px) {
+  .list-card .card-item {
+    font-size: 1rem;
+  }
+  .list-card .card-item .avatar {
+    min-width: 12.5em;
+  }
+  .list-card .card-item .info {
+    font-size: 1.3em;
+  }
+  .list-card .card-item .info .title {
+    font-size: 1.15em;
+  }
+  .list-card .card-item .info .actions a {
+    font-size: 1.4rem;
+    flex: 1;
+    line-height: 1.2;
+  }
+}
 .container-section-1 {
   width: 100%;
   display: flex;
@@ -415,7 +448,6 @@
 }
 .container-section-2 .container-des .thinking .thinking-2 img {
   width: 72%;
-  height: -moz-fit-content;
   height: fit-content;
 }
 .container-section-2 .container-des .thinking .thinking-3 {
@@ -423,7 +455,6 @@
 }
 .container-section-2 .container-des .thinking .thinking-3 img {
   width: 30%;
-  height: -moz-fit-content;
   height: fit-content;
 }
 .container-section-2 .container-des .thinking .thinking-4 {
@@ -432,7 +463,6 @@
 }
 .container-section-2 .container-des .thinking .thinking-4 img {
   width: 44%;
-  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -471,7 +501,6 @@
   }
   .container-des .thinking .thinking-2 img {
     width: 72%;
-    height: -moz-fit-content;
     height: fit-content;
   }
   .container-des .thinking .thinking-3 {
@@ -479,7 +508,6 @@
   }
   .container-des .thinking .thinking-3 img {
     width: 30%;
-    height: -moz-fit-content;
     height: fit-content;
   }
   .container-des .thinking .thinking-4 {
@@ -488,7 +516,6 @@
   }
   .container-des .thinking .thinking-4 img {
     width: 44%;
-    height: -moz-fit-content;
     height: fit-content;
   }
 }
@@ -513,7 +540,6 @@
   }
   .container-des .thinking .thinking-2 img {
     width: 72%;
-    height: -moz-fit-content;
     height: fit-content;
   }
   .container-des .thinking .thinking-4 img {
@@ -563,7 +589,6 @@
 }
 
 .ribbon-truly {
-  width: -moz-fit-content;
   width: fit-content;
   color: var(--third-500);
   padding: 10px 20px;
@@ -635,7 +660,6 @@
 .truly-item__content__icon img {
   min-width: 40px;
   display: block;
-  width: -moz-min-content;
   width: min-content;
 }
 .truly-item__content__des {
@@ -872,4 +896,4 @@
   .container-sidebar {
     top: 90px;
   }
-}/*# sourceMappingURL=male-9-18.css.map */
+}
