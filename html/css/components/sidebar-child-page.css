@@ -79,41 +79,6 @@
   transform: scale(1.1) rotateZ(2deg);
 }
 
-.sidebar-action-controls {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  color: var(--neutral-400);
-}
-.sidebar-action-controls .action-item {
-  display: flex;
-  flex-direction: row;
-  border-radius: var(--radius-md);
-  padding: 0.5em 2em;
-  color: white;
-  font-size: 2em;
-  background-color: var(--primary-500);
-  vertical-align: middle;
-  align-items: center;
-  justify-content: center;
-  gap: 0.7em;
-  cursor: pointer;
-  transition: all 0.3s ease-in;
-}
-.sidebar-action-controls .action-item:hover {
-  background-color: var(--primary-800);
-}
-.sidebar-action-controls .action-item.active {
-  background-color: var(--primary-800);
-}
-.sidebar-action-controls .action-item img {
-  width: 2em;
-  height: 2em;
-}
-.sidebar-action-controls .action-item#sidebar-btn-booking img {
-  height: 1.7em;
-}
-
 .container-sidebar-mobile {
   background-color: transparent;
   position: static;
@@ -183,6 +148,24 @@
 .sidebar .container-sidebar .list-card .card-item .actions a,
 .container-sidebar-mobile .list-card .card-item .actions a {
   border-color: var(--third-500);
+}
+
+.sidebar.is-yellow .container-sidebar .sidebar-title,
+.container-sidebar-mobile .sidebar-title {
+  background-color: var(--secondary-500);
+  color: var(--primary-500);
+}
+.sidebar.is-yellow .container-sidebar .list-card .card-item .info .title,
+.container-sidebar-mobile .list-card .card-item .info .title {
+  color: var(--primary-500);
+}
+.sidebar.is-yellow .container-sidebar .list-card .card-item .actions a,
+.container-sidebar-mobile .list-card .card-item .actions a {
+  border-color: var(--primary-500);
+}
+.sidebar.is-yellow .container-sidebar .list-card .card-item .actions a::before,
+.container-sidebar-mobile .list-card .card-item .actions a::before {
+  background-color: var(--primary-500);
 }
 
 @media (min-width: 1100px) {
