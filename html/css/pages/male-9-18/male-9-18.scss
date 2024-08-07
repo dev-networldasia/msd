@@ -1,10 +1,10 @@
-@import'./sidebar';
 @import'./section-1';
 @import'./section-2';
 @import'./truly';
 @import'./quote';
 
 .container-content .main-container .body-main-content {
+
 
    position: relative;
    z-index: 1;
@@ -22,7 +22,7 @@
    }
 }
 
-.main-content{
+.main-content {
    background-color: var(--neutral-900);
 }
 
