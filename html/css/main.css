@@ -209,6 +209,10 @@ a {
   --radius-lg: 30px;
 }
 
+.bg-white {
+  background-color: white;
+}
+
 .bg-primary {
   background-color: var(--primary-500);
 }
@@ -314,12 +318,18 @@ a {
 .container,
 .container-fluid {
   width: 100%;
-  padding-right: 2.75rem;
-  padding-left: 2.75rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
 }
 
+@media (min-width: 1100px) {
+  .container {
+    padding-right: 2.75rem;
+    padding-left: 2.75rem;
+  }
+}
 @media (min-width: 1500px) {
   .container {
     max-width: 1500px;
