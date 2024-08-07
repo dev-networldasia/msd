@@ -122,6 +122,9 @@
   color: var(--third-500);
 }
 
+.is-yellow .slide-posts {
+  background-color: transparent;
+}
 .is-yellow .posts.swiper .post-item__title {
   color: var(--primary-500);
   background-color: var(--secondary-500);
