@@ -16,10 +16,10 @@
 }
 .container-section-1 .top-banner .male-9-18-info {
   width: 100%;
-  color: var(--neutral-900);
+  color: var(--primary-500);
   padding: 10px;
   text-align: center;
-  background-color: var(--third-500);
+  background-color: var(--secondary-500);
 }
 .container-section-1 .top-banner .male-9-18-info__title {
   font-weight: 700;
@@ -78,10 +78,10 @@
 }
 .container-section-1 .description .disc-image-male .male-9-18-info__title {
   width: 100%;
-  color: var(--neutral-900);
+  color: var(--primary-500);
   padding: 20px 0;
   text-align: center;
-  background-color: var(--third-500);
+  background-color: var(--secondary-500);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -188,10 +188,10 @@
 }
 .container-section-2 .top-ribbon {
   text-align: center;
-  background-color: var(--third-500);
+  background-color: var(--secondary-500);
   border-radius: var(--radius-sm);
   box-shadow: 4px 4px 0px #CEEBEE;
-  color: var(--neutral-900);
+  color: var(--primary-500);
   padding: 10px 30px;
   font-size: 12px;
   line-height: 1.5;
@@ -387,16 +387,17 @@
   position: relative;
   width: 100%;
   border-radius: var(--radius-md);
-  background: linear-gradient(to bottom right, #306eff 0%, #306eff 25%, #53b7e8 50%, #7bd6e6 75%, #b1eced 100%);
+  background: url("../../../images/female-9-18/bg-trully-section.png") no-repeat center;
 }
 
 .ribbon-truly {
   width: fit-content;
-  color: var(--third-500);
+  color: var(--primary-500);
   padding: 10px 20px;
   background-color: var(--neutral-900);
   margin: 20px 0;
   border-radius: var(--radius-sm);
+  background: url("../../../images/female-9-18/bg-ribbon.png") no-repeat center;
 }
 
 .hpv-truly {
@@ -551,6 +552,9 @@
     margin: 1.5em;
     margin-right: 0;
   }
+  .ribbon-truly {
+    font-size: 1.5em;
+  }
   .truly-item__content__group p,
   .truly-item .truly-item__content__des {
     font-size: 16px;
@@ -621,13 +625,14 @@
   align-items: center;
   font-size: 15px;
   margin: 20px 0;
-  color: var(--third-500);
 }
 .description-quote .content-quote {
   text-align: center;
+  color: var(--primary-500);
 }
 .description-quote .icon-quote {
   margin-top: 5px;
+  color: var(--secondary-500);
 }
 
 @media (min-width: 1100px) {
@@ -683,10 +688,6 @@
   z-index: -1;
   background-color: var(--neutral-900);
   opacity: 0.5;
-}
-
-.main-content {
-  background-color: var(--neutral-900);
 }
 
 @media (min-width: 1100px) {

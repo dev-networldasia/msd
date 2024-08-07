@@ -84,6 +84,12 @@
    }
 
    .footer-main-content {
+      &.bg-secondary {
+         color: var(--neutral-200);
+      }
+   }
+
+   .footer-main-content {
       // white-space: break-spaces;
       font-size: 11px;
       text-align: justify;

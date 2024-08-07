@@ -99,50 +99,50 @@
    }
 }
 
-.sidebar-action-controls {
-   display: flex;
-   flex-direction: column;
-   gap: 1em;
+// .sidebar-action-controls {
+//    display: flex;
+//    flex-direction: column;
+//    gap: 1em;
 
-   color: var(--neutral-400);
+//    color: var(--neutral-400);
 
-   .action-item {
-      display: flex;
-      flex-direction: row;
-      border-radius: var(--radius-md);
-      padding: 0.5em 2em;
-      color: white;
-      font-size: 2em;
-      background-color: var(--primary-500);
-      vertical-align: middle;
-      align-items: center;
-      justify-content: center;
-      gap: 0.7em;
-      cursor: pointer;
+//    .action-item {
+//       display: flex;
+//       flex-direction: row;
+//       border-radius: var(--radius-md);
+//       padding: 0.5em 2em;
+//       color: white;
+//       font-size: 2em;
+//       background-color: var(--primary-500);
+//       vertical-align: middle;
+//       align-items: center;
+//       justify-content: center;
+//       gap: 0.7em;
+//       cursor: pointer;
 
-      transition: all 0.3s ease-in;
+//       transition: all 0.3s ease-in;
 
-      &:hover {
-         background-color: var(--primary-800);
-      }
+//       &:hover {
+//          background-color: var(--primary-800);
+//       }
 
-      &.active {
-         background-color: var(--primary-800);
-      }
+//       &.active {
+//          background-color: var(--primary-800);
+//       }
 
-      img {
-         width: 2em;
-         height: 2em;
-      }
+//       img {
+//          width: 2em;
+//          height: 2em;
+//       }
 
-      &#sidebar-btn-booking {
-         img {
-            height: 1.7em;
-         }
-      }
-   }
+//       &#sidebar-btn-booking {
+//          img {
+//             height: 1.7em;
+//          }
+//       }
+//    }
 
-}
+// }
 
 .container-sidebar-mobile {
    background-color: transparent;
@@ -228,6 +228,32 @@
 
          .actions a {
             border-color: var(--third-500);
+         }
+      }
+   }
+}
+
+.sidebar.is-yellow .container-sidebar,
+.container-sidebar-mobile {
+   .sidebar-title {
+      background-color: var(--secondary-500);
+      color: var(--primary-500);
+   }
+
+   .list-card {
+      .card-item {
+         .info {
+            .title {
+               color: var(--primary-500);
+            }
+         }
+
+         .actions a {
+            border-color: var(--primary-500);
+
+            &::before {
+               background-color: var(--primary-500);
+            }
          }
       }
    }

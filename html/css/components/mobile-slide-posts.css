@@ -103,6 +103,44 @@
   color: var(--third-500);
 }
 
+.posts.swiper.is-blue .post-item__title {
+  color: white;
+  background-color: var(--third-500);
+}
+.posts.swiper.is-blue .post-item__action a {
+  background-color: var(--third-700);
+  color: white;
+}
+.posts.swiper.is-blue .post-item__action a:hover {
+  background-color: var(--third-600);
+}
+.posts.swiper.is-blue .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--third-500);
+}
+.posts.swiper.is-blue .swiper-button-next::after,
+.posts.swiper.is-blue .swiper-button-prev::after {
+  color: var(--third-500);
+}
+
+.is-yellow .posts.swiper .post-item__title {
+  color: var(--primary-500);
+  background-color: var(--secondary-500);
+}
+.is-yellow .posts.swiper .post-item__action a {
+  background-color: var(--secondary-500);
+  color: var(--primary-500);
+}
+.is-yellow .posts.swiper .post-item__action a:hover {
+  background-color: var(--secondary-600);
+}
+.is-yellow .posts.swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--secondary-500);
+}
+.is-yellow .posts.swiper .swiper-button-next::after,
+.is-yellow .posts.swiper .swiper-button-prev::after {
+  color: var(--secondary-500);
+}
+
 .slide-posts#mobile-slide-posts {
   padding: 0.8em;
   display: block;
