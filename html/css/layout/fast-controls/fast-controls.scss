@@ -1,4 +1,4 @@
-.fast-action-controls {
+.mobile-fast-action-controls {
    font-size: 1rem;
    position: fixed;
    bottom: 7.3rem;
@@ -44,7 +44,7 @@
 }
 
 @media (min-width: 1100px) {
-   .fast-action-controls {
+   .mobile-fast-action-controls {
       display: none;
    }
 }
