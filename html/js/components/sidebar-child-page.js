@@ -1,5 +1,5 @@
-function renderListCardMobile() {
-    const listCardEl = document.querySelector("#sidebar-list-card-mobile");
+function renderListCard() {
+    const listCardEl = document.querySelector("#sidebar-list-card");
 
     if (!listCardEl) return;
 
@@ -18,10 +18,13 @@ function renderListCardMobile() {
                      ${card.subtitle}
                   </p>
                   <div class="actions">
-                     <a href="${card.link_female}" class="btn btn-primary-outline full-radius">
+                     <a href="${card.link_female}" class="btn btn-primary-outline full-radius btn-primary-animation is-blue">
+                        <p>Tìm hiểu thêm</p>
                         <b>Nữ</b>
                      </a>
-                     <a href="${card.link_male}" class="btn btn-primary-outline full-radius">
+
+                     <a href="${card.link_male}" class="btn btn-primary-outline full-radius btn-primary-animation is-blue">
+                        <p>Tìm hiểu thêm</p>
                         <b>Nam</b>
                      </a>
                   </div>
@@ -32,4 +35,4 @@ function renderListCardMobile() {
         listCardEl.appendChild(item);
     });
 }
-renderListCardMobile();
+renderListCard();

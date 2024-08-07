@@ -3,7 +3,7 @@ function renderListCard() {
 
     if (!listCardEl) return;
 
-    homeSidebarCards.forEach((card) => {
+    sidebarCards.forEach((card) => {
         const item = document.createElement("div");
         item.className = "card-item box-shadow-sm";
         const contentCardItem = `
