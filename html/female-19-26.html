@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Trẻ Nam tuổi 19-26</title>
+   <!-- <link ref="icon" href="/favicon.png" /> -->
+   <link rel="icon" href="./favicon.ico">
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Main CSS of Website  -->
+   <link rel="stylesheet" href="./css/main.css">
+
+   <!-- Main CSS of Website  -->
+   <link rel="stylesheet" href="./css/pages/female-19-26/female-19-26.css">
+
+   <!-- Load Data For Main Menu -->
+   <script src="./js/data/main-menu.js"></script>
+
+   <!-- Load Data For Sidebar Cop -->
+   <script src="./js/data/sidebar.js"></script>
+
+   <!-- Load Data For Slide Posts -->
+   <script src="./js/data/slide-posts.js"></script>
+
+   <!-- Load JS Utils -->
+   <script src="./js/index.js"></script>
+
+   <style>
+      @font-face {
+         font-family: 'Unbounded';
+         src: url('./fonts/Unbounded-Bold.ttf') format('truetype'),
+            url('./fonts/Unbounded-Light.ttf') format('truetype');
+         font-weight: 200;
+         font-style: normal;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="root-container bg-gradient-third">
+      <!-- Menu -->
+      <header class="menu-header" id="menu">
+         <script type="text/javascript">
+            loadHtmlComponent('./layout/menu/', 'menu')
+         </script>
+      </header>
+
+      <!-- Container-content -->
+      <main class="container container-content">
+
+         <!-- Main content -->
+         <div class="main-container box-shadow-md" id="main-container">
+
+            <!-- Banner main -->
+            <div class="banner-main">
+               <img class="banner-main__desktop" src="./images/common/main-banner-desktop.png" />
+               <img class="banner-main__mobile" src="./images/common/main-banner-mobile.png" />
+            </div>
+
+            <!-- Body Main Content -->
+            <div class="body-main-content is-yellow bg-white">
+
+               <div class="main-content" id="body-main-content">
+                  <script type="text/javascript">
+                     loadHtmlComponent('./pages/female-19-26/', 'body-main-content', 'body-main-content');
+                  </script>
+               </div>
+
+               <!-- AI Cần Dự Phòng -->
+               <div class="container-sidebar-mobile" id="sidebar-mobile">
+                  <script type="text/javascript">
+                     loadHtmlComponent('./pages/female-19-26/', 'sidebar-mobile', 'sidebar-mobile')
+                  </script>
+               </div>
+
+            </div>
+
+
+            <!-- Footer main content -->
+            <div class="footer-main-content paragraph-2-col bg-secondary" id="footer-main-content">
+               <script type="text/javascript">
+                  loadHtmlComponent('./pages/female-19-26/', 'footer-main-content', 'footer-content');
+               </script>
+            </div>
+         </div>
+
+
+         <!-- Sidebar content -->
+         <link rel="stylesheet" href="./css/components/sidebar-child-page.css">
+         <div class="sidebar is-yellow" id="sidebar">
+            <script type="text/javascript">
+               loadHtmlComponent('./components/', 'sidebar', 'sidebar-child-page')
+            </script>
+         </div>
+
+      </main>
+
+
+      <!-- Footer -->
+      <footer id="footer">
+         <script type="text/javascript">
+            loadHtmlComponent('./layout/footer/', 'footer')
+         </script>
+      </footer>
+   </div>
+
+
+   <!-- Menu footer mobile -->
+   <div class="menu-footer-mobile" id="menu-footer-mobile">
+      <script type="text/javascript">
+         loadHtmlComponent('./layout/menu-footer-mobile/', 'menu-footer-mobile')
+      </script>
+   </div>
+
+   <!-- Fast Action Controls -->
+   <div class="fast-action-controls" id="fast-action-controls">
+      <script type="text/javascript">
+         loadHtmlComponent('./components/', 'fast-action-controls', 'fast-action-controls')
+      </script>
+   </div>
+
+   <!-- Fast Action Controls -->
+   <div class="mobile-fast-action-controls" id="mobile-fast-action-controls">
+      <script type="text/javascript">
+         loadHtmlComponent('./layout/fast-controls/', 'mobile-fast-action-controls')
+      </script>
+   </div>
+
+   <!-- Icons SVG  -->
+   <div id="icon-svg" style="display: none;">
+      <script type="text/javascript">
+         loadHtmlComponent('./images/icons/svg', 'icon-svg')
+      </script>
+   </div>
+
+   <!-- Load Data For Slide Posts -->
+   <!-- <script src="./js/data/slide-posts.js"></script> -->
+</body>
+
+</html>
