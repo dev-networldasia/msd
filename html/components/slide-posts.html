@@ -44,6 +44,10 @@
    if (elLoadScriptLibSwiper) {
       elLoadScriptLibSwiper.addEventListener('load', () => {
          var swiper = new Swiper(".swiper-posts", {
+            autoplay: {
+               delay: 4000,
+            },
+            loop: true,
             slidesPerView: 2,
             spaceBetween: 10,
             pagination: {

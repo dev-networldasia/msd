@@ -13,6 +13,7 @@
   justify-content: center;
 }
 .menu-footer-mobile .list-menu-items .menu-item {
+  height: -moz-fit-content;
   height: fit-content;
 }
 .menu-footer-mobile .list-menu-items .menu-item a {
@@ -32,4 +33,4 @@
   .menu-footer-mobile {
     display: none;
   }
-}
+}/*# sourceMappingURL=menu-footer-mobile.css.map */
