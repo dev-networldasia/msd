@@ -1,0 +1,13 @@
+@import './slide-posts.scss';
+
+
+.slide-posts#mobile-slide-posts {
+   padding: .8em;
+   display: block;
+}
+
+@media (min-width: 1100px) {
+   .slide-posts#mobile-slide-posts {
+      display: none;
+   }
+}

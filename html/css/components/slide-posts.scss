@@ -1,10 +1,6 @@
 .slide-posts {
-
    .posts {
       font-size: 1rem;
-      // display: grid;
-      // grid-template-columns: 1fr 1fr;
-      // gap: 0.5em;
    }
 }
 
@@ -26,12 +22,21 @@
       padding: .8em 1em;
       color: var(--primary-500);
       line-height: 1.3;
+
+      span {
+         display: -webkit-box;
+         -webkit-box-orient: vertical;
+         -webkit-line-clamp: 3;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         line-height: 1.5em;
+      }
    }
 
    &__des {
       text-transform: capitalize;
       font-size: 1.3em;
-      padding: .8em 1em;
+      margin: .8em 1em;
       font-weight: 300;
    }
 
