@@ -16,8 +16,8 @@ var sidebarCards = [
         subtitle: "<b>NGUY CƠ NHIỄM CAO NHẤT</b> \n - Dự phòng HPV ngay!",
         description:
             "Gần 50% các trường hợp nhiễm HPV xảy ra ở độ tuổi 15 - 24.(12)",
-        link_female: "./female-8-19.html",
-        link_male: "./male-8-19.html",
+        link_female: "./female-19-26.html",
+        link_male: "./male-19-26.html",
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ var sidebarCards = [
         title: "Người  trưởng thành (27-45 tuổi)",
         subtitle: "<b>CƠ HỘI CUỐI CÙNG</b> \n - Dự phòng HPV ngay!",
         description: "Người trong độ tuổi trung niên có thể dự phòng HPV.(13)",
-        link_female: "./female-8-19.html",
-        link_male: "./male-8-19.html",
+        link_female: "./female-27-45.html",
+        link_male: "./male-27-45.html",
     },
 ];
