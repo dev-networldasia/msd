@@ -35,7 +35,8 @@
 
    &__items {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: 1fr 1fr;
       align-items: stretch;
       // display: flex;
       // flex-wrap: wrap;
@@ -175,6 +176,12 @@
    }
 }
 
+@media (min-width: 768px) {
+   .disease-routes__items {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   }
+}
+
 @media (min-width: 1100px) {
    .disease-routes {
       background: linear-gradient(180deg, #FCEA6F 0%, #DCC31A 100%);
@@ -212,6 +219,13 @@
    }
 }
 
+@media (min-width: 1100px) and (max-width:1299px) {
+   .hpv-report .hpv-reports {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   }
+}
+
 @media (min-width: 1300px) {
    .routes-item {
       padding: 1em;
@@ -234,7 +248,7 @@
       }
 
       &__des {
-         padding: 65px 15px 15px 15px;
+         padding: 40px 15px 15px 15px;
          font-size: 1.7em;
       }
    }
@@ -247,7 +261,7 @@
       }
 
       .routes-item__des {
-         padding-bottom: 65px;
+         padding-bottom: 45px;
       }
 
    }
@@ -269,7 +283,7 @@
       }
 
       &__items {
-         padding: 15px;
+         padding: 15px 0;
          padding-bottom: 50px;
       }
    }

@@ -227,10 +227,11 @@
   border-radius: var(--radius-md);
   margin-top: -3.8%;
   align-items: center;
-  gap: 25px;
+  gap: 1em;
   box-shadow: 3px 3px 5px rgba(0, 104, 90, 0.3411764706);
 }
-.container-what-is-hpv .viral-disease .head-ribbon {
+
+.head-ribbon {
   background: linear-gradient(180deg, #2CAF99 0%, #0F7360 100%);
   box-shadow: 7px 8px 0px rgba(61, 175, 165, 0.7);
   border-radius: var(--radius-sm);
@@ -238,24 +239,24 @@
   padding: 10px 15px;
   width: fit-content;
 }
-.container-what-is-hpv .viral-disease .head-ribbon__title-1, .container-what-is-hpv .viral-disease .head-ribbon__title-2 {
+.head-ribbon__title-1, .head-ribbon__title-2 {
   font-size: 13px;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
 }
-.container-what-is-hpv .viral-disease .head-ribbon__title-2 {
+.head-ribbon__title-2 {
   color: var(--secondary-500);
 }
-.container-what-is-hpv .viral-disease .reasons {
-  display: flex;
-  flex-wrap: wrap;
-  flex: auto;
-  color: white;
-  gap: 5px;
-  row-gap: 10px;
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  width: 100%;
+  gap: 1em;
+  margin-top: 1.5em;
 }
-.container-what-is-hpv .viral-disease .reasons .reason-item {
+.reasons .reason-item {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -264,7 +265,7 @@
   gap: 10px;
   align-items: stretch;
 }
-.container-what-is-hpv .viral-disease .reasons .reason-item__icon-percent {
+.reasons .reason-item__icon-percent {
   position: relative;
   z-index: 1;
   display: flex;
@@ -272,7 +273,7 @@
   justify-content: center;
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 1.2em;
   background-color: var(--primary-500);
   padding: 0;
   color: var(--secondary-500);
@@ -285,21 +286,21 @@
   max-height: 42px;
   margin: auto;
 }
-.container-what-is-hpv .viral-disease .reasons .reason-item__icon-percent span {
+.reasons .reason-item__icon-percent span {
   font-size: 0.6em;
   display: inline-block;
   vertical-align: middle;
 }
-.container-what-is-hpv .viral-disease .reasons .reason-item__text {
-  font-size: 10.5px;
+.reasons .reason-item__text {
+  font-size: 1.3em;
   background-color: white;
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
   font-weight: 300;
   color: var(--primary-500);
   padding: 10px;
-  padding-left: 20px;
-  margin-left: -28px;
+  padding-left: 2.1em;
+  margin-left: -2.5em;
   box-shadow: 2px 2px 5px rgba(0, 104, 90, 0.6117647059);
   letter-spacing: -0.5px;
   flex-grow: 1;
@@ -307,14 +308,34 @@
   display: flex;
   align-items: center;
 }
-.container-what-is-hpv .viral-disease .quote-footer {
+
+.quote-footer {
   color: white;
   width: 100%;
   text-align: center;
   font-size: 9px;
-  margin-top: 10px;
 }
 
+@media (min-width: 768px) {
+  .reasons {
+    max-width: 700px;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    gap: 2em;
+  }
+  .reasons .reason-item__icon-percent {
+    min-width: 3.5em;
+    min-height: 3.5em;
+    font-size: 2em;
+    line-height: 1.2;
+  }
+  .reasons .reason-item__text {
+    margin-left: -2.5em;
+    font-size: 2em;
+    padding-left: 2.4em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+  }
+}
 @media (min-width: 1100px) {
   .container-what-is-hpv {
     padding: 3em;
@@ -335,27 +356,30 @@
   .container-what-is-hpv .viral-disease .head-ribbon__title-1, .container-what-is-hpv .viral-disease .head-ribbon__title-2 {
     font-size: 20px;
   }
-  .container-what-is-hpv .viral-disease .reasons {
-    gap: 15px;
-  }
-  .container-what-is-hpv .viral-disease .reasons .reason-item {
-    min-width: 280px;
-  }
-  .container-what-is-hpv .viral-disease .reasons .reason-item__icon-percent {
-    font-size: 16px;
-    min-width: 60px;
-    min-height: 60px;
-    max-width: 60px;
-    max-height: 60px;
-  }
-  .container-what-is-hpv .viral-disease .reasons .reason-item__text {
-    padding: 1.5em 0;
-    margin-left: -2.5em;
-    padding-left: 2.2em;
-    font-size: 1.5em;
-  }
   .container-what-is-hpv .viral-disease .quote-footer {
     font-size: 14px;
+  }
+  .container-what-is-hpv .reasons {
+    max-width: 800px;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  }
+  .container-what-is-hpv .reasons .reason-item__icon-percent {
+    min-width: 3.2em;
+    min-height: 3.2em;
+    font-size: 2.1em;
+  }
+  .container-what-is-hpv .reasons .reason-item__text {
+    font-size: 1.8em;
+    margin-left: -2.4em;
+    padding-left: 2em;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1350px) {
+  .disease-routes .disease-routes__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 1300px) {
@@ -378,23 +402,10 @@
   .container-what-is-hpv .viral-disease .head-ribbon__title-2 {
     font-size: 2.8em;
   }
-  .container-what-is-hpv .viral-disease .reasons {
-    gap: 15px;
+  .container-what-is-hpv .reasons .reason-item__icon-percent {
+    font-size: 2.8em;
   }
-  .container-what-is-hpv .viral-disease .reasons .reason-item {
-    min-width: 350px;
-  }
-  .container-what-is-hpv .viral-disease .reasons .reason-item__icon-percent {
-    font-size: 25px;
-    min-width: 100px;
-    min-height: 100px;
-    max-width: 100px;
-    max-height: 100px;
-  }
-  .container-what-is-hpv .viral-disease .reasons .reason-item__text {
-    padding: 2.1em 0;
-    margin-left: -2.8em;
-    padding-left: 3em;
+  .container-what-is-hpv .reasons .reason-item__text {
     font-size: 2.2em;
   }
 }
@@ -655,7 +666,7 @@
   }
   .ribbon-header__title {
     padding: 10px;
-    padding-left: 6.5em;
+    padding-left: 2.8em;
     width: 320px;
     font-size: 22px;
   }
@@ -820,6 +831,12 @@
   background-color: var(--fifth-500);
 }
 
+@media (min-width: 768px) {
+  .hpv-report .hpv-reports {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  }
+}
 @media (min-width: 1100px) {
   .hpv-report {
     padding: 0 20px;
@@ -877,7 +894,7 @@
 }
 .disease-routes__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: 1fr 1fr;
   align-items: stretch;
   row-gap: 40px;
   margin-top: 25px;
@@ -986,6 +1003,11 @@
   background-color: var(--fifth-500);
 }
 
+@media (min-width: 768px) {
+  .disease-routes__items {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
 @media (min-width: 1100px) {
   .disease-routes {
     background: linear-gradient(180deg, #FCEA6F 0%, #DCC31A 100%);
@@ -1012,6 +1034,12 @@
     max-width: fit-content;
   }
 }
+@media (min-width: 1100px) and (max-width: 1299px) {
+  .hpv-report .hpv-reports {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
 @media (min-width: 1300px) {
   .routes-item {
     padding: 1em;
@@ -1031,7 +1059,7 @@
     box-shadow: 1.06px 1.06px 1.42px rgba(120, 120, 120, 0.35);
   }
   .routes-item__des {
-    padding: 65px 15px 15px 15px;
+    padding: 40px 15px 15px 15px;
     font-size: 1.7em;
   }
   .routes-item:nth-child(2n) {
@@ -1041,7 +1069,7 @@
     bottom: -40px;
   }
   .routes-item:nth-child(2n) .routes-item__des {
-    padding-bottom: 65px;
+    padding-bottom: 45px;
   }
   .disease-routes {
     padding: 25px 15px;
@@ -1054,7 +1082,7 @@
     font-size: 30px;
   }
   .disease-routes__items {
-    padding: 15px;
+    padding: 15px 0;
     padding-bottom: 50px;
   }
 }

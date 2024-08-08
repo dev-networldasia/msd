@@ -106,7 +106,7 @@
     font-size: 1.8em;
   }
 }
-@media (min-width: 769px) and (max-width: 1099px) {
+@media (min-width: 768px) and (max-width: 1099px) {
   .container-section-1 .description .group-image-male .img-male .text-img {
     width: 45%;
     margin-bottom: 2em;
@@ -238,7 +238,7 @@
     margin-top: 58%;
   }
 }
-@media (min-width: 769px) and (max-width: 1099px) {
+@media (min-width: 768px) and (max-width: 1099px) {
   .container-des {
     max-width: 70%;
     margin-top: 30px;
