@@ -316,7 +316,7 @@
   font-size: 9px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .reasons {
     max-width: 700px;
     grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
@@ -374,6 +374,12 @@
     padding-left: 2em;
     padding-top: 1.6em;
     padding-bottom: 1.6em;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1350px) {
+  .disease-routes .disease-routes__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 1300px) {
@@ -825,6 +831,12 @@
   background-color: var(--fifth-500);
 }
 
+@media (min-width: 768px) {
+  .hpv-report .hpv-reports {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  }
+}
 @media (min-width: 1100px) {
   .hpv-report {
     padding: 0 20px;
@@ -882,7 +894,7 @@
 }
 .disease-routes__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: 1fr 1fr;
   align-items: stretch;
   row-gap: 40px;
   margin-top: 25px;
@@ -991,6 +1003,11 @@
   background-color: var(--fifth-500);
 }
 
+@media (min-width: 768px) {
+  .disease-routes__items {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
 @media (min-width: 1100px) {
   .disease-routes {
     background: linear-gradient(180deg, #FCEA6F 0%, #DCC31A 100%);
@@ -1017,6 +1034,12 @@
     max-width: fit-content;
   }
 }
+@media (min-width: 1100px) and (max-width: 1299px) {
+  .hpv-report .hpv-reports {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
 @media (min-width: 1300px) {
   .routes-item {
     padding: 1em;
@@ -1036,7 +1059,7 @@
     box-shadow: 1.06px 1.06px 1.42px rgba(120, 120, 120, 0.35);
   }
   .routes-item__des {
-    padding: 65px 15px 15px 15px;
+    padding: 40px 15px 15px 15px;
     font-size: 1.7em;
   }
   .routes-item:nth-child(2n) {
@@ -1046,7 +1069,7 @@
     bottom: -40px;
   }
   .routes-item:nth-child(2n) .routes-item__des {
-    padding-bottom: 65px;
+    padding-bottom: 45px;
   }
   .disease-routes {
     padding: 25px 15px;
@@ -1059,7 +1082,7 @@
     font-size: 30px;
   }
   .disease-routes__items {
-    padding: 15px;
+    padding: 15px 0;
     padding-bottom: 50px;
   }
 }

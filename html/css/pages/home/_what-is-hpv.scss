@@ -156,7 +156,7 @@
 
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
    .reasons {
       max-width: 700px;
       grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
@@ -235,26 +235,12 @@
    }
 }
 
-// @media (min-width: 1100px) and (max-width: 1300px) {
-//    .reasons {
-//       max-width: 900px;
-//       grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-
-//       .reason-item__icon-percent {
-//          min-width: 3.2em;
-//          min-height: 3.2em;
-//          font-size: 2.8em;
-//       }
-
-//       .reason-item__text {
-//          font-size: 2.4em;
-//          margin-left: -2em;
-//          padding-left: 2em;
-//          padding-top: 1.3em;
-//          padding-bottom: 1.3em;
-//       }
-//    }
-// }
+@media (min-width: 1100px) and (max-width:1350px) {
+   .disease-routes .disease-routes__items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+}
 
 @media (min-width: 1300px) {
    .container-what-is-hpv {

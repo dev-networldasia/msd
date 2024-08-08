@@ -138,9 +138,15 @@
    }
 }
 
-
+@media (min-width: 768px) {
+   .hpv-report .hpv-reports {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+   }
+}
 
 @media (min-width: 1100px) {
+
    .hpv-report {
       padding: 0 20px;
       margin-top: 50px;
