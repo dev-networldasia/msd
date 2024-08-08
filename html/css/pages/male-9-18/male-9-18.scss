@@ -1,29 +1,42 @@
-@import'./section-1';
-@import'./section-2';
-@import'./truly';
-@import'./quote';
+.container-section-2 .container-des .thinking {
 
-.container-content .main-container .body-main-content {
+   .thinking-4,
+   .thinking-3 {
+      margin-top: 50%;
 
+      img {
+         width: 50%;
+      }
+   }
 
-   position: relative;
-   z-index: 1;
+   .thinking-3 {
+      justify-content: center;
+      margin-right: 14%;
 
-   &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      z-index: -1;
-      background-color: var(--neutral-900);
-      opacity: 0.5;
+      img {
+         width: 45%;
+      }
    }
 }
 
-.main-content {
-   background-color: var(--neutral-900);
+.container-section-2 .container-des .thinking .thinking-2 {}
+
+@media (min-width: 768px) {
+   .thinking .item-thinking.thinking-2 img {
+      width: 78%;
+   }
 }
 
-@import './responsive'
+@media (min-width: 1100px) {
+   .thinking .item-thinking.thinking-2 img {
+      width: 78%;
+   }
+
+   .container-section-1 .description .group-image-male .img-male .text-img {
+      width: 50%;
+   }
+
+   .container-section-1 .description .group-image-male .img-male .male-9-18 {
+      width: 80%;
+   }
+}

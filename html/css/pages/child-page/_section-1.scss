@@ -1,0 +1,269 @@
+.container-section-1 {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--neutral-900);
+   align-items: center;
+   font-size: 1rem;
+
+
+   .top-banner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+
+      .male-9-18-info {
+         width: 100%;
+         color: var(--primary-500);
+         padding: 10px;
+         text-align: center;
+         background-color: var(--secondary-500);
+
+         &__title {
+            font-weight: 700;
+            font-size: 10px;
+            text-transform: uppercase;
+         }
+
+         &__des {
+            font-size: 10px;
+            line-height: 1.2;
+         }
+      }
+   }
+
+   .description {
+      display: flex;
+      // width: %;
+      flex-direction: column;
+      background-color: var(--neutral-900);
+      border-radius: var(--radius-lg);
+      align-items: center;
+      padding-top: 10px;
+      overflow: hidden;
+      margin-top: 2em;
+      margin-left: 1em;
+      margin-right: 1em;
+
+
+      .group-image-male {
+         display: flex;
+         flex-direction: row;
+         background-color: var(--neutral-900);
+         border-radius: var(--radius-sm);
+
+         .img-male {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+
+            .male-9-18 {
+               width: 155px;
+            }
+
+            .text-img {
+               width: 75%;
+               position: relative;
+            }
+
+            .text-img-1 {
+               bottom: -5%;
+               left: -7%;
+            }
+
+            .text-img-2 {
+               bottom: -7.5%;
+               right: -7%;
+            }
+         }
+      }
+
+      .disc-image-male {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         position: relative;
+         z-index: 10;
+
+         .male-9-18-info__title {
+            width: 100%;
+            color: var(--primary-500);
+            padding: 20px 0;
+            text-align: center;
+            background-color: var(--secondary-500);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+         }
+      }
+   }
+}
+
+.is-blue {
+
+   .container-section-1 .description .disc-image-male .male-9-18-info__title,
+   .container-section-1 .top-banner .male-9-18-info,
+   .container-section-2 .top-ribbon {
+      background-color: var(--third-500);
+      color: white;
+   }
+}
+
+@media (min-width: 768px) {
+   .container-section-1 .description .group-image-male .img-male .text-img {
+      width: 60%
+   }
+
+   .container-section-1 .top-banner .male-9-18-info__title {
+      font-size: 1.8em;
+   }
+
+   .container-section-1 .description .disc-image-male .male-9-18-info__title {
+      font-size: 1.8em;
+   }
+}
+
+@media (min-width: 769px) and (max-width: 1099px) {
+   .container-section-1 .description .group-image-male .img-male .text-img {
+      width: 45%;
+      margin-bottom: 2em;
+   }
+
+   .container-section-1 .description .group-image-male .img-male .male-9-18 {
+      width: 40em;
+   }
+}
+
+@media (min-width: 1300px) {
+   .container-section-1 .description .group-image-male .img-male .text-img {
+      width: 55%;
+   }
+
+   .container-section-1 .description .group-image-male {
+      max-width: 87%;
+   }
+
+   .container-section-1 .top-banner .male-9-18-info__title {
+      font-size: 2.2em;
+   }
+
+   .container-section-1 .description .disc-image-male .male-9-18-info__title {
+      font-size: 2.2em;
+   }
+
+   .container-section-1 .description .group-image-male .img-male .male-9-18 {
+      width: 75%;
+   }
+
+
+
+   // .container-section-1 {
+
+   //    .top-banner {
+
+   //       .male-9-18-info {
+   //          padding: 10px;
+
+   //          &__title {
+   //             font-weight: 700;
+   //             font-size: 18px;
+   //             text-transform: uppercase;
+   //          }
+   //       }
+   //    }
+
+   //    .description {
+
+   //       .group-image-male {
+
+   //          .img-male {
+
+   //             .male-9-18 {
+   //                width: 325px;
+   //             }
+
+   //             .text-img {
+   //                width: 55%;
+   //                position: relative;
+   //             }
+
+   //             // .text-img-1 {
+   //             //    bottom: -10%;
+   //             //    left: -7%;
+   //             // }
+
+   //             // .text-img-2 {
+   //             //    bottom: -10%;
+   //             //    right: -7%;
+   //             // }
+   //          }
+   //       }
+
+   //       .disc-image-male {
+
+   //          .male-9-18-info__title {
+   //             padding: 30px 0;
+   //             font-size: 20px;
+   //          }
+   //       }
+   //    }
+   // }
+}
+
+@media (min-width: 1500px) {
+   // .container-section-1 {
+
+   //    .top-banner {
+
+   //       .male-9-18-info {
+   //          padding: 10px;
+
+   //          &__title {
+   //             font-weight: 700;
+   //             font-size: 2.2em;
+   //             text-transform: uppercase;
+   //          }
+   //       }
+   //    }
+
+   //    .description {
+
+   //       .group-image-male {
+
+   //          .img-male {
+
+   //             .male-9-18 {
+   //                width: 325px;
+   //             }
+
+   //             .text-img {
+   //                width: 55%;
+   //                position: relative;
+   //             }
+
+   //             // .text-img-1 {
+   //             //    bottom: -5%;
+   //             //    left: -7%;
+   //             // }
+
+   //             // .text-img-2 {
+   //             //    bottom: -7.7%;
+   //             //    right: -7%;
+   //             // }
+   //          }
+   //       }
+
+   //       .disc-image-male {
+
+   //          .male-9-18-info__title {
+   //             padding: 30px 0;
+   //             font-size: 2.2em;
+   //          }
+   //       }
+   //    }
+   // }
+}

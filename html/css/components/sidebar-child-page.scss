@@ -4,7 +4,7 @@
    top: 80px;
    display: flex;
    flex-direction: column;
-   gap: 15px;
+   gap: 1em;
 
    .sidebar-title {
       background-color: var(--primary-500);
@@ -21,7 +21,7 @@
 .list-card {
    display: flex;
    flex-direction: column;
-   gap: 1.5em;
+   gap: 1em;
 
    .card-item {
       font-size: 1rem;

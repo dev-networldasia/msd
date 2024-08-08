@@ -15,17 +15,21 @@
    width: 100%;
 
    border-radius: var(--radius-md);
-   background: linear-gradient(to bottom right, #306eff 0%, #306eff 25%, #53b7e8 50%, #7bd6e6 75%, #b1eced 100%);
+   // background: linear-gradient(to bottom right, #306eff 0%, #306eff 25%, #53b7e8 50%, #7bd6e6 75%, #b1eced 100%);
+   background: url('../../../images/female-9-18/bg-trully-section.png') no-repeat center;
 }
 
 .ribbon-truly {
    width: fit-content;
-   color: var(--third-500);
+   color: var(--primary-500);
 
+   font-size: 1.5em;
    padding: 10px 20px;
    background-color: var(--neutral-900);
-   margin: 20px 0;
+   margin-bottom: .3em;
+   margin-top: 1.2em;
    border-radius: var(--radius-sm);
+   background: url('../../../images/female-9-18/bg-ribbon.png') no-repeat center;
 
 }
 
@@ -206,83 +210,110 @@
 
 }
 
+.is-blue {
 
+   .group-truly {
+      background: linear-gradient(180deg, #0D64FD 0%, #8DB1DF 100%);
+   }
+
+   .ribbon-truly {
+      background: white;
+      color: var(--third-500);
+      box-shadow: 2px 2px 5px #33333358;
+   }
+}
+
+@media (min-width: 768px) {
+
+   .ribbon-truly {
+      font-size: 2em;
+   }
+
+}
 
 @media (min-width: 1100px) {
-   .truly-item {
-      margin: 1.5em;
-      margin-right: 0;
-   }
+   // .truly-item {
+   //    margin: 1.5em;
+   //    margin-right: 0;
+   // }
 
-   .truly-item__content__group p,
-   .truly-item .truly-item__content__des {
-      font-size: 16px;
-   }
+   // .ribbon-truly {
+   //    font-size: 2em;
+   // }
 
-   .truly-item__content__icon img {
-      min-width: 50px;
-   }
+   // .truly-item__content__group p,
+   // .truly-item .truly-item__content__des {
+   //    font-size: 16px;
+   // }
+
+   // .truly-item__content__icon img {
+   //    min-width: 50px;
+   // }
 }
 
 @media (min-width: 1300px) {
 
+   .ribbon-truly {
+      font-size: 2.8em;
+   }
+
    .truly-item__content__group p,
    .truly-item .truly-item__content__des {
-      font-size: 18px;
+      font-size: 1.7em;
    }
 
-   .truly-item__content__icon img {
-      min-width: 60px;
-   }
+   // .truly-item__content__icon img {
+   //    min-width: 60px;
+   // }
 
-   .truly-item__content__group {
-      padding-left: 25px;
-   }
+   // .truly-item__content__group {
+   //    padding-left: 25px;
+   // }
 
-   .truly-item {
-      padding: 25px 25px 25px 0;
-   }
+   // .truly-item {
+   //    padding: 25px 25px 25px 0;
+   // }
 
-   .truly-item__content__icon {
-      padding: 0 25px;
-   }
+   // .truly-item__content__icon {
+   //    padding: 0 25px;
+   // }
 
-   .truly-item__shape {
-      left: -14px;
-      width: 15px;
-      border-top-left-radius: 15px;
-      border-bottom-left-radius: 15px;
-   }
+   // .truly-item__shape {
+   //    left: -14px;
+   //    width: 15px;
+   //    border-top-left-radius: 15px;
+   //    border-bottom-left-radius: 15px;
+   // }
 }
 
 @media (min-width: 1500px) {
 
-   .truly-item__content__group p,
-   .truly-item .truly-item__content__des {
-      font-size: 20px;
-   }
+   // .truly-item__content__group p,
+   // .truly-item .truly-item__content__des {
+   //    font-size: 2em;
+   // }
 
-   .truly-item__content__group {
-      padding-left: 25px;
-   }
+   // .truly-item__content__group {
+   //    padding-left: 25px;
+   // }
 
-   .truly-item {
-      padding: 25px 25px 25px 0;
-   }
+   // .truly-item {
+   //    padding: 25px 25px 25px 0;
+   // }
 
-   .truly-item__content__icon {
-      padding: 0 25px;
-   }
+   // .truly-item__content__icon {
+   //    padding: 0 25px;
+   // }
 
-   .truly-item__content__icon img {
-      min-width: 60px;
-   }
+   // .truly-item__content__icon img {
+   //    min-width: 60px;
+   // }
 
-   .truly-item__shape {
-      left: -14px;
-      width: 15px;
-      border-top-left-radius: 15px;
-      border-bottom-left-radius: 15px;
-   }
+   // .truly-item__shape {
+   //    left: -14px;
+   //    width: 15px;
+   //    border-top-left-radius: 15px;
+   //    border-bottom-left-radius: 15px;
+   // }
 
 }
