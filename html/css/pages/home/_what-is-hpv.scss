@@ -6,32 +6,6 @@
    flex-direction: column;
    padding: 10px;
 
-   .top-banner {
-      display: flex;
-      align-items: center;
-      position: relative;
-      z-index: 10;
-
-      .image-virus {
-         width: 35%;
-      }
-
-      .hpv-info {
-         width: 60%;
-         color: var(--primary-500);
-
-         &__title {
-            font-weight: 700;
-            font-size: 18px;
-         }
-
-         &__des {
-            font-size: 10px;
-            line-height: 1.2;
-         }
-      }
-   }
-
    .viral-disease {
       display: flex;
       flex-direction: column;
@@ -42,6 +16,33 @@
       align-items: center;
       gap: 1em;
       box-shadow: 3px 3px 5px #00685a57;
+   }
+}
+
+.top-banner {
+   display: flex;
+   align-items: center;
+   position: relative;
+   z-index: 10;
+
+   .image-virus {
+      width: 35%;
+   }
+
+   .hpv-info {
+      width: 60%;
+      color: var(--primary-500);
+
+      &__title {
+         font-weight: 700;
+         font-size: 18px;
+         margin-bottom: 0.5em;
+      }
+
+      &__des {
+         font-size: 1.2em;
+         line-height: 1.2;
+      }
    }
 }
 
@@ -157,6 +158,16 @@
 }
 
 @media (min-width: 768px) {
+   .top-banner .hpv-info__title {
+      font-size: 2.5em;
+      line-height: 1.2;
+   }
+
+   .top-banner .hpv-info__des {
+      font-size: 2em;
+      line-height: 1.2;
+   }
+
    .reasons {
       max-width: 700px;
       grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
