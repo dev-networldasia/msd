@@ -1,4 +1,4 @@
-.popup-search{
+.popup-search {
    position: fixed;
    left: 0;
    top: 0;
@@ -11,7 +11,7 @@
    // animation-timing-function: ease-out;
 
 
-   .overlay{
+   .overlay {
       position: absolute;
       z-index: 0;
       left: 0;
@@ -21,7 +21,7 @@
       background-color: #3333336a;
    }
 
-   .container-search{
+   .container-search {
       position: absolute;
       z-index: 2;
       right: 10px;
@@ -37,7 +37,8 @@
       gap: 10px;
 
       color: var(--neutral-400);
-      input{
+
+      input {
 
          font-size: 14px;
          width: 100%;
@@ -45,7 +46,7 @@
          border-radius: 12px;
          border: 1px solid var(--neutral-06-day, #d6d6d6);
          background: var(--neutral-09-day, #fff);
-   
+
          &:focus {
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
             outline: 0;
@@ -57,23 +58,28 @@
          }
       }
 
-      .search-results{
+      .search-results {
          color: var(--primary-500);
-         ul{
+
+         ul {
             display: flex;
             flex-direction: column;
             padding-left: 10px;
             gap: 8px;
-            li{
+
+            li {
+               font-size: 1.6em;
                text-transform: lowercase;
                text-decoration: none;
                display: inline;
             }
          }
       }
-      .no-results{
+
+      .no-results {
          color: var(--primary-500);
          text-align: center;
+         font-size: 1.6em;
       }
    }
 }
@@ -82,13 +88,12 @@
 /* Define the animation */
 @keyframes slideIn {
    from {
-     transform: translateX(100%);
-     opacity: 1;
+      transform: translateX(100%);
+      opacity: 1;
    }
+
    to {
-     transform: translateX(0);
-     opacity: 0;
+      transform: translateX(0);
+      opacity: 0;
    }
- }
- 
- 
+}

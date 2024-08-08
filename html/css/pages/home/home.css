@@ -226,11 +226,12 @@
 .top-banner .hpv-info__title {
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 .top-banner .hpv-info__des {
   font-size: 1.2em;
   line-height: 1.2;
+  padding-bottom: 2em;
 }
 
 .head-ribbon {
