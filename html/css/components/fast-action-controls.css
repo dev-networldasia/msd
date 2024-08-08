@@ -1,14 +1,13 @@
 .fast-action-controls {
   position: fixed;
   right: 0.8em;
-  top: 50%;
+  bottom: 2em;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.5em;
   color: var(--neutral-400);
   z-index: 99;
-  transform: translateY(-50%);
   visibility: hidden;
 }
 .fast-action-controls .action-item {
