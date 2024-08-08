@@ -60,7 +60,7 @@
 
 .slide-posts .posts.swiper .swiper-pagination {
   position: relative;
-  margin-top: 1.5em;
+  margin-top: 2.2em;
 }
 .slide-posts .posts.swiper .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--secondary-500);

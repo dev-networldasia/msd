@@ -1,38 +1,47 @@
-.container-quote{
+.container-quote {
    background-color: var(--neutral-900);
    display: flex;
    position: relative;
    justify-content: center;
 }
 
-.description-quote{
+.description-quote {
    display: flex;
    flex-direction: column;
    position: relative;
    align-items: center;
    font-size: 15px;
    margin: 20px 0;
-   color: var(--third-500);
-   
-   .content-quote{
+   // color: var(--third-500);
+
+   .content-quote {
       text-align: center;
+      color: var(--primary-500);
+      max-width: 24em;
    }
 
-   .icon-quote{
+   .icon-quote {
       margin-top: 5px;
+      color: var(--secondary-500);
+   }
+}
+
+.is-blue {
+   .description-quote .content-quote {
+      color: var(--third-500);
    }
 }
 
 @media (min-width: 1100px) {
-   .description-quote{
+   .description-quote {
       font-size: 24px;
-      line-height: 30px;   
+      line-height: 30px;
       margin: 40px 0;
-   
-      .icon-quote{
+
+      .icon-quote {
          margin-top: 15px;
 
-         img{
+         img {
             width: 55px;
          }
       }
@@ -40,15 +49,15 @@
 }
 
 @media (min-width: 1300px) {
-   .description-quote{
+   .description-quote {
       font-size: 26px;
-      line-height: 30px;   
+      line-height: 30px;
       margin: 40px 0;
-   
-      .icon-quote{
+
+      .icon-quote {
          margin-top: 15px;
 
-         img{
+         img {
             width: 65px;
          }
       }
@@ -56,15 +65,15 @@
 }
 
 @media (min-width: 1500px) {
-   .description-quote{
+   .description-quote {
       font-size: 30px;
-      line-height: 37px;   
+      line-height: 37px;
       margin: 50px 0;
-   
-      .icon-quote{
+
+      .icon-quote {
          margin-top: 20px;
 
-         img{
+         img {
             width: 83px;
          }
       }
