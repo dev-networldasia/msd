@@ -393,6 +393,9 @@ a {
   flex-direction: column;
   gap: 0px;
   border-radius: var(--radius-md);
+  position: fixed;
+  left: 1em;
+  right: 1em;
 }
 .container-content .main-container .banner-main {
   border-top-left-radius: var(--radius-lg);
@@ -475,6 +478,7 @@ a {
     max-height: 100%;
     overflow: hidden;
     border-radius: var(--radius-lg);
+    position: static;
   }
   .container-content .main-container .banner-main__desktop {
     display: block;

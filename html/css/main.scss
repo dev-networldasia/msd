@@ -42,17 +42,17 @@
    .main-container {
       max-height: calc(100svh - 160px);
       overflow-y: auto;
-
       flex-grow: 1;
-
       width: 100;
       display: flex;
       flex: auto;
       flex-direction: column;
       gap: 0px;
-
       border-radius: var(--radius-md);
-      // background-color: white;
+
+      position: fixed;
+      left: 1em;
+      right: 1em;
 
       .banner-main {
          border-top-left-radius: var(--radius-lg);
