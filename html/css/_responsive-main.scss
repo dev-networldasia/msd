@@ -1,3 +1,16 @@
+@media (max-width: 1099px) {
+   body {
+      max-height: 100svh;
+      min-height: 100svh;
+      overflow-y: hidden;
+   }
+
+   .root-container {
+      max-height: 100svh;
+      min-height: 100svh;
+   }
+}
+
 @media (min-width: 1100px) {
 
    .root-container {
