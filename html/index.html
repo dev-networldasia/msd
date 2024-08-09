@@ -86,8 +86,7 @@
             </div>
 
             <!-- Footer main content -->
-            <div class="footer-main-content paragraph-2-col bg-primary wow animate__fadeInLeft
-            " data-wow-duration="1.5s" data-wow-delay="0s" id="footer-main-content">
+            <div class="footer-main-content paragraph-2-col bg-primary " id="footer-main-content">
                <script type="text/javascript">
                   loadHtmlComponent('./pages/home/', 'footer-main-content', 'footer-content');
                </script>
@@ -158,14 +157,12 @@
          }
       )
       wow.init();
+
+      // Add Wow js for mobile container
       if (window.innerWidth < 1100) {
-         // const container = document.querySelector('#main-container');
-         // Khởi tạo WOW.js với container của bạn
          setTimeout(() => {
             new WOWForContainer('#main-container');
          }, 1000)
-
-
       }
    </script>
 
