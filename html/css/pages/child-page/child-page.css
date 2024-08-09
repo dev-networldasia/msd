@@ -312,19 +312,6 @@
   margin-right: -0.5em;
   min-width: 250px;
 }
-.truly-item::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -10px;
-  width: calc(100% + 10px);
-  height: 100%;
-  background-color: rgba(59, 72, 64, 0.1882352941);
-  border-radius: 8px 0 0 8px;
-  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.05);
-  z-index: -1;
-  transform: skewY(-1.5deg);
-}
 .truly-item__shape {
   position: absolute;
   margin: auto;
@@ -366,18 +353,6 @@
 .truly-item.odd {
   margin-right: 13px;
   margin-left: auto;
-}
-.truly-item.odd::after {
-  top: 5px;
-  left: auto;
-  right: -10px;
-  width: calc(100% + 10px);
-  height: 100%;
-  background-color: rgba(59, 72, 64, 0.1882352941);
-  border-radius: 0 8px 8px 0;
-  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.05);
-  z-index: -1;
-  transform: skewY(1.5deg);
 }
 .truly-item.odd .truly-item__content__des {
   border-left: none;
