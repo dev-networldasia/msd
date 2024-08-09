@@ -13,6 +13,12 @@
    <!-- Main CSS of Website  -->
    <link rel="stylesheet" href="./css/main.css">
 
+   <!-- Home CSS -->
+   <link rel="stylesheet" href="./css/pages/home/home.css">
+
+   <!-- Load Data Plugin  Wow animate-->
+   <link rel="stylesheet" href="./js/lib/wow-animate/animate.min.css">
+
    <!-- Load Data For Main Menu -->
    <script src="./js/data/main-menu.js"></script>
 
@@ -55,7 +61,8 @@
          <div class="main-container box-shadow-md" id="main-container">
 
             <!-- Banner main -->
-            <div class="banner-main">
+            <div class="banner-main wow animate__pulse
+               " data-wow-duration="1.5s" data-wow-delay="0s">
                <img class="banner-main__desktop" src="./images/common/main-banner-desktop.png" />
                <img class="banner-main__mobile" src="./images/common/main-banner-mobile.png" />
             </div>
@@ -70,17 +77,17 @@
                </div>
 
                <!-- Sidebar Mobile -->
-               <div class="container-sidebar-mobile" id="sidebar-mobile">
+               <div class="container-sidebar-mobile wow animate__fadeInRight" data-wow-duration="1.5s"
+                  data-wow-delay="0" id="sidebar-mobile">
                   <script type="text/javascript">
                      loadHtmlComponent('./pages/home/', 'sidebar-mobile', 'sidebar-mobile')
                   </script>
                </div>
-
             </div>
 
-
             <!-- Footer main content -->
-            <div class="footer-main-content paragraph-2-col bg-primary" id="footer-main-content">
+            <div class="footer-main-content paragraph-2-col bg-primary wow animate__fadeInLeft
+            " data-wow-duration="1.5s" data-wow-delay="0s" id="footer-main-content">
                <script type="text/javascript">
                   loadHtmlComponent('./pages/home/', 'footer-main-content', 'footer-content');
                </script>
@@ -136,6 +143,33 @@
          loadHtmlComponent('./images/icons/svg', 'icon-svg')
       </script>
    </div>
+
+   <!-- Install Wow Animate -->
+   <script src="./js/lib/wow-animate/wow.min.js"></script>
+   <script src="./js/lib/wow-animate/custom-wow-for-container.js"></script>
+   <script>
+      wow = new WOW(
+         {
+            boxClass: 'wow',      // default
+            animateClass: 'animated', // default
+            offset: 100,          // default
+            mobile: true,       // default
+            live: true        // default
+         }
+      )
+      wow.init();
+      if (window.innerWidth < 1100) {
+         // const container = document.querySelector('#main-container');
+         // Khởi tạo WOW.js với container của bạn
+         setTimeout(() => {
+            new WOWForContainer('#main-container');
+         }, 1000)
+
+
+      }
+   </script>
+
+
 </body>
 
 </html>

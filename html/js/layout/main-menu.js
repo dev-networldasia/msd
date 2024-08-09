@@ -105,7 +105,7 @@ setTimeout(() => {
 function addEventToggleMenuMobile() {
     const elBtn = document.querySelector(".btn-open-menu-mobile");
 
-    if (!elBtn) return console.log("Not found element!  22222");
+    if (!elBtn) return console.log("Not found element!");
 
     elBtn.addEventListener("click", (e) => {
         createMenuMobile();
