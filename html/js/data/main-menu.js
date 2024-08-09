@@ -2,32 +2,32 @@ var mainMenuData = [
     {
         id: 1,
         title: "Nữ giới",
-        link: "#",
+        link: "https://hpv.vn/du-phong-cho-nu",
     },
     {
         id: 2,
         title: "Nam giới",
-        link: "#",
+        link: "https://hpv.vn/du-phong-cho-nam",
     },
     {
         id: 3,
         title: "Trắc nghiệm",
-        link: "#",
+        link: "https://hpv.vn/kiem-tra-hpv",
     },
     {
         id: 4,
         title: "Sống lành chủ động",
-        link: "#",
+        link: "https://hpv.vn/song-lanh-chu-dong",
     },
     {
         id: 5,
         title: "Hoạt động cộng đồng",
-        link: "#",
+        link: "https://hpv.vn/hoat-dong-cong-dong",
     },
     {
         id: 6,
         title: "Địa điểm tư vấn",
-        link: "#",
+        link: "https://hpv.vn/dia-diem-tu-van",
     },
 ];
 

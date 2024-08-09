@@ -17,7 +17,7 @@ var sidebarCards = [
         description:
             "Gần 50% các trường hợp nhiễm HPV xảy ra ở độ tuổi 15 - 24.(12)",
         link_female: "./female-19-26.html",
-        link_male: "./male-19-26.html",
+        link_male: "https://hpv.vn/chi-tiet-du-phong-cho-nam/du-phong-hpv-cho-nam-tu-18-26-tuoi",
     },
     {
         id: 3,
@@ -26,6 +26,6 @@ var sidebarCards = [
         subtitle: "<b>CƠ HỘI CUỐI CÙNG</b> \n - Dự phòng HPV ngay!",
         description: "Người trong độ tuổi trung niên có thể dự phòng HPV.(13)",
         link_female: "./female-27-45.html",
-        link_male: "./male-27-45.html",
+        link_male: "https://hpv.vn/chi-tiet-du-phong-cho-nam/du-phong-hpv-cho-nam-tu-27-45-tuoi",
     },
 ];
