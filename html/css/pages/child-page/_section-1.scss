@@ -46,13 +46,16 @@
       margin-top: 2em;
       margin-left: 1em;
       margin-right: 1em;
+      width: calc(100% - 25px);
 
 
       .group-image-male {
          display: flex;
          flex-direction: row;
+         justify-content: space-around;
          background-color: var(--neutral-900);
          border-radius: var(--radius-sm);
+         width: 100%;
 
          .img-male {
             display: flex;
@@ -62,7 +65,7 @@
             justify-content: flex-end;
 
             .male-9-18 {
-               width: 155px;
+               width: 185px;
             }
 
             .text-img {
@@ -114,6 +117,10 @@
 }
 
 @media (min-width: 768px) {
+   .container-section-1 .description {
+      max-width: 95%;
+   }
+
    .container-section-1 .description .group-image-male .img-male .text-img {
       width: 60%
    }
