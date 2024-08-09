@@ -1,0 +1,13 @@
+@media only screen and (max-width: 975px) {
+    .MuiSnackbar-root.MuiSnackbar-anchorOriginBottomLeft.css-cpgvjg-MuiSnackbar-root {
+        /* left: 80% !important; */
+        top: -88% !important;
+    }
+}
+
+@media only screen and (min-width: 975px) {
+    .MuiSnackbar-root.MuiSnackbar-anchorOriginBottomLeft.css-cpgvjg-MuiSnackbar-root {
+        left: 80% !important;
+        top: -88% !important;
+    }
+}

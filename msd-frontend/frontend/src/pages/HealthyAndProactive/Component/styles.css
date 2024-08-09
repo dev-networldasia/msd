@@ -1,0 +1,25 @@
+.by-svh-custom {
+    height: 100svh;
+    /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.hover-scale-image-healthy:hover {
+    background-color: #40AFA3;
+    transition: all 0.2s ease-in-out;
+}
+
+.height-content-healthy {
+    height: calc(100% - 181px) !important;
+}
+
+.hover-scale-image-healthy:hover>div>div>img {
+    transform: scale(1.1) !important;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.hover-scale-image-healthy:hover p {
+    color: white !important;
+
+}

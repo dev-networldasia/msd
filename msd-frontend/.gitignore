@@ -1,0 +1,12 @@
+.idea
+.env
+docker/mysql/database
+static
+asset-manifest.json
+favicon.ico
+index.html
+lh.html
+logo512.png
+logo192.png
+manifest.json
+robots.txt

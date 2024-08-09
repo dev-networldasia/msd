@@ -1,0 +1,124 @@
+.text-606060 {
+  color: #606060 !important;
+}
+.by-svh-custom {
+  height: 100svh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.text-fff {
+  color: #fff !important;
+}
+
+/* .home-page-mobile{
+  background-image: url('../../assets//svg/bg_mobile_home.png');
+} */
+.home-page {
+  height: 100svh;
+}
+
+.female-background {
+  height: 100svh;
+
+}
+
+/* .male-background {
+  height: 100svh;
+
+} */
+
+
+/* menu custom */
+.border-FDE533 {
+  border: 1px solid #FDE533 !important;
+}
+
+.border-045AFA {
+  border: 1px solid #045AFA !important;
+}
+
+.border-005750 {
+  border: 1px solid #005750 !important;
+}
+
+.text-005750 {
+  color: #005750 !important;
+}
+
+.text-ffffff {
+  color: #ffffff;
+}
+
+.bg-FDE533 {
+  background-color: #FDE533;
+}
+
+.bg-045AFA {
+  background-color: #045AFA;
+}
+
+.bg-005750 {
+  background-color: #005750;
+}
+
+.hover-border-FDE533:hover {
+  border: 1px solid #FDE533 !important;
+}
+
+.hover-border-045AFA:hover {
+  border: 1px solid #045AFA !important;
+}
+
+.hover-border-005750:hover {
+  border: 1px solid #005750 !important
+}
+
+.hover-text-ffffff:hover {
+  color: #ffffff;
+}
+
+.hover-text-005750:hover {
+  color: #005750;
+}
+
+.hover-bg-FDE533:hover {
+  background-color: #FDE533;
+}
+
+.hover-bg-005750:hover {
+  background-color: #005750;
+}
+
+.hover-bg-045AFA:hover {
+  background-color: #045AFA;
+}
+
+.modal-custom-border:focus-visible {
+  border: none !important;
+}
+
+/* @media only screen and (min-width: 768px) {
+  .MuiButtonBase-root.MuiMenuItem-root.MuiMenuItem-gutters.MuiMenuItem-root.MuiMenuItem-gutters.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+    font-size: 20px !important;
+    padding: 10px 20px !important;
+  }
+
+}
+*/
+@media only screen and (max-width: 600px) {
+  .text-custom-header-mobile {
+    font-size: 16px !important;
+    /* padding: 10px 20px !important; */
+    height: 24px !important;
+  }
+
+}
+
+/* @media only screen and (min-width: 600px) {
+
+
+} */
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  min-height: auto !important;
+}

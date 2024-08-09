@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.by-svh-custom {
+  height: 100svh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+P,
+span,
+div {
+  font-family: 'Unbounded', sans-serif;
+}
+
+.hover-custom-color-text:hover>div>div>svg {
+  color: white !important;
+}
+
+.hover-custom-color-text:hover>div>span {
+  color: white !important;
+}
+
+.hover-custom-color-text:hover>span {
+  color: white !important;
+}
+
+.custom-transition-thanks {
+  overflow: hidden !important;
+  max-height: 111px !important;
+  display: flex;
+  flex-shrink: 0;
+  animation: mymove .5s 1;
+  width: 100%;
+}
+
+.custom-transition-thanks span {
+  animation: mymoveText 1s 1;
+}
+
+/* @media only screen and (min-width: 1440px) {
+  .custom-modal-mobile {
+    left: 20px !important;
+    top: 40% !important;
+    transform: translate(0%, -50%) !important;
+  }
+} */
+
+@media only screen and (max-width: 767px) {
+
+  .custom-modal-mobile {
+    padding: 0 10px;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
+
+/* @media only screen and (min-width: 975px) and (max-width: 1439px) {
+  .custom-modal-mobile {
+    left: 0 !important;
+    top: 30% !important;
+    transform: translate(0%, -50%) !important;
+  }
+} */
+
+
+@media only screen and (max-width: 978px) {
+  .custom-modal-started-md {
+    margin-bottom: 65px !important;
+  }
+}
+
+
+
+@media only screen and (min-width: 975px) and (max-width: 1200px) {
+  .custom-gap-tablet-horizontal {
+    gap: 0.5rem;
+  }
+
+  .custom-padding-tablet-horizontal {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  .custom-height-description-tablet-horizontal {
+    height: 70px;
+  }
+
+  .custom-padding-left-tablet-horizontal {
+    padding-left: 0;
+  }
+
+  .custom-padding-bottom-tablet-horizontal {
+    padding-bottom: 0.25rem;
+  }
+
+  .custom-padding-top-tablet-horizontal {
+    padding-top: 0.25rem;
+  }
+}
+
+
+
+@keyframes mymove {
+  from {
+    width: 0px;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    ;
+  }
+
+  to {
+    max-height: 100% !important;
+    overflow: hidden;
+    width: 100%
+  }
+}
+
+
+@keyframes mymoveText {
+
+  0% {
+    /* display: none; */
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: inherit;
+  }
+}
+
+
+/* Dots */
+.slick-arrow {
+  display: none !important;
+}
+
+.slick-slide div {
+  height: 100% !important;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-slider {
+  height: 100% !important;
+}
+
+.slick-track {
+  height: 100% !important;
+}
+
+.slick-list {
+  height: 100% !important;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -20px;
+
+  display: block;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 10px;
+  height: 10px;
+
+  content: "•";
+  text-align: center;
+
+  opacity: 0.25;
+  color: black;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: black;
+}
+
+
+.ft-slick__dots--custom {
+  height: 2px;
+  width: 24px;
+  background-color: rgb(232, 230, 230);
+  border-radius: 4px;
+  position: relative;
+}
+
+.slick-dots li {
+  width: 30px;
+  padding: 0 8px;
+  margin: 0 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.slick-dots .slick-active .ft-slick__dots--custom {
+  width: 24px;
+  background-color: #005750;
+  margin: 0 2px;
+}
+
+
+
+/* ip12 trở lên */
+@media only screen and (min-width: 384px) and (max-height: 767px) {
+
+  /* .custom-height-mobile {
+    height: 60% !important;
+  }
+
+  .height-banner-8 {
+    height: 20% !important;
+  } */
+  .title-homepage {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+
+  .padding-top-male {
+    /* padding-top: 4px !important; */
+  }
+
+  .margin-bottom-male {
+    /* margin-bottom: 8px !important; */
+  }
+
+  .des-size-homepage {
+    font-size: 12px !important;
+  }
+}
+
+/* tbalet doc nhma có chiều dọc ngắn hon 855px*/
+/* @media only screen and (min-width: 768px) and (max-height: 850px) {
+
+
+
+
+} */
+
+/* ip12 trở lên */
+@media only screen and (min-width: 768px) and (max-height: 850px) {
+
+  /* . */
+
+  /* .custom-height-mobile {
+    height: 60% !important;
+  }
+
+  .height-banner-8 {
+    height: 20% !important;
+  } */
+  .title-homepage {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+
+  /* .w-image-male {
+    width: 60% !important;
+  } */
+
+  .padding-top-male {
+    padding-top: 12px !important;
+  }
+
+  .margin-bottom-male {
+    margin-bottom: 12px !important;
+  }
+
+  .des-size-homepage {
+    font-size: 12px !important;
+  }
+}
