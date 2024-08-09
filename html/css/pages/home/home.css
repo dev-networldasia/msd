@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap");
 .container-sidebar,
 .container-sidebar-mobile {
-  position: sticky;
-  top: 80px;
   display: flex;
   flex-direction: column;
   gap: 15px;
