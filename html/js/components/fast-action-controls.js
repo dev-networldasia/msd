@@ -148,7 +148,7 @@ function createPopoverLocations() {
         {
             id: 4,
             title: "Nhà thuốc FPT Long Châu - Hệ thống chuỗi nhà thuốc lớn",
-            link: "https://nhathuoclongchau.com.vn/",
+            link: "https://nhathuoclongchau.com.vn/trung-tam-tiem-chung",
             image: "./images/common/logo-long-chau.png",
         },
     ];
