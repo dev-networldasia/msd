@@ -1,0 +1,55 @@
+.popover-locations {
+  position: fixed;
+  right: 7.5em;
+  bottom: 2em;
+  z-index: 99;
+  font-size: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.3s ease, transform 0.3s ease;
+  transform-origin: right bottom;
+}
+.popover-locations.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.popover-locations .locations {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 1.2em;
+  gap: 1em;
+  flex-direction: column;
+  display: flex;
+}
+
+.location-item {
+  color: darkblue;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.location-item img {
+  width: 90px;
+}
+.location-item:hover {
+  border-radius: var(--radius-lg);
+  box-shadow: 2px 2px 5px rgba(51, 48, 0, 0.3843137255);
+}
+.location-item:hover img {
+  width: 90px;
+}
+
+/* Define the animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}
