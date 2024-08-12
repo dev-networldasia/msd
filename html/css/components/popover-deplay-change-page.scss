@@ -54,11 +54,12 @@
       color: var(--neutral-200);
 
       &__left {
-         font-size: 2.3em;
+         font-size: 2.1em;
       }
 
       &__right {
-         font-size: 1.5em;
+         font-size: 1.3em;
+         font-weight: 400;
       }
    }
 
@@ -68,18 +69,19 @@
       border-bottom-right-radius: var(--radius-md);
       border-top-left-radius: 0;
       padding-top: 0;
-      max-width: 70em;
+      max-width: 65em;
    }
 
    .content {
-      background-color: var(--primary-700);
+      background-color: var(--primary-800);
       color: white;
-      padding: 1.2em;
+      padding: 1.6em;
       border-radius: var(--radius-sm);
-      font-size: 1.5em;
+      font-size: 1.3em;
       display: flex;
       flex-direction: column;
       gap: 1.5em;
+      font-weight: 400;
 
       a {
          color: var(--third-400);
