@@ -268,6 +268,30 @@ a {
   box-shadow: 0px 4px 15px 0px rgba(51, 51, 51, 0.2470588235);
 }
 
+.text-neutral {
+  color: var(--neutral-500);
+}
+
+.text-primary {
+  color: var(--primary-500);
+}
+
+.text-secondary {
+  color: var(--secondary-500);
+}
+
+.text-forth {
+  color: var(--forth-500);
+}
+
+.text-fifth {
+  color: var(--fifth-500);
+}
+
+.text-sixth {
+  color: var(--sixth-500);
+}
+
 .btn-primary-outline {
   display: inline-block;
   border: 1px solid var(--primary-500);
