@@ -23,7 +23,7 @@ function renderListCard() {
                         <b>Nữ</b>
                      </a>
 
-                     <a href="${card.link_male}" target="_blank" class="btn btn-primary-outline full-radius btn-primary-animation is-blue">
+                     <a href="${card.link_male}" class="btn btn-primary-outline full-radius btn-primary-animation is-blue">
                         <p>Tìm hiểu thêm</p>
                         <b>Nam</b>
                      </a>
