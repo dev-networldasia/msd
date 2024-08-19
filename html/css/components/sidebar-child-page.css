@@ -1,7 +1,5 @@
 .container-sidebar,
 .container-sidebar-mobile {
-  position: sticky;
-  top: 80px;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -29,7 +27,6 @@
   gap: 1.5em;
   background-color: white;
   border-radius: var(--radius-md);
-  padding: 1em;
   flex: auto;
   overflow: hidden;
 }
@@ -53,6 +50,7 @@
   line-height: 1.2;
   font-size: 1.5em;
   justify-content: center;
+  padding: 1em 1em 1em 0em;
 }
 .list-card .card-item .info .title {
   font-size: 18px;

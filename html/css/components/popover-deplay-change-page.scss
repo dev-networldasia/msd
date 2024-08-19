@@ -88,3 +88,28 @@
       }
    }
 }
+
+@media (max-width: 1099px) {
+   .popover-modal.delay-change-page {
+      .title {
+         &__left {
+            font-size: 1.3em;
+         }
+
+         &__right {
+            font-size: .8em;
+         }
+      }
+
+      .content {
+         font-size: 1em;
+      }
+   }
+
+   .popover-modal .popover-content {
+      bottom: 12em;
+      left: 1em;
+      right: 1em;
+      margin: auto;
+   }
+}

@@ -1,4 +1,5 @@
 <link type="text/css" rel="stylesheet" href="./css/layout/menu/menu.css">
+<link type="text/css" rel="stylesheet" href="./css/layout/modal-search/modal-search.css">
 
 <script type="text/javascript" id="js-menu">
    var scriptElement = document.createElement('script');
@@ -7,7 +8,14 @@
    document.body.appendChild(scriptElement);
 </script>
 
-<div class="container-msd main-menu box-shadow-md">
+<div class="container main-menu box-shadow-md">
+
+   <!-- Modal Search -->
+   <div class="modal-search" id="modal-search">
+      <script type="text/javascript">
+         loadHtmlComponent('./layout/modal-search/', 'modal-search')
+      </script>
+   </div>
 
    <!-- Button open menu mobile -->
    <div class="btn-open-menu-mobile">
@@ -23,7 +31,6 @@
          <img src="./images/common/logo-menu.png" alt="hpv" />
       </div>
    </a>
-
    <!-- Menu -->
    <nav id="nav-menu" class="nav-menu">
       <ul>
@@ -34,6 +41,4 @@
          </svg>
       </div>
    </nav>
-
-
 </div>

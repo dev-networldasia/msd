@@ -1,13 +1,13 @@
-.popup-menu-mobile{
+.popup-menu-mobile {
    position: fixed;
    left: 0;
    top: 0;
    right: 0;
    bottom: 0;
-   z-index: 99;
+   z-index: 43;
    transition: all 250ms ease-in-out;
 
-   .overlay{
+   .overlay {
       position: absolute;
       z-index: 0;
       left: 0;
@@ -17,7 +17,7 @@
       background-color: #3333336a;
    }
 
-   .container-menu-mobile{
+   .container-menu-mobile {
       position: absolute;
       z-index: 2;
       left: 20px;
@@ -34,23 +34,23 @@
 
       color: var(--neutral-400);
 
-      .nav-menu{
+      .nav-menu {
          display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-left: 0;
-         &__item{
+         flex-direction: column;
+         gap: 10px;
+         padding-left: 0;
+
+         &__item {
             font-size: 15px;
             color: var(--primary-500);
             padding: 5px 8px;
             display: inline;
-            a{
+
+            a {
                color: var(--primary-500)
             }
          }
-        
+
       }
    }
 }
-
- 
