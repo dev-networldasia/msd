@@ -1,14 +1,13 @@
 .fast-action-controls {
   position: fixed;
   right: 0.8em;
-  bottom: 2em;
+  bottom: 3.5em;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
   gap: 1.5em;
   color: var(--neutral-400);
-  z-index: 99;
-  visibility: hidden;
+  z-index: 42;
 }
 .fast-action-controls .action-item {
   text-align: center;
@@ -17,7 +16,7 @@
   border-radius: var(--radius-sm);
   padding: 0.5em;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.2em;
   background-color: var(--primary-500);
   vertical-align: middle;
   align-items: center;
@@ -27,6 +26,7 @@
   height: 40px;
   max-width: fit-content;
   box-shadow: 2px 2px 5px rgba(1, 95, 85, 0.4509803922);
+  padding: 0.5em 0.8em;
 }
 .fast-action-controls .action-item.active {
   background-color: var(--primary-800);
@@ -37,29 +37,46 @@
 }
 .fast-action-controls .action-item__title {
   transition: all 250ms ease-in;
-  width: 0;
-  padding: 0;
   margin: 0;
   overflow: hidden;
-  opacity: 0;
   white-space: nowrap;
+  width: 100%;
+  opacity: 1;
+  margin-left: 0.4em;
 }
 .fast-action-controls .action-item#fast-btn-booking img {
   height: 1.5em;
 }
-.fast-action-controls .action-item:hover {
-  padding: 0.5em 0.8em;
-}
 .fast-action-controls .action-item:hover .action-item__title {
   width: 100%;
-  transition: all 250ms ease-in;
-  margin: 0;
   opacity: 1;
   margin-left: 0.4em;
 }
+.fast-action-controls .action-item#fast-btn-consulting-point {
+  display: none;
+}
 
-@media (min-width: 1100px) {
+@media (max-width: 1099px) {
   .fast-action-controls {
-    visibility: visible;
+    flex-direction: row;
+    bottom: 7.4em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    justify-content: center;
+  }
+}
+@media (min-width: 1100px) {
+  .fast-action-controls .action-item {
+    font-size: 1.5em;
+  }
+  .fast-action-controls .action-item__title {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    margin: 0;
+  }
+  .fast-action-controls .action-item#fast-btn-consulting-point {
+    display: flex;
   }
 }

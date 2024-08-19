@@ -87,7 +87,7 @@ const handleClickLocation = (event, link) => {
 
 // Add event click outside popover
 const handleClosePopoverLocations = (event) => {
-    event.stopPropagation();
+    if (event) event.stopPropagation();
     console.log("Call in popover locations");
     const elPopoverLocations = document.querySelector(
         ".popover-locations#popover-locations"
@@ -123,33 +123,39 @@ function createPopoverLocations() {
     popoverLocations.className = "popover-locations";
     popoverLocations.id = "popover-locations";
 
-    const locationItems = document.createElement("div");
-    locationItems.className = "locations box-shadow-md";
+    // Add Overlay
+    const overlay = document.createElement("div");
+    overlay.className = "overlay";
+    popoverLocations.appendChild(overlay);
 
+    // Add locations
+    const locationItems = document.createElement("div");
+    // locationItems.className = "locations box-shadow-md";
+    locationItems.className = "locations";
     const locations = [
         {
             id: 1,
             title: "Danh sách các Bệnh viện - YouMed - Ứng dụng đặt lịch khám Bệnh viện, Bác sĩ",
             link: "https://youmed.vn/dat-kham/benh-vien?utm_source=Hpv.vn&utm_medium=redirect&utm_campaign=MSD006-HPV",
-            image: "./images/common/logo-you-med.png",
+            image: "./images/common/logo-you-med.svg",
         },
         {
             id: 2,
             title: "Hello Health Group",
             link: "https://hellohealthgroup.com/",
-            image: "./images/common/logo-hello-health.png",
+            image: "./images/common/logo-hello-health.svg",
         },
         {
             id: 3,
             title: "Hệ thống tiêm chủng VNVC - Công ty cổ phần Vacxin Việt Nam",
             link: "https://vnvc.vn/dang-ky-tiem-chung/",
-            image: "./images/common/logo-vnvc.png",
+            image: "./images/common/logo-vnvc.svg",
         },
         {
             id: 4,
             title: "Nhà thuốc FPT Long Châu - Hệ thống chuỗi nhà thuốc lớn",
             link: "https://nhathuoclongchau.com.vn/trung-tam-tiem-chung",
-            image: "./images/common/logo-long-chau.png",
+            image: "./images/common/logo-long-chau.svg",
         },
     ];
     locations.forEach((location) => {
@@ -239,7 +245,6 @@ function createPopoverModalDelayChangePage() {
 
     // Add event click outside popover
     const handleClosePopover = (event) => {
-        console.log("-------->");
         if (elPopoverContent.contains(event.target)) return;
         elPopover.classList.remove("active");
         setTimeout(() => {

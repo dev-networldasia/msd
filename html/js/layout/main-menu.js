@@ -29,42 +29,229 @@ function addEventForButtonSearch() {
     if (!elBtn) return console.log("Not found element!");
 
     elBtn.addEventListener("click", (e) => {
-        createPopupSearch();
+        e.stopPropagation();
+        activeModalSearch();
+        addEventForBtnSearchControl();
     });
 
     document.addEventListener("click", (event) => {
         if (elBtn.contains(event.target)) return;
 
         const containerSearch = document.querySelector(
-            "#popup-search #container-search"
+            "#modal-search.modal-search .search-control"
         );
-        if (!containerSearch) return;
-        if (!containerSearch.contains(event.target)) {
-            removePopupSearch();
-        }
+        // if (!containerSearch) return;
+        // if (!containerSearch.contains(event.target)) {
+        //     removePopupSearch();
+        // }
     });
 }
 
-function createPopupSearch() {
-    const popupSearchEle = document.createElement("div");
-    popupSearchEle.className = "popup-search";
-    popupSearchEle.id = "popup-search";
-    popupSearchEle.innerHTML = `
-    <div class="overlay"></div>
-        <div class="container-search box-shadow-md" id="container-search">
-            <input type="text" placeholder="Tìm kiếm..." />
-            <div class="search-results" id="search-results">
+function addEventForBtnSearchControl() {
+    const containerSearch = document.querySelector(
+        "#modal-search.modal-search"
+    );
 
-            </div>
-            <div class="no-results">
-                Không tìm thấy kết quả nào
-            </div>
-        </div>
-    `;
+    if (!containerSearch) return console.log("Not found element!");
 
-    document.body.appendChild(popupSearchEle);
+    const btnSearch = containerSearch.querySelector(".search-control .search");
+    const input = containerSearch.querySelector(".input-control");
 
-    renderListSearchResult();
+    if (!btnSearch || !input) return;
+
+    //Render 6 most viewed articles default
+    get6MostViewedArticles("", containerSearch);
+
+    if (!input.dataset.keyDownEnterEventAdded) {
+        input.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.keyCode === 13) {
+                event.preventDefault();
+                handleSearch(input.value, containerSearch);
+            }
+        });
+        input.dataset.keyDownEnterEventAdded = true;
+    }
+    if (!btnSearch.dataset.clickEventAdded) {
+        btnSearch.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (!input.value) return;
+            handleSearch(input.value, containerSearch);
+        });
+        btnSearch.dataset.clickEventAdded = true;
+    }
+}
+
+// function createPopupSearch() {
+//     const popupSearchEle = document.createElement("div");
+//     popupSearchEle.className = "popup-search";
+//     popupSearchEle.id = "popup-search";
+//     popupSearchEle.innerHTML = `
+//     <div class="overlay"></div>
+//         <div class="container-search box-shadow-md" id="container-search">
+//             <input type="text" placeholder="Tìm kiếm..." />
+//             <div class="search-results" id="search-results">
+
+//             </div>
+//             <div class="no-results">
+//                 Không tìm thấy kết quả nào
+//             </div>
+//         </div>
+//     `;
+
+//     document.body.appendChild(popupSearchEle);
+
+//     renderListSearchResult();
+// }
+
+function activeModalSearch() {
+    const popupSearchEle = document.querySelector(".modal-search#modal-search");
+    if (!popupSearchEle) return;
+
+    popupSearchEle.classList.add("active");
+
+    const searchContent = popupSearchEle.querySelector(".search-content");
+
+    function eventClickOutSide(event) {
+        if (searchContent.contains(event.target)) return;
+
+        popupSearchEle.classList.remove("active");
+        document.removeEventListener("click", eventClickOutSide);
+    }
+
+    document.addEventListener("click", eventClickOutSide);
+
+    const elBtnCloseModal = popupSearchEle.querySelector(".close-modal");
+    if (elBtnCloseModal) {
+        elBtnCloseModal.addEventListener("click", () => {
+            popupSearchEle.style.display = "block";
+            popupSearchEle.classList.remove("active");
+            setTimeout(() => {
+                popupSearchEle.style.display = "none";
+                document.removeEventListener("click", eventClickOutSide);
+            }, 300);
+        });
+    }
+}
+
+async function handleSearch(inputValue, containerSearch) {
+    const titleResultBox = containerSearch.querySelector(
+        ".results-search .title"
+    );
+    const resultsContent = containerSearch.querySelector(
+        ".results-search .list-results"
+    );
+    const searchControl = containerSearch.querySelector(".search-control");
+
+    if (
+        !titleResultBox ||
+        !resultsContent ||
+        searchControl.dataset.isSearching
+    ) {
+        return;
+    }
+
+    searchControl.dataset.isSearching = "loading";
+    titleResultBox.textContent = "Kết quả tìm kiếm";
+    resultsContent.innerHTML = `<div class="msd-loader-container">
+               <div class="msd-loader"></div>
+               <div class="msd-loader-text">Tìm kiếm...</div>
+            </div>`;
+    const resultData = await requestSearchPost(inputValue);
+    searchControl.dataset.isSearching = "";
+    if (!resultData) {
+        resultsContent.innerHTML = `<div class="not-found-post">Không tìm thấy bài viết!</div>`;
+    } else {
+        const listPostHTML = resultData.map((post) => {
+            return `<a href="${post.link}" class="result-item">
+            <img src="${post.image}" alt="${post.title}">
+            <p class="result-item__des">${post.title}</p>
+            </a>`;
+        });
+        resultsContent.innerHTML = listPostHTML.join("");
+    }
+}
+
+async function get6MostViewedArticles(inputValue, containerSearch) {
+    const titleResultBox = containerSearch.querySelector(
+        ".results-search .title"
+    );
+    const resultsContent = containerSearch.querySelector(
+        ".results-search .list-results"
+    );
+    if (!titleResultBox || !resultsContent) return;
+
+    titleResultBox.textContent = "Kết quả tìm kiếm nhiều nhất";
+
+    resultsContent.innerHTML = `<div class="msd-loader-container">
+               <div class="msd-loader"></div>
+               <div class="msd-loader-text">Tìm kiếm...</div>
+            </div>`;
+    const resultData = await requestSearchPost(inputValue);
+    if (!resultData) {
+        resultsContent.innerHTML = `<div class="not-found-post">Không tìm thấy bài viết!</div>`;
+    } else {
+        const listPostHTML = resultData.map((post) => {
+            return `<a href="${post.link}" class="result-item">
+            <img src="${post.image}" alt="${post.title}">
+            <p class="result-item__des">${post.title}</p>
+            </a>`;
+        });
+        resultsContent.innerHTML = listPostHTML.join("");
+    }
+}
+
+function requestSearchPost(value) {
+    // const url = `${apiUrl}/search?q=${value}`;
+    // return fetch(url)
+    //     .then((response) => response.json())
+    //     .then((data) => renderPostOfModalSearch(data.data))
+    //     .catch((error) => console.error("Error:", error));
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+                {
+                    title: "Một mối quan hệ lành mạnh là cùng giúp nhau hoàn thiện, chăm sóc lẫn nhau và trân trọng giá trị của đối phương",
+                    image: "https://hpv.vn/api/CMS/image/folder/1716989923_Picture3.png",
+                },
+            ]);
+        }, 2000);
+    });
 }
 
 function removePopupSearch() {
@@ -72,28 +259,7 @@ function removePopupSearch() {
     if (popupSearchEle) document.body.removeChild(popupSearchEle);
 }
 
-function renderListSearchResult() {
-    const searchResultEl = document.querySelector("#search-results");
-
-    if (!searchResultEl) return console.log("Not found element!");
-
-    const { status, total, message, data } = searchResults;
-
-    if (status === 0) {
-        searchResultEl.innerHTML = `<p class="text-danger">${message}</p>`;
-        return;
-    }
-
-    const list = data.map((item) => {
-        const link = `<a href="${item.url}">${item.title}</a>`;
-        return `<li class="search-result__item">${link}</li>`;
-    });
-
-    searchResultEl.innerHTML = `<ul>${list.join("")}</ul>`;
-}
-
 setTimeout(() => {
-    renderListSearchResult();
     addEventForButtonSearch();
 }, 1000);
 

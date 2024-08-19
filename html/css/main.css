@@ -1,4 +1,51 @@
+/* HTML: <div class="loader"></div> */
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Unbounded:wght@200..900&display=swap");
+.msd-loader-container {
+  margin: 5.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2em;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.msd-loader-text {
+  font-size: 2.2rem;
+  color: var(--primary-500);
+  font-weight: 400;
+}
+
+.msd-loader {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+  --c: no-repeat linear-gradient(#25b09b 0 0);
+  background: var(--c) center/100% 10px, var(--c) center/10px 100%;
+}
+.msd-loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--c) 0 0, var(--c) 100% 0, var(--c) 0 100%, var(--c) 100% 100%;
+  background-size: 1.5em 1.5em;
+  animation: msd-animation 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes msd-animation {
+  33% {
+    inset: -10px;
+    transform: rotate(0deg);
+  }
+  66% {
+    inset: -10px;
+    transform: rotate(90deg);
+  }
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
 html {
   font-size: 55.25%;
 }
@@ -387,7 +434,7 @@ a {
 .menu-header {
   position: sticky;
   top: 0px;
-  z-index: 10;
+  z-index: 45;
   margin-top: 0;
   transition: all 200ms ease-in-out;
 }
@@ -409,7 +456,7 @@ a {
   gap: 10px;
 }
 .container-content .main-container {
-  max-height: calc(100svh - 160px);
+  max-height: calc(100svh - 170px);
   overflow-y: auto;
   flex-grow: 1;
   width: 100;

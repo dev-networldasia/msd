@@ -75,3 +75,21 @@
 .popover-modal.delay-change-page .content a {
   color: var(--third-400);
 }
+
+@media (max-width: 1099px) {
+  .popover-modal.delay-change-page .title__left {
+    font-size: 1.3em;
+  }
+  .popover-modal.delay-change-page .title__right {
+    font-size: 0.8em;
+  }
+  .popover-modal.delay-change-page .content {
+    font-size: 1em;
+  }
+  .popover-modal .popover-content {
+    bottom: 12em;
+    left: 1em;
+    right: 1em;
+    margin: auto;
+  }
+}
