@@ -32,13 +32,13 @@ const actionsData = [
         path: ".fast-action-controls #fast-btn-booking",
         methodEvent(event) {
             const popover = document.querySelector(
-                ".popover-locations#popover-locations"
+                ".modal-locations#modal-locations"
             );
             if (!popover) {
                 event.stopPropagation();
-                createPopoverLocations();
+                createModalLocations();
             } else {
-                handleClosePopoverLocations();
+                handleCloseModalLocations();
             }
         },
     },
@@ -64,7 +64,7 @@ function clearTimerCountDown() {
 
 // Event click location item
 const handleClickLocation = (event, link) => {
-    handleClosePopoverLocations(event);
+    handleCloseModalLocations(event);
 
     const popoverDirect = createPopoverModalDelayChangePage();
     const elClickToHere = popoverDirect.querySelector("a#link-redirect");
@@ -86,14 +86,11 @@ const handleClickLocation = (event, link) => {
 };
 
 // Add event click outside popover
-const handleClosePopoverLocations = (event) => {
+const handleCloseModalLocations = (event) => {
     if (event) event.stopPropagation();
-    console.log("Call in popover locations");
     const elPopoverLocations = document.querySelector(
-        ".popover-locations#popover-locations"
+        ".modal-locations#modal-locations"
     );
-
-    // Check if the click is within the popover or the popover doesn't exist
 
     if (!elPopoverLocations) {
         return;
@@ -110,13 +107,99 @@ const handleClosePopoverLocations = (event) => {
     }, 240);
 
     // Remove the event listener
-    document.removeEventListener("click", handleClosePopoverLocations);
+    document.removeEventListener("click", handleCloseModalLocations);
 
     // Handle timerCountDown if applicable
     if (timerCountDown) {
         clearInterval(timerCountDown); // Use clearInterval instead of setInterval
     }
 };
+
+const elementHeaderModalLocations = `<div class="header-title">
+      <h2 class="title">
+         <p class="title__main">Tham vấn ngay</p>
+         <p class="title__sub">với chuyên gia y tế</p>
+      </h2>
+      <img src="./images/key-visual-msd.png" class="key-visual"></img>
+      <span class="btn-close-modal">×</span>
+   </div>`;
+
+function createModalLocations() {
+    const modalLocations = document.createElement("div");
+    modalLocations.className = "modal-locations";
+    modalLocations.id = "modal-locations";
+
+    // Add Overlay
+    const overlay = document.createElement("div");
+    overlay.className = "overlay";
+    modalLocations.appendChild(overlay);
+
+    // Add locations
+    const locationItems = document.createElement("div");
+    // locationItems.className = "locations box-shadow-md";
+    locationItems.className = "locations";
+    locationItems.innerHTML = elementHeaderModalLocations;
+
+    const locations = [
+        {
+            id: 1,
+            title: "Danh sách các Bệnh viện - YouMed - Ứng dụng đặt lịch khám Bệnh viện, Bác sĩ",
+            link: "https://youmed.vn/dat-kham/benh-vien?utm_source=Hpv.vn&utm_medium=redirect&utm_campaign=MSD006-HPV",
+            image: "./images/common/logo-you-med.svg",
+        },
+        {
+            id: 2,
+            title: "Hello Health Group",
+            link: "https://hellohealthgroup.com/",
+            image: "./images/common/logo-hello-health.svg",
+        },
+        {
+            id: 3,
+            title: "Hệ thống tiêm chủng VNVC - Công ty cổ phần Vacxin Việt Nam",
+            link: "https://vnvc.vn/dang-ky-tiem-chung/",
+            image: "./images/common/logo-vnvc.svg",
+        },
+        {
+            id: 4,
+            title: "Nhà thuốc FPT Long Châu - Hệ thống chuỗi nhà thuốc lớn",
+            link: "https://nhathuoclongchau.com.vn/trung-tam-tiem-chung",
+            image: "./images/common/logo-long-chau.svg",
+        },
+    ];
+
+    const locationList = document.createElement("div");
+    locationList.className = "location-list";
+    locations.forEach((location) => {
+        const locationItem = document.createElement("div");
+        locationItem.className = "location-item";
+        locationItem.setAttribute("title", location.title);
+        locationItem.innerHTML = `<img src="${location.image}" />`;
+        locationItem.onclick = () => handleClickLocation(event, location.link);
+        locationList.appendChild(locationItem);
+    });
+
+    locationItems.appendChild(locationList);
+    modalLocations.appendChild(locationItems);
+    document.body.appendChild(modalLocations);
+
+    //Add event close modal for button
+    const btnCloseModal = locationItems.querySelector(".btn-close-modal");
+    btnCloseModal.onclick = handleCloseModalLocations;
+
+    // Add animate appear for popover
+    const elPopover = document.querySelector(
+        ".modal-locations#modal-locations"
+    );
+
+    if (!elPopover) return console.log("Not found element!");
+
+    // Delay run animate
+    setTimeout(() => {
+        elPopover.classList.add("active");
+    }, 240);
+
+    document.addEventListener("click", handleCloseModalLocations);
+}
 
 function createPopoverLocations() {
     const popoverLocations = document.createElement("div");
@@ -183,7 +266,7 @@ function createPopoverLocations() {
         elPopover.classList.add("active");
     }, 240);
 
-    document.addEventListener("click", handleClosePopoverLocations);
+    document.addEventListener("click", handleCloseModalLocations);
 }
 
 //----------------------------------------------------------------
