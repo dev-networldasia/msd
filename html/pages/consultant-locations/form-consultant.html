@@ -1,0 +1,34 @@
+<div class="header-label">
+   <h3 class="header-label__title">
+      LIÊN HỆ TƯ VẤN
+   </h3>
+   <h4 class="header-label__subtitle">
+      Cùng chuyên gia tại Trung tâm Y tế gần nhất!
+   </h4>
+</div>
+
+<from class="form-input">
+   <div class="form-control">
+      <input type="text" name="city" hidden class="form-input__field" placeholder="Tên của bạn" required>
+      <div class="dropdown msd">
+         <button class="dropdown-toggle">Thành phố
+            <svg class="icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+               <path fill="currentColor" d="M7 10l5 5 5-5z"></path>
+            </svg>
+         </button>
+         <div class="dropdown-menu">
+            <div class="dropdown-item" data-value="1">Option 1</div>
+            <div class="dropdown-item" data-value="2">Option 2</div>
+            <div class="dropdown-item" data-value="3">Option 3</div>
+         </div>
+      </div>
+   </div>
+</from>
+
+
+<script type="text/javascript">
+   var scriptElement = document.createElement('script');
+   scriptElement.src = "./js/components/form-consultant.js";
+   scriptElement.type = 'module';
+   document.body.appendChild(scriptElement);
+</script>

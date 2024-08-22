@@ -11,7 +11,10 @@ async function loadHtmlComponent(path, id, nameFile) {
             el.innerHTML = data;
             const scripts = el.getElementsByTagName("script");
             for (let i = 0; i < scripts.length; i++) {
-                if (scripts[i]) eval(scripts[i].innerHTML);
+                if (scripts[i] && scripts[i]?.innerHTML)
+                    try {
+                        eval(scripts[i].innerHTML);
+                    } catch (e) {}
             }
         });
 }
