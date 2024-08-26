@@ -1,0 +1,40 @@
+<div class="overlay"></div>
+<div class="modal-content">
+   <div class="ribbon-white"></div>
+   <div class="title">
+      <div class="title__left">
+         Xin chào!<br>
+         Hãy chọn để tiếp tục
+      </div>
+   </div>
+   <div class="content">
+      <div class="questions">
+         <div class="question-item" id="know-hpv">
+            <p>Bạn đã biết HPV
+               trước đây chưa?</p>
+            <div class="item-selects">
+               <input hidden type="radio" id="know-hpv-yes" name="know-hpv" value="1">
+               <label for="know-hpv-yes">Đã biết</label>
+               <input hidden type="radio" id="know-hpv-no" name="know-hpv" value="0">
+               <label for="know-hpv-no">chưa biết</label>
+            </div>
+         </div>
+         <div class="question-item" id="injected-hpv">
+            <p>Bạn đã có kế hoạch dự phòng
+               HPV chưa?</p>
+            <div class="item-selects">
+               <input hidden type="radio" id="injected-hpv-yes" name="injected-hpv" value="1">
+               <label for="injected-hpv-yes">Đã có</label>
+               <input hidden type="radio" id="injected-hpv-no" name="injected-hpv" value="0">
+               <label for="injected-hpv-no">chưa có</label>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script type="text/javascript">
+      var scriptElement = document.createElement('script');
+      scriptElement.src = "./js/components/modal-start-hbs.js";
+      scriptElement.type = 'module';
+      document.body.appendChild(scriptElement);
+   </script>
