@@ -171,7 +171,7 @@ function createModalLocations() {
     locationList.className = "location-list";
     locations.forEach((location) => {
         const locationItem = document.createElement("div");
-        locationItem.className = "location-item";
+        locationItem.className = "location-item glow-on-hover";
         locationItem.setAttribute("title", location.title);
         locationItem.innerHTML = `<img src="${location.image}" />`;
         locationItem.onclick = () => handleClickLocation(event, location.link);
@@ -243,7 +243,7 @@ function createPopoverLocations() {
     ];
     locations.forEach((location) => {
         const locationItem = document.createElement("div");
-        locationItem.className = "location-item";
+        locationItem.className = "location-item glow-on-hover";
         locationItem.setAttribute("title", location.title);
         locationItem.innerHTML = `<img src="${location.image}" />`;
         locationItem.onclick = () => handleClickLocation(event, location.link);
