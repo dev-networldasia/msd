@@ -28,33 +28,13 @@
    <div class="swiper-pagination">
       
    </div>
-
-   <!-- If we need navigation buttons -->
-   <!-- <div class="swiper-button-prev"></div>
-   <div class="swiper-button-next"></div> -->
-
-   <!-- If we need scrollbar -->
-   <!-- <div class="swiper-scrollbar"></div> -->
 </div>
 
 
-<!-- Load Swiper library -->
-<!-- <script type="text/javascript">
-   (() => {
-      const scriptElement = document.createElement('script');
-      scriptElement.id = "js-load-lib-swiper"
-      scriptElement.src = "./js/lib/swiper/swiper-bundle.min.js";
-      document.body.appendChild(scriptElement);
-   })()
-</script>
- -->
 
 <!-- Init Swiper -->
 <script type="text/javascript">
    function initSwiper(pathSwiper) {
-      // const elLoadScriptLibSwiper = document.querySelector('#js-load-lib-swiper')
-      // if (elLoadScriptLibSwiper) {
-      //    elLoadScriptLibSwiper.addEventListener('load', () => {
       var swiper = new Swiper(pathSwiper, {
          autoplay: {
             delay: 4000,
@@ -72,8 +52,6 @@
             prevEl: ".swiper-button-prev",
          },
       });
-      //    })
-      // }
    }
    initSwiper(".banner-details#banner-details .swiper-banner-details");
 </script>

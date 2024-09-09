@@ -18,14 +18,20 @@
 
 
    <!-- Location List-->
-   <div class="locations-list" id="locations-list">
+   <div class="consultant-locations-list" id="consultant-locations-list">
       <script type="text/javascript">
-         loadHtmlComponent('./pages/consultant-locations/', 'locations-list', 'locations-list')
+         loadHtmlComponent('./pages/consultant-locations/', 'consultant-locations-list', 'consultant-locations-list')
       </script>
    </div>
 </div>
 
-<div class="col-1/3">
+<div class="col-1/3 modal-consultant-location-details active">
+   <!-- <div class="thumb-consultant-locations-details">
+      <img src="https://hpv.vn/static/media/location_detail_banner.63cb8eefb7801297e911.png" alt="">
+   </div> -->
+   <div class="overlay">
+   </div>
+   <span class="btn-close-modal">×</span>
    <!-- Google map -->
    <div class="google-map" id="google-map">
       <script type="text/javascript">

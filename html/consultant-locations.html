@@ -25,10 +25,12 @@
    <!-- Load swiper js -->
    <link rel="stylesheet" href="./js/lib/swiper/swiper-bundle.min.css">
 
+   <!-- Toastify -->
+   <!-- https://github.com/apvarun/toastify-js -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
    <!-- Load JS Utils -->
    <script src="./js/index.js"></script>
-
-
 
    <style>
       @font-face {
@@ -51,7 +53,7 @@
       </header>
 
       <!-- Container-content -->
-      <main class="container container-content">
+      <main class="container container-content" id="main-container">
 
          <div class="main-consultant-content" id="body-main-content">
             <script type="text/javascript">
@@ -97,26 +99,31 @@
    <script src="./js/lib/wow-animate/wow.min.js"></script>
    <script src="./js/lib/wow-animate/custom-wow-for-container.js"></script>
    <script>
-      wow = new WOW(
-         {
-            boxClass: 'wow',      // default
-            animateClass: 'animated', // default
-            offset: 100,          // default
-            mobile: true,       // default
-            live: true        // default
-         }
-      )
-      wow.init();
+      try {
+         wow = new WOW(
+            {
+               boxClass: 'wow',      // default
+               animateClass: 'animated', // default
+               offset: 100,          // default
+               mobile: true,       // default
+               live: true        // default
+            }
+         )
+         wow.init();
 
-      // Add Wow js for mobile container
-      if (window.innerWidth < 1100) {
-         setTimeout(() => {
-            new WOWForContainer('#main-container');
-         }, 1000)
+         // Add Wow js for mobile container
+         if (window.innerWidth < 1100) {
+            setTimeout(() => {
+               new WOWForContainer('#main-container');
+            }, 1000)
+         }
+      } catch (e) {
+
       }
    </script>
 
    <script src="./js/lib/swiper/swiper-bundle.min.js" id="js-load-lib-swiper"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
