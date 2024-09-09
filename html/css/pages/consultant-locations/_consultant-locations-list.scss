@@ -1,0 +1,188 @@
+.consultant-locations-list {
+   margin-top: 1em;
+   height: calc(100% - 222px) !important;
+   overflow-y: auto;
+   position: relative;
+
+   .consultant-locations {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+      .location {
+         display: flex;
+         flex-direction: column;
+         border-radius: var(--radius-sm);
+         background-color: white;
+         cursor: pointer;
+         overflow: hidden;
+         min-height: calc(33% - 0.5em);
+         transition: all 200ms ease-in;
+
+         &:hover {
+            .location__thumb {
+               img {
+                  transform: scale(1.05);
+               }
+            }
+         }
+
+         .location__thumb {
+            position: relative;
+            aspect-ratio: 3/2;
+            max-height: 75%;
+            transform: scale(1);
+            overflow: hidden;
+
+            img {
+               transition: transform 200ms ease-in;
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+
+            &:after {
+               bottom: 0;
+               color: #a3a3a3;
+               content: "Hình minh họa";
+               font-size: 10px;
+               height: 20px;
+               left: 0;
+               padding-left: 10px;
+               position: absolute;
+               width: 100%;
+               z-index: 99999;
+            }
+         }
+
+         .location__info {
+            padding: 1em;
+
+            &__name {
+               font-weight: 400;
+               font-size: 1.6em;
+               text-transform: uppercase;
+
+               display: -webkit-box;
+               -webkit-box-orient: vertical;
+               -webkit-line-clamp: 2;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               line-height: 1.5em;
+            }
+
+            &__address {
+               display: flex;
+               gap: 1em;
+               align-items: center;
+               margin-top: 1em;
+
+               .address__icon {
+                  font-size: 1.8em;
+                  color: var(--neutral-400);
+               }
+
+               .address__text {
+                  color: var(--neutral-400);
+                  font-weight: 400;
+                  font-size: 1.12em;
+                  font-style: normal;
+
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 2;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  line-height: 1.5em;
+               }
+            }
+         }
+      }
+   }
+
+   .loading {
+      position: sticky;
+      top: 50%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: fit-content;
+      transform: translateY(-50%);
+      z-index: 99;
+   }
+
+   .empty-state {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: fit-content;
+      width: fit-content;
+   }
+}
+
+@media (max-width: 975px) {
+   .consultant-locations-list {
+      max-height: 100svh;
+      min-height: 350px;
+   }
+
+   .consultant-locations-list .consultant-locations {
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+
+   .consultant-locations-list .consultant-locations {
+      .location {
+         flex-direction: row;
+         min-height: 120px !important;
+         background-color: var(--primary-300);
+         min-width: 320px;
+         flex: 1;
+
+         &:nth-child(2n) {
+            background-color: var(--primary-800);
+         }
+
+
+         .location__info {
+            padding: 1.2em;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+         }
+
+         &__thumb {
+            max-width: 35%;
+            max-height: 100% !important;
+            width: 35%;
+         }
+
+         .location__info__name {
+            font-size: 1.5em;
+            color: white;
+            font-weight: 500;
+         }
+
+         .location__info__address {
+            .address__text {
+               -webkit-line-clamp: 3;
+               color: white;
+               letter-spacing: 0.02em;
+               line-height: 1.5;
+            }
+
+            .address__icon {
+               display: none;
+            }
+         }
+      }
+
+   }
+}

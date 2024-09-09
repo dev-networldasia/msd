@@ -5,7 +5,8 @@
 @import './base/paragraph';
 @import './base/components';
 @import './grid/container';
-@import './components//modal-start-hbs';
+@import './components/modal-start-hbs';
+@import './components/custom-toastify';
 
 .root-container {
    display: flex;
@@ -14,6 +15,7 @@
    min-height: 100vh;
    // gap: 10px;
 }
+
 
 
 .menu-header {

@@ -128,7 +128,7 @@
 .location-item {
    cursor: pointer;
    transition: all 250ms ease-in-out;
-   overflow: hidden;
+   // overflow: hidden;
    background-color: white;
    padding: 1.5em 1em;
    transform: scale(1);
@@ -180,5 +180,67 @@
       .location-item img {
          filter: grayscale(0)
       }
+   }
+}
+
+
+.glow-on-hover {
+   // width: 220px;
+   // height: 50px;
+   // border: none;
+   // outline: none;
+   // color: #fff;
+   // background: #111;
+   // cursor: pointer;
+   // position: relative;
+   // z-index: 0;
+   // border-radius: 10px;
+
+   &:before {
+      content: '';
+      // background: linear-gradient(45deg, #30aea3, #16c4dc, #c9cf4d, #00ffd5, #dfda53);
+      background: linear-gradient(45deg, #c9cf4d, #51caaf, #16c4dc, #00ffd5, #dfda53);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+   }
+
+   &:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: white;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+   }
+
+   &:hover:before {
+      opacity: 1;
+   }
+}
+
+@keyframes glowing {
+   0% {
+      background-position: 0 0;
+   }
+
+   50% {
+      background-position: 400% 0;
+   }
+
+   100% {
+      background-position: 0 0;
    }
 }

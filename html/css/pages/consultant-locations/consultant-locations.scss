@@ -1,29 +1,140 @@
 @import './banner-details';
 @import './form-consultant';
+@import './consultant-locations-list';
+@import './locations-details';
+@import './google-map';
+
+
 
 .main-consultant-content {
    display: flex;
-   flex-direction: column;
-   gap: 1em;
-   max-height: calc(100svh - 170px);
+   flex-direction: row;
+   gap: 1.5em;
+   max-height: calc(100svh - 169px);
    overflow-y: auto;
-   flex: none;
+   flex: auto;
 
    .col-1\/3 {
-      flex: 1;
-      width: 100%;
+      flex: auto;
+      width: 33%;
+
    }
 
+   .thumb-consultant-locations-details {
+      display: block;
+      aspect-ratio: 3 / 2;
+      transform: scale(1);
+      overflow: hidden;
+
+      img {
+         transition: transform 200ms ease-in;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   .modal-consultant-location-details {
+      display: flex;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      gap: 1em;
+
+      .btn-close-modal {
+         margin-bottom: -1.3em;
+         margin-right: 0.5em;
+         margin-left: auto;
+         float: right;
+         width: 1.5em;
+         height: 1.5em;
+         border-radius: 50%;
+         text-align: center;
+         line-height: 1.3em;
+         font-weight: 400;
+         cursor: pointer;
+         font-size: 2em;
+         color: var(--primary-500);
+         transition: all 250ms ease-in-out;
+         border: 2px solid;
+         z-index: 1;
+         background-color: white;
+         box-shadow: 0 0 8px var(--primary-800);
+         display: none;
+      }
+
+      .overlay {
+         display: none;
+      }
+   }
 }
 
-
-@media (min-width: 976px) {
+@media (max-width: 975px) {
    .main-consultant-content {
-      flex-direction: row;
+      flex-direction: column;
       flex: auto;
+      gap: 1.5em;
 
       .col-1\/3 {
-         width: 33%;
+         width: 100%;
+         flex: 1;
       }
+
+      .modal-consultant-location-details {
+         display: none;
+         align-items: center;
+         justify-content: center;
+         position: fixed;
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         z-index: 99;
+         transition: all 250ms ease-in-out;
+         font-size: 1.2rem;
+
+
+         .overlay {
+            display: none;
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(26 26 26 / 64%);
+            opacity: 0;
+            backdrop-filter: blur(8px);
+         }
+
+         .btn-close-modal {
+            display: block;
+         }
+
+
+
+         .google-map,
+         .locations-details {
+            opacity: 0;
+            transform-origin: top bottom;
+            transition: all 250ms ease-in-out;
+            transform: scale(.3);
+         }
+
+         &.active {
+            display: flex;
+
+            .overlay {
+               opacity: 1;
+               display: block;
+            }
+
+            .google-map,
+            .locations-details {
+               transform: scale(1);
+               opacity: 1;
+            }
+         }
+      }
+
    }
 }

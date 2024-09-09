@@ -2,13 +2,14 @@
 
 .form-consultant {
    min-height: 22em;
-   background-color: transparent;
+
+   background-color: var(--primary-900);
    border-radius: var(--radius-sm);
    // overflow: hidden;
    padding: 1.5em;
 
    .header-label {
-      display: flex;
+      display: none;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
@@ -17,6 +18,7 @@
       background-color: #6cc9ad;
       color: white;
       padding: 1.5em;
+      margin-bottom: 1em;
 
 
       &__title,
@@ -30,17 +32,93 @@
       }
    }
 
-   .form-input {}
+   .form-input {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+
+      .inline-control {
+         display: flex;
+         gap: 1.5em;
+         flex-direction: row;
+
+         .input-control {
+            flex: 1;
+            width: 50%;
+
+            .dropdown,
+            .dropdown-toggle,
+            .dropdown-menu {
+               width: 100%;
+               text-align: left;
+            }
+
+         }
+      }
+
+      button,
+      input {
+         font-size: 1.35rem;
+         background-color: white;
+         color: rgb(30, 30, 30);
+         border: none;
+         cursor: pointer;
+         font-weight: 500;
+         border-radius: 5em;
+         width: 100%;
+         padding: 1em 1.8em;
+
+         &:focus-visible {
+            outline: none;
+         }
+      }
+   }
+
+   #action-submit {
+      text-align: center;
+
+      #btn-find-now {
+         max-width: 15em;
+         margin: auto;
+         transition: all 250ms ease-in-out;
+         text-transform: uppercase;
+
+         &:hover {
+            background-color: var(--primary-500);
+            color: white;
+         }
+      }
+   }
+
 }
 
 
-@media (min-width: 976px) {
+// @media (min-width: 976px) {
+//    .form-consultant {
+//       min-height: 22em;
+//       background-color: var(--primary-900);
+
+//       .header-label {
+//          display: none;
+//       }
+//    }
+// }
+@media (max-width: 975px) {
    .form-consultant {
-      min-height: 22em;
-      background-color: var(--primary-900);
+      background-color: transparent;
+      padding: 0;
 
       .header-label {
-         display: none;
+         display: flex;
+      }
+
+      .form-input {
+         gap: 0.8em;
+
+         button,
+         input {
+            border-radius: var(--radius-sm);
+         }
       }
    }
 }

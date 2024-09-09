@@ -185,7 +185,9 @@ $third-500: #005CFF;
 
    // background-size: 150% 100%;
    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-   background-image: radial-gradient(25% 70% at -1% 91%, #38ab9f 1%, #38ab9f 1%, #073AFF00 91%), radial-gradient(30% 53% at 62% 163%, #73F2FFFF 0%, #073AFF00 100%), linear-gradient(125deg, #FFFFFFFF 8%, #d3e9d6 44%, #ACE0C8FF 93%);
+   background-image: radial-gradient(25% 70% at -1% 91%, #38ab9f 1%, #38ab9f 1%, #073AFF00 91%),
+      radial-gradient(30% 53% at 62% 163%, #73F2FFFF 0%, #073AFF00 100%),
+      linear-gradient(125deg, #bdfbe8 8%, #d3e9d6 44%, #ACE0C8FF 93%);
    // background: linear-gradient(to bottom right,
    //       #f8fcf8 0%,
    //       #e1f5ea 20%,
@@ -237,4 +239,22 @@ $third-500: #005CFF;
 
 .box-shadow-lg {
    box-shadow: 0px 4px 15px 0px #3333333f;
+}
+
+
+
+::-webkit-scrollbar-track {
+   height: 50%;
+   max-height: 50%
+}
+
+::-webkit-scrollbar {
+   border-radius: 16px;
+   height: 5px;
+   width: 4px
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 16px;
+   box-shadow: inset 0 0 6px #151515
 }

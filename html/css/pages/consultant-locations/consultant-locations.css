@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .banner-details .swiper-banner-details .banner-item {
   border-radius: var(--radius-sm);
   overflow: hidden;
@@ -44,7 +45,7 @@
   cursor: pointer;
   font-weight: 500;
   padding-right: 3em;
-  border-radius: var(--radius-sm);
+  border-radius: 5em;
 }
 .dropdown .dropdown-toggle .icon {
   position: absolute;
@@ -54,36 +55,46 @@
   top: 20%;
   color: var(--neutral-500);
 }
+.dropdown .dropdown-toggle .select-value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .dropdown .dropdown-menu {
   display: none;
   position: absolute;
   background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  min-width: 160px;
+  min-width: fit-content;
   z-index: 1;
   border-radius: 5px;
+  max-height: 450px;
+  overflow-y: auto;
+  padding: 0;
+  flex-direction: column;
 }
 .dropdown .dropdown-item {
-  font-size: 1.6em;
-  padding: 1em;
+  font-size: 1.5em;
+  padding: 0.4em 1em;
+  display: block;
   cursor: pointer;
-  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
 }
 .dropdown .dropdown-item:last-child {
   border-bottom: none;
 }
 .dropdown .dropdown-item:hover {
-  background-color: #ddd;
+  background-color: var(--neutral-800);
 }
 
 .form-consultant {
   min-height: 22em;
-  background-color: transparent;
+  background-color: var(--primary-900);
   border-radius: var(--radius-sm);
   padding: 1.5em;
 }
 .form-consultant .header-label {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -91,6 +102,7 @@
   background-color: #6cc9ad;
   color: white;
   padding: 1.5em;
+  margin-bottom: 1em;
 }
 .form-consultant .header-label__title, .form-consultant .header-label__subtitle {
   font-size: 1.5em;
@@ -99,34 +111,497 @@
 .form-consultant .header-label__title {
   text-transform: uppercase;
 }
-@media (min-width: 976px) {
+.form-consultant .form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.form-consultant .form-input .inline-control {
+  display: flex;
+  gap: 1.5em;
+  flex-direction: row;
+}
+.form-consultant .form-input .inline-control .input-control {
+  flex: 1;
+  width: 50%;
+}
+.form-consultant .form-input .inline-control .input-control .dropdown,
+.form-consultant .form-input .inline-control .input-control .dropdown-toggle,
+.form-consultant .form-input .inline-control .input-control .dropdown-menu {
+  width: 100%;
+  text-align: left;
+}
+.form-consultant .form-input button,
+.form-consultant .form-input input {
+  font-size: 1.35rem;
+  background-color: white;
+  color: rgb(30, 30, 30);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5em;
+  width: 100%;
+  padding: 1em 1.8em;
+}
+.form-consultant .form-input button:focus-visible,
+.form-consultant .form-input input:focus-visible {
+  outline: none;
+}
+.form-consultant #action-submit {
+  text-align: center;
+}
+.form-consultant #action-submit #btn-find-now {
+  max-width: 15em;
+  margin: auto;
+  transition: all 250ms ease-in-out;
+  text-transform: uppercase;
+}
+.form-consultant #action-submit #btn-find-now:hover {
+  background-color: var(--primary-500);
+  color: white;
+}
+
+@media (max-width: 975px) {
   .form-consultant {
-    min-height: 22em;
-    background-color: var(--primary-900);
+    background-color: transparent;
+    padding: 0;
   }
   .form-consultant .header-label {
+    display: flex;
+  }
+  .form-consultant .form-input {
+    gap: 0.8em;
+  }
+  .form-consultant .form-input button,
+  .form-consultant .form-input input {
+    border-radius: var(--radius-sm);
+  }
+}
+.consultant-locations-list {
+  margin-top: 1em;
+  height: calc(100% - 222px) !important;
+  overflow-y: auto;
+  position: relative;
+}
+.consultant-locations-list .consultant-locations {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.consultant-locations-list .consultant-locations .location {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-sm);
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+  min-height: calc(33% - 0.5em);
+  transition: all 200ms ease-in;
+}
+.consultant-locations-list .consultant-locations .location:hover .location__thumb img {
+  transform: scale(1.05);
+}
+.consultant-locations-list .consultant-locations .location .location__thumb {
+  position: relative;
+  aspect-ratio: 3/2;
+  max-height: 75%;
+  transform: scale(1);
+  overflow: hidden;
+}
+.consultant-locations-list .consultant-locations .location .location__thumb img {
+  transition: transform 200ms ease-in;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.consultant-locations-list .consultant-locations .location .location__thumb:after {
+  bottom: 0;
+  color: #a3a3a3;
+  content: "Hình minh họa";
+  font-size: 10px;
+  height: 20px;
+  left: 0;
+  padding-left: 10px;
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+}
+.consultant-locations-list .consultant-locations .location .location__info {
+  padding: 1em;
+}
+.consultant-locations-list .consultant-locations .location .location__info__name {
+  font-weight: 400;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+}
+.consultant-locations-list .consultant-locations .location .location__info__address {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-top: 1em;
+}
+.consultant-locations-list .consultant-locations .location .location__info__address .address__icon {
+  font-size: 1.8em;
+  color: var(--neutral-400);
+}
+.consultant-locations-list .consultant-locations .location .location__info__address .address__text {
+  color: var(--neutral-400);
+  font-weight: 400;
+  font-size: 1.12em;
+  font-style: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+}
+.consultant-locations-list .loading {
+  position: sticky;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+.consultant-locations-list .empty-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+}
+
+@media (max-width: 975px) {
+  .consultant-locations-list {
+    max-height: 100svh;
+    min-height: 350px;
+  }
+  .consultant-locations-list .consultant-locations {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .consultant-locations-list .consultant-locations .location {
+    flex-direction: row;
+    min-height: 120px !important;
+    background-color: var(--primary-300);
+    min-width: 320px;
+    flex: 1;
+  }
+  .consultant-locations-list .consultant-locations .location:nth-child(2n) {
+    background-color: var(--primary-800);
+  }
+  .consultant-locations-list .consultant-locations .location .location__info {
+    padding: 1.2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+  .consultant-locations-list .consultant-locations .location__thumb {
+    max-width: 35%;
+    max-height: 100% !important;
+    width: 35%;
+  }
+  .consultant-locations-list .consultant-locations .location .location__info__name {
+    font-size: 1.5em;
+    color: white;
+    font-weight: 500;
+  }
+  .consultant-locations-list .consultant-locations .location .location__info__address .address__text {
+    -webkit-line-clamp: 3;
+    color: white;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+  .consultant-locations-list .consultant-locations .location .location__info__address .address__icon {
     display: none;
+  }
+}
+.locations-details {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-sm);
+  background-color: white;
+  overflow: hidden;
+  transition: all 200ms ease-in;
+  padding: 1.5em;
+  gap: 0.5em;
+}
+.locations-details .thumb {
+  aspect-ratio: 4/2;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  border-radius: 1em;
+}
+.locations-details .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.locations-details .location-details__name {
+  font-weight: 400;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+.locations-details .location-details__info {
+  font-style: normal;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+.locations-details .location-details__info .info__address {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  font-weight: 400;
+}
+.locations-details .location-details__info .info__address .address__icon {
+  color: var(--neutral-300);
+  font-size: 1.8em;
+}
+.locations-details .location-details__info .info__address .address__text {
+  color: var(--neutral-300);
+  font-size: 1.2em;
+}
+.locations-details .location-details__info .info__contact {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-weight: 400;
+}
+.locations-details .location-details__info .info__contact .contact__working-hour,
+.locations-details .location-details__info .info__contact .contact__phone-number {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.locations-details .location-details__info .info__contact .phone-number__icon,
+.locations-details .location-details__info .info__contact .working-hour__icon {
+  color: var(--neutral-300);
+  font-size: 1.8em;
+}
+.locations-details .location-details__info .info__contact .working-hour__text,
+.locations-details .location-details__info .info__contact .phone-number__text {
+  color: var(--neutral-300);
+  font-size: 1.2em;
+}
+.locations-details .actions {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+}
+.locations-details .actions a,
+.locations-details .actions button {
+  background-color: var(--primary-500);
+  color: white;
+  border-radius: var(--radius-xs);
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  font-size: 1.8em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.locations-details .actions a:hover,
+.locations-details .actions button:hover {
+  background-color: var(--primary-800);
+}
+.locations-details .actions a svg,
+.locations-details .actions button svg {
+  font-size: 1.3em;
+}
+.locations-details .actions .btn-og-back {
+  display: none;
+  background-color: var(--warning-600);
+}
+.locations-details .actions .btn-og-back:hover {
+  background-color: var(--warning-800);
+}
+
+@media (max-width: 976px) {
+  .locations-details .actions button.btn-og-back {
+    display: inline-flex;
+  }
+  .locations-details {
+    width: 88%;
+    height: fit-content;
+    font-size: 0.85rem;
+    max-height: 50svh;
+    padding: 1em;
+  }
+  .locations-details .location-details__name {
+    margin-top: 0.5em;
+  }
+  .locations-details .actions {
+    font-size: 0.85rem;
+  }
+}
+.google-map {
+  flex-grow: 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+}
+.google-map .loading {
+  position: sticky;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+
+@media (max-width: 975px) {
+  .google-map {
+    width: 100%;
+    max-height: 50svh;
+    max-width: 88%;
+  }
+  .google-map iframe {
+    width: 400px;
   }
 }
 .main-consultant-content {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
-  max-height: calc(100svh - 170px);
+  flex-direction: row;
+  gap: 1.5em;
+  max-height: calc(100svh - 169px);
   overflow-y: auto;
-  flex: none;
+  flex: auto;
 }
 .main-consultant-content .col-1\/3 {
-  flex: 1;
+  flex: auto;
+  width: 33%;
+}
+.main-consultant-content .thumb-consultant-locations-details {
+  display: block;
+  aspect-ratio: 3/2;
+  transform: scale(1);
+  overflow: hidden;
+}
+.main-consultant-content .thumb-consultant-locations-details img {
+  transition: transform 200ms ease-in;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-consultant-content .modal-consultant-location-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.main-consultant-content .modal-consultant-location-details .btn-close-modal {
+  margin-bottom: -1.3em;
+  margin-right: 0.5em;
+  margin-left: auto;
+  float: right;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.3em;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 2em;
+  color: var(--primary-500);
+  transition: all 250ms ease-in-out;
+  border: 2px solid;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 0 8px var(--primary-800);
+  display: none;
+}
+.main-consultant-content .modal-consultant-location-details .overlay {
+  display: none;
 }
 
-@media (min-width: 976px) {
+@media (max-width: 975px) {
   .main-consultant-content {
-    flex-direction: row;
+    flex-direction: column;
     flex: auto;
+    gap: 1.5em;
   }
   .main-consultant-content .col-1\/3 {
-    width: 33%;
+    width: 100%;
+    flex: 1;
+  }
+  .main-consultant-content .modal-consultant-location-details {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    transition: all 250ms ease-in-out;
+    font-size: 1.2rem;
+  }
+  .main-consultant-content .modal-consultant-location-details .overlay {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 26, 26, 0.64);
+    opacity: 0;
+    backdrop-filter: blur(8px);
+  }
+  .main-consultant-content .modal-consultant-location-details .btn-close-modal {
+    display: block;
+  }
+  .main-consultant-content .modal-consultant-location-details .google-map,
+  .main-consultant-content .modal-consultant-location-details .locations-details {
+    opacity: 0;
+    transform-origin: top bottom;
+    transition: all 250ms ease-in-out;
+    transform: scale(0.3);
+  }
+  .main-consultant-content .modal-consultant-location-details.active {
+    display: flex;
+  }
+  .main-consultant-content .modal-consultant-location-details.active .overlay {
+    opacity: 1;
+    display: block;
+  }
+  .main-consultant-content .modal-consultant-location-details.active .google-map,
+  .main-consultant-content .modal-consultant-location-details.active .locations-details {
+    transform: scale(1);
+    opacity: 1;
   }
 }

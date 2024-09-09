@@ -284,7 +284,7 @@ a {
 
 .bg-gradient-primary {
   background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  background-image: radial-gradient(25% 70% at -1% 91%, #38ab9f 1%, #38ab9f 1%, rgba(7, 58, 255, 0) 91%), radial-gradient(30% 53% at 62% 163%, #73f2ff 0%, rgba(7, 58, 255, 0) 100%), linear-gradient(125deg, white 8%, #d3e9d6 44%, #ace0c8 93%);
+  background-image: radial-gradient(25% 70% at -1% 91%, #38ab9f 1%, #38ab9f 1%, rgba(7, 58, 255, 0) 91%), radial-gradient(30% 53% at 62% 163%, #73f2ff 0%, rgba(7, 58, 255, 0) 100%), linear-gradient(125deg, #bdfbe8 8%, #d3e9d6 44%, #ace0c8 93%);
 }
 
 .bg-gradient-secondary {
@@ -313,6 +313,22 @@ a {
 
 .box-shadow-lg {
   box-shadow: 0px 4px 15px 0px rgba(51, 51, 51, 0.2470588235);
+}
+
+::-webkit-scrollbar-track {
+  height: 50%;
+  max-height: 50%;
+}
+
+::-webkit-scrollbar {
+  border-radius: 16px;
+  height: 5px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  box-shadow: inset 0 0 6px #151515;
 }
 
 .text-neutral {
@@ -579,6 +595,27 @@ a {
     font-size: 0.9em;
   }
 }
+.toastify.msd {
+  top: 15px;
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.8392156863);
+  backdrop-filter: blur(3px);
+  color: var(--neutral-300);
+  font-size: 1.4em;
+  border-radius: var(--radius-sm);
+  font-weight: 400;
+  border-bottom: 5px solid var(--primary-500);
+}
+.toastify.msd .toast-close {
+  color: var(--neutral-200);
+  font-size: 1.2em;
+  padding: 0 0.6em;
+  margin-left: 0.3em;
+}
+.toastify.msd.error {
+  border-bottom-color: var(--error-700);
+}
+
 .root-container {
   display: flex;
   flex-direction: column;

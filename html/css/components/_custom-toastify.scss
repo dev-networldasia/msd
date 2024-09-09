@@ -1,0 +1,24 @@
+.toastify.msd {
+   top: 15px;
+   padding: 1.5em;
+   background: #ffffffd6;
+   backdrop-filter: blur(3px);
+   color: var(--neutral-300);
+   font-size: 1.4em;
+   border-radius: var(--radius-sm);
+   font-weight: 400;
+   border-bottom: 5px solid var(--primary-500);
+
+   .toast-close {
+      color: var(--neutral-200);
+      font-size: 1.2em;
+      padding: 0 0.6em;
+      margin-left: .3em;
+   }
+
+   &.error {
+      // color: var(--error-500);
+      border-bottom-color: var(--error-700);
+   }
+
+}
